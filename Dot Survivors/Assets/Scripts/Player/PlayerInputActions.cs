@@ -99,6 +99,24 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""TestXP"",
+                    ""type"": ""Button"",
+                    ""id"": ""08713beb-d96f-4a0d-a04f-1b1282aa32b3"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TestDamage"",
+                    ""type"": ""Button"",
+                    ""id"": ""474a7180-fc60-4422-95ce-42a7ec5eed78"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -156,6 +174,28 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""56358fa5-bb07-4c86-8cda-7b005f01f5c0"",
+                    ""path"": ""<Keyboard>/numpad8"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TestXP"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b888c47d-d7c2-45ef-bd16-02a4f62d2b1c"",
+                    ""path"": ""<Keyboard>/numpad9"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TestDamage"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -165,6 +205,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         // Movements
         m_Movements = asset.FindActionMap("Movements", throwIfNotFound: true);
         m_Movements_Move = m_Movements.FindAction("Move", throwIfNotFound: true);
+        m_Movements_TestXP = m_Movements.FindAction("TestXP", throwIfNotFound: true);
+        m_Movements_TestDamage = m_Movements.FindAction("TestDamage", throwIfNotFound: true);
     }
 
     ~@PlayerInputActions()
@@ -246,6 +288,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Movements;
     private List<IMovementsActions> m_MovementsActionsCallbackInterfaces = new List<IMovementsActions>();
     private readonly InputAction m_Movements_Move;
+    private readonly InputAction m_Movements_TestXP;
+    private readonly InputAction m_Movements_TestDamage;
     /// <summary>
     /// Provides access to input actions defined in input action map "Movements".
     /// </summary>
@@ -261,6 +305,14 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Movements/Move".
         /// </summary>
         public InputAction @Move => m_Wrapper.m_Movements_Move;
+        /// <summary>
+        /// Provides access to the underlying input action "Movements/TestXP".
+        /// </summary>
+        public InputAction @TestXP => m_Wrapper.m_Movements_TestXP;
+        /// <summary>
+        /// Provides access to the underlying input action "Movements/TestDamage".
+        /// </summary>
+        public InputAction @TestDamage => m_Wrapper.m_Movements_TestDamage;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -290,6 +342,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
+            @TestXP.started += instance.OnTestXP;
+            @TestXP.performed += instance.OnTestXP;
+            @TestXP.canceled += instance.OnTestXP;
+            @TestDamage.started += instance.OnTestDamage;
+            @TestDamage.performed += instance.OnTestDamage;
+            @TestDamage.canceled += instance.OnTestDamage;
         }
 
         /// <summary>
@@ -304,6 +362,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
+            @TestXP.started -= instance.OnTestXP;
+            @TestXP.performed -= instance.OnTestXP;
+            @TestXP.canceled -= instance.OnTestXP;
+            @TestDamage.started -= instance.OnTestDamage;
+            @TestDamage.performed -= instance.OnTestDamage;
+            @TestDamage.canceled -= instance.OnTestDamage;
         }
 
         /// <summary>
@@ -351,5 +415,19 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMove(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "TestXP" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTestXP(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "TestDamage" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTestDamage(InputAction.CallbackContext context);
     }
 }

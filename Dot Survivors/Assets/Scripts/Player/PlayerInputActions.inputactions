@@ -13,6 +13,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "TestXP",
+                    "type": "Button",
+                    "id": "08713beb-d96f-4a0d-a04f-1b1282aa32b3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestDamage",
+                    "type": "Button",
+                    "id": "474a7180-fc60-4422-95ce-42a7ec5eed78",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -70,6 +88,28 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "56358fa5-bb07-4c86-8cda-7b005f01f5c0",
+                    "path": "<Keyboard>/numpad8",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestXP",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b888c47d-d7c2-45ef-bd16-02a4f62d2b1c",
+                    "path": "<Keyboard>/numpad9",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestDamage",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

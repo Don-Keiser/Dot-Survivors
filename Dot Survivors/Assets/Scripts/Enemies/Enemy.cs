@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 2f;
-    [SerializeField] int damage = 2;
-    [SerializeField] float damageInterval = 0.5f;
+    public float moveSpeed = 2f;
+    public int damage = 10;
+    public float health = 50f;
+    public float damageInterval = 0.5f;
 
     private Transform player;
     private PlayerStats playerStats;
@@ -50,5 +51,19 @@ public class Enemy : MonoBehaviour
         {
             damageTimer = 0f; // Reset timer on initial collision
         }
+    }
+
+    public void TakeDamage(float damageAmount)
+    {
+        health -= damageAmount;
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
     }
 }

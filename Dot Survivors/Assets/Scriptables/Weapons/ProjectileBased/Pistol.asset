@@ -20,3 +20,4 @@ MonoBehaviour:
   projectilePrefab: {fileID: 761922942573321250, guid: 09fded82a7b5f2c498d318c88fcc2e55, type: 3}
   isPiercing: 0
   range: 10
+  consecutiveShots: 3

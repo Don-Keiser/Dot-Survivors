@@ -1241,8 +1241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapons:
-  - {fileID: 11400000, guid: be79a4764b2999e48a60f7d00daa684f, type: 2}
-  - {fileID: 11400000, guid: b18db752801de5c4bbceab270c95bbb6, type: 2}
+  - {fileID: 11400000, guid: c530c3d0ab1cec04f89574275988c5fc, type: 2}
   firePoint: {fileID: 7995766372259085776}
 --- !u!114 &2131484848
 MonoBehaviour:

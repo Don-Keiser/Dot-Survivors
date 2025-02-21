@@ -15,9 +15,23 @@ MonoBehaviour:
   weaponName: Sniper
   weaponIcon: {fileID: 2087949621987537175, guid: 5cb7927719a6ec54185a373c18a112ff, type: 3}
   level: 1
+  maxLevel: 4
   damage: 20
   cooldown: 3
+  upgradeSteps:
+  - damageIncrease: 10
+    cooldownReduction: 0.5
+    rangeIncrease: 0
+    extraShots: 1
+  - damageIncrease: 20
+    cooldownReduction: 0.5
+    rangeIncrease: 0
+    extraShots: 0
+  - damageIncrease: 20
+    cooldownReduction: 1
+    rangeIncrease: 0
+    extraShots: 1
   projectilePrefab: {fileID: 4247204747336912010, guid: 762552ace63437049b6ccf5a8d274ead, type: 3}
   isPiercing: 1
-  range: 4
+  range: 6
   consecutiveShots: 1

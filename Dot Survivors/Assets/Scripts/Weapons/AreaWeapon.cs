@@ -18,9 +18,14 @@ public abstract class AreaWeapon : WeaponBase
 
     public override void UpgradeWeapon()
     {
+        if (!CanUpgrade()) return;
+
+        WeaponUpgradeStep upgrade = upgradeSteps[level - 1];
+        damage += upgrade.damageIncrease;
+        cooldown -= upgrade.cooldownReduction;
+        range += upgrade.rangeIncrease;
         level++;
-        damage += 10f;
-        range += 5f;
-        cooldown -= 0.5f;
+
+        Debug.Log($"{weaponName} upgraded to Level {level}");
     }
 }

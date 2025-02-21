@@ -4,11 +4,16 @@ using UnityEngine;
 public class PlayerWeaponManager : MonoBehaviour
 {
     public List<WeaponBase> weapons = new List<WeaponBase>();
-    private HashSet<string> acquiredWeaponNames = new HashSet<string>();
+    public int maxWeapons = 3;
     public Transform firePoint;
+    private HashSet<string> acquiredWeaponNames = new HashSet<string>();
+
+    public WeaponHotbarUI hotbarUI;
 
     private void Start()
     {
+        hotbarUI.InitializeHotbar(maxWeapons);
+
         List<WeaponBase> clonedWeapons = new List<WeaponBase>();
         foreach (var weapon in weapons)
         {
@@ -22,6 +27,7 @@ public class PlayerWeaponManager : MonoBehaviour
             }
         }
         weapons = clonedWeapons;
+        hotbarUI.UpdateHotbar(weapons);
     }
 
     private void Update()
@@ -40,6 +46,12 @@ public class PlayerWeaponManager : MonoBehaviour
             return;
         }
 
+        if (weapons.Count >= maxWeapons)
+        {
+            Debug.Log("Weapon limit reached!");
+            return;
+        }
+
         WeaponBase weaponInstance = newWeapon.Clone();
         weapons.Add(weaponInstance);
         acquiredWeaponNames.Add(weaponInstance.weaponName);
@@ -48,6 +60,8 @@ public class PlayerWeaponManager : MonoBehaviour
         {
             empFieldWeapon.Activate(gameObject);
         }
+
+        hotbarUI.UpdateHotbar(weapons);
     }
 
     public void UpgradeWeapon(int weaponIndex)
@@ -55,6 +69,16 @@ public class PlayerWeaponManager : MonoBehaviour
         if (weaponIndex >= 0 && weaponIndex < weapons.Count)
         {
             weapons[weaponIndex].UpgradeWeapon();
+        }
+    }
+
+    public void RemoveWeapon(int weaponIndex)
+    {
+        if (weaponIndex >= 0 && weaponIndex < weapons.Count)
+        {
+            acquiredWeaponNames.Remove(weapons[weaponIndex].weaponName);
+            weapons.RemoveAt(weaponIndex);
+            hotbarUI.UpdateHotbar(weapons);
         }
     }
 }

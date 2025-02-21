@@ -283,6 +283,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175747731}
   m_CullTransparentMesh: 1
+--- !u!1 &485813334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 485813335}
+  - component: {fileID: 485813336}
+  m_Layer: 5
+  m_Name: HotbarGroup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &485813335
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485813334}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1921047892}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 170, y: 120}
+  m_SizeDelta: {x: 300, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &485813336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485813334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,6 +593,7 @@ GameObject:
   - component: {fileID: 652287763}
   - component: {fileID: 652287764}
   - component: {fileID: 652287765}
+  - component: {fileID: 652287766}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -617,6 +678,20 @@ MonoBehaviour:
   acquireWeaponButton: {fileID: 175747733}
   upgradeWeaponText: {fileID: 2062619735}
   acquireWeaponText: {fileID: 1462624123}
+--- !u!114 &652287766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652287760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a086e77c5b9b34e904ce3db382a0d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSlotPrefab: {fileID: 5810592826239482067, guid: 64a5f8d3f7a5b1e4f8c67200d7fe4937, type: 3}
+  hotbarContainer: {fileID: 485813335}
 --- !u!114 &678772309 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1759826784066667446, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
@@ -1577,6 +1652,7 @@ RectTransform:
   m_Children:
   - {fileID: 1193807142}
   - {fileID: 1258587325}
+  - {fileID: 485813335}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1909,7 +1985,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapons:
   - {fileID: 11400000, guid: be79a4764b2999e48a60f7d00daa684f, type: 2}
+  maxWeapons: 6
   firePoint: {fileID: 7995766372259085776}
+  hotbarUI: {fileID: 652287766}
 --- !u!114 &2131484848
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,20 +1,27 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class PlayerWeaponManager : MonoBehaviour
 {
-    public List<WeaponBase> weapons;
+    public List<WeaponBase> weapons = new List<WeaponBase>();
+    private HashSet<string> acquiredWeaponNames = new HashSet<string>();
     public Transform firePoint;
 
     private void Start()
     {
+        List<WeaponBase> clonedWeapons = new List<WeaponBase>();
         foreach (var weapon in weapons)
         {
-            if (weapon is EMPFieldWeapon empFieldWeapon)
+            WeaponBase weaponInstance = weapon.Clone();
+            clonedWeapons.Add(weaponInstance);
+            acquiredWeaponNames.Add(weaponInstance.weaponName);
+
+            if (weaponInstance is EMPFieldWeapon empFieldWeapon)
             {
                 empFieldWeapon.Activate(gameObject);
             }
         }
+        weapons = clonedWeapons;
     }
 
     private void Update()
@@ -27,8 +34,17 @@ public class PlayerWeaponManager : MonoBehaviour
 
     public void AddWeapon(WeaponBase newWeapon)
     {
-        weapons.Add(newWeapon);
-        if (newWeapon is EMPFieldWeapon empFieldWeapon)
+        if (acquiredWeaponNames.Contains(newWeapon.weaponName))
+        {
+            Debug.Log($"Weapon {newWeapon.weaponName} is already acquired!");
+            return;
+        }
+
+        WeaponBase weaponInstance = newWeapon.Clone();
+        weapons.Add(weaponInstance);
+        acquiredWeaponNames.Add(weaponInstance.weaponName);
+
+        if (weaponInstance is EMPFieldWeapon empFieldWeapon)
         {
             empFieldWeapon.Activate(gameObject);
         }

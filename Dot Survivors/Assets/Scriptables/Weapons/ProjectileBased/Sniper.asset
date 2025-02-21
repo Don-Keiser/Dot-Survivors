@@ -19,4 +19,5 @@ MonoBehaviour:
   cooldown: 3
   projectilePrefab: {fileID: 4247204747336912010, guid: 762552ace63437049b6ccf5a8d274ead, type: 3}
   isPiercing: 1
-  range: 15
+  range: 4
+  consecutiveShots: 1

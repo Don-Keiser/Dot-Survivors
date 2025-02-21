@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: EnemySimple
   m_EditorClassIdentifier: 
   enemyName: EnemySimple
-  health: 60
+  health: 80
   moveSpeed: 2
   damage: 5
-  damageInterval: 0.8
+  damageInterval: 0.2
   possibleDrops:
   - {fileID: 11400000, guid: 01132698c902b48499ea05ceb92be52c, type: 2}
   dropChances:

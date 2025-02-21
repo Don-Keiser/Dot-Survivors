@@ -39,4 +39,14 @@ public class EMPFieldWeapon : AreaWeapon
             empAura.SetRange(range);
         }
     }
+
+    public override WeaponBase Clone()
+    {
+        EMPFieldWeapon copy = Instantiate(this);
+        copy.level = this.level;
+        copy.damage = this.damage;
+        copy.cooldown = this.cooldown;
+        copy.range = this.range;
+        return copy;
+    }
 }

@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48dbabd46560ffd45a9073e1c698ab02, type: 3}
-  m_Name: EnemySimpleHarder
+  m_Name: FastEnemy
   m_EditorClassIdentifier: 
-  enemyName: EnemySimpleHarder
-  health: 150
-  moveSpeed: 2
-  damage: 10
+  enemyName: FastEnemy
+  health: 80
+  moveSpeed: 5
+  damage: 5
   damageInterval: 0.2
   possibleDrops:
   - {fileID: 11400000, guid: 01132698c902b48499ea05ceb92be52c, type: 2}

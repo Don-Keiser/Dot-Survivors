@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6095970511815703424}
   - component: {fileID: 3072552122704842959}
   - component: {fileID: 3926397292519080992}
-  - component: {fileID: 4025532927326519969}
+  - component: {fileID: 6225452531325846542}
   m_Layer: 8
   m_Name: EnemySimple
   m_TagString: Enemy
@@ -77,8 +77,8 @@ MonoBehaviour:
   enemyConfig: {fileID: 11400000, guid: 38898aa538f201b4ebe591ec6df66cc9, type: 2}
   health: 50
   damage: 10
---- !u!60 &4025532927326519969
-PolygonCollider2D:
+--- !u!58 &6225452531325846542
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -111,24 +111,8 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.46134326, y: 0.0049937647}
-      - {x: -0.014351308, y: 0.24683265}
-      - {x: -0.46402904, y: 0.4618265}
-      - {x: -0.46256047, y: -0.46264386}
-      - {x: 0.063329995, y: -0.20434782}
-  m_UseDelaunayMesh: 0
+  m_Offset: {x: -0.08, y: 0}
+  m_Radius: 0.35
 --- !u!1 &4567132028913356277
 GameObject:
   m_ObjectHideFlags: 0

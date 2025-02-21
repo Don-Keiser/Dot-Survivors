@@ -54,7 +54,7 @@ public class PlayerStats : MonoBehaviour
     {
         level++;
         experiencePoints -= experienceToNextLevel;
-        experienceToNextLevel = Mathf.RoundToInt(experienceToNextLevel * 1.5f);
+        experienceToNextLevel = Mathf.RoundToInt(experienceToNextLevel * 1.25f);
 
         OnLevelUp?.Invoke(level);
         OnXPChanged?.Invoke(experiencePoints, experienceToNextLevel);

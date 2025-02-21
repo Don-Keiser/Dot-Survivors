@@ -10,4 +10,9 @@ public abstract class WeaponBase : ScriptableObject
 
     public abstract void UseWeapon(Transform firePoint, Transform player);
     public abstract void UpgradeWeapon();
+
+    public virtual WeaponBase Clone()
+    {
+        return Instantiate(this);
+    }
 }

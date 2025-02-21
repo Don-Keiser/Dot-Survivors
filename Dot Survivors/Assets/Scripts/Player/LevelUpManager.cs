@@ -21,7 +21,7 @@ public class LevelUpManager : MonoBehaviour
             weaponManager.weapons[Random.Range(0, weaponManager.weapons.Count)] : null;
 
         WeaponBase weaponToAcquire = availableWeapons
-            .Where(w => !weaponManager.weapons.Contains(w))
+            .Where(w => !weaponManager.weapons.Any(acquired => acquired.weaponName == w.weaponName))
             .OrderBy(_ => Random.value)
             .FirstOrDefault();
 

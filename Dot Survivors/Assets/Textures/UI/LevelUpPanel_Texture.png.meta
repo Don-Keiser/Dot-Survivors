@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 135ba47427ddbff47bcf34777ca06c3d
+guid: 73c46339a1d8ef84dbe5e424e32544ab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 626795535111865842
-    second: sniperBullet_Text_0
+      213: -1207785884130893628
+    second: LevelUpPanel_Texture_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sniperBullet_Text_0
+      name: LevelUpPanel_Texture_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 142
-        height: 20
+        width: 1000
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2f5c421e733d2b800800000000000000
-      internalID: 626795535111865842
+      spriteID: 4c0a5a333251d3fe0800000000000000
+      internalID: -1207785884130893628
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sniperBullet_Text_0: 626795535111865842
+      LevelUpPanel_Texture_0: -1207785884130893628
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

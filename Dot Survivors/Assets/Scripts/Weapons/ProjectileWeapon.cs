@@ -39,7 +39,6 @@ public class ProjectileWeapon : WeaponBase
         level++;
         damage += 5f;
         cooldown *= 0.9f;
-        range += 1f;
         consecutiveShots++;
     }
 
@@ -66,5 +65,16 @@ public class ProjectileWeapon : WeaponBase
         }
 
         return closestEnemies;
+    }
+
+    public override WeaponBase Clone()
+    {
+        ProjectileWeapon copy = Instantiate(this);
+        copy.level = this.level;
+        copy.damage = this.damage;
+        copy.cooldown = this.cooldown;
+        copy.range = this.range;
+        copy.consecutiveShots = this.consecutiveShots;
+        return copy;
     }
 }

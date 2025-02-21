@@ -50,29 +50,34 @@ public class WaveManager : MonoBehaviour
         Debug.Log("All waves completed.");
     }
 
-    void SpawnEnemy(WaveConfig wave)
+void SpawnEnemy(WaveConfig wave)
+{
+    Vector2 spawnPosition = GetRandomSpawnPosition();
+    float totalChance = 0f;
+
+    foreach (var enemy in wave.enemies)
     {
-        Vector2 spawnPosition = GetRandomSpawnPosition();
+        totalChance += enemy.spawnChance;
+    }
 
-        float totalChance = 0f;
-        foreach (var enemy in wave.enemies)
+    float randomValue = Random.Range(0f, totalChance);
+    float cumulativeChance = 0f;
+
+    foreach (var enemy in wave.enemies)
+    {
+        cumulativeChance += enemy.spawnChance;
+        if (randomValue <= cumulativeChance)
         {
-            totalChance += enemy.spawnChance;
-        }
+            GameObject spawnedEnemy = Instantiate(enemy.enemyPrefab, spawnPosition, Quaternion.identity);
 
-        float randomValue = Random.Range(0f, totalChance);
-        float cumulativeChance = 0f;
+            // Set random scale
+            float randomSize = Random.Range(0.7f, 1.3f); // Adjust values as needed
+            spawnedEnemy.transform.localScale = new Vector3(randomSize, randomSize, 1);
 
-        foreach (var enemy in wave.enemies)
-        {
-            cumulativeChance += enemy.spawnChance;
-            if (randomValue <= cumulativeChance)
-            {
-                Instantiate(enemy.enemyPrefab, spawnPosition, Quaternion.identity);
-                break;
-            }
+            break;
         }
     }
+}
 
     Vector2 GetRandomSpawnPosition()
     {

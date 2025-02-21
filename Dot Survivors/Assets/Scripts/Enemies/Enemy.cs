@@ -2,20 +2,27 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float moveSpeed = 2f;
-    public int damage = 10;
-    public float health = 50f;
-    public float damageInterval = 0.5f;
+    public EnemyConfig enemyConfig;
 
     private Transform player;
     private PlayerStats playerStats;
     private float damageTimer;
+    [SerializeField] float health;
+    private float moveSpeed;
+    [SerializeField] int damage;
+    private float damageInterval;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerStats = player.GetComponent<PlayerStats>();
         damageTimer = 0f;
+
+        // Load stats from EnemyConfig
+        health = enemyConfig.health;
+        moveSpeed = enemyConfig.moveSpeed;
+        damage = enemyConfig.damage;
+        damageInterval = enemyConfig.damageInterval;
     }
 
     void Update()
@@ -23,14 +30,17 @@ public class Enemy : MonoBehaviour
         MoveTowardsPlayer();
     }
 
-    void MoveTowardsPlayer()
+void MoveTowardsPlayer()
+{
+    if (player != null)
     {
-        if (player != null)
-        {
-            Vector2 direction = (player.position - transform.position).normalized;
-            transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
-        }
+        Vector2 direction = (player.position - transform.position).normalized;
+        transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
+}
 
     void OnCollisionStay2D(Collision2D collision)
     {
@@ -49,7 +59,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            damageTimer = 0f; // Reset timer on initial collision
+            damageTimer = 0f;
         }
     }
 
@@ -64,6 +74,16 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        DropXp();
         Destroy(gameObject);
+    }
+
+    private void DropXp()
+    {
+        XPOrbConfig drop = enemyConfig.GetRandomDrop();
+        if (drop != null)
+        {
+            Instantiate(drop.xpOrbPrefab, transform.position, Quaternion.identity);
+        }
     }
 }

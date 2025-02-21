@@ -1,11 +1,13 @@
 using UnityEngine;
+using System.Linq;
 
 public class LevelUpManager : MonoBehaviour
 {
     public PlayerWeaponManager weaponManager;
     public WeaponBase[] availableWeapons;
+    public LevelUpUI levelUpUI;
 
-    void Start()
+    private void Start()
     {
         PlayerStats playerStats = GetComponent<PlayerStats>();
         playerStats.OnLevelUp += HandleLevelUp;
@@ -13,25 +15,16 @@ public class LevelUpManager : MonoBehaviour
 
     void HandleLevelUp(int level)
     {
-        if (Random.value > 0.5f)
-        {
-            AcquireNewWeapon();
-        }
-        else
-        {
-            UpgradeRandomWeapon();
-        }
-    }
+        Time.timeScale = 0f;
 
-    void AcquireNewWeapon()
-    {
-        WeaponBase newWeapon = availableWeapons[Random.Range(0, availableWeapons.Length)];
-        weaponManager.AddWeapon(newWeapon);
-    }
+        WeaponBase weaponToUpgrade = weaponManager.weapons.Count > 0 ? 
+            weaponManager.weapons[Random.Range(0, weaponManager.weapons.Count)] : null;
 
-    void UpgradeRandomWeapon()
-    {
-        int weaponIndex = Random.Range(0, weaponManager.weapons.Count);
-        weaponManager.UpgradeWeapon(weaponIndex);
+        WeaponBase weaponToAcquire = availableWeapons
+            .Where(w => !weaponManager.weapons.Contains(w))
+            .OrderBy(_ => Random.value)
+            .FirstOrDefault();
+
+        levelUpUI.Initialize(weaponManager, weaponToUpgrade, weaponToAcquire);
     }
 }

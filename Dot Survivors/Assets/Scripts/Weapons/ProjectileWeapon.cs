@@ -22,7 +22,8 @@ public class ProjectileWeapon : WeaponBase
                 if (target != null)
                 {
                     Vector2 direction = (target.transform.position - firePoint.position).normalized;
-                    GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+                    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                    GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.Euler(new Vector3(0, 0, angle)));
                     projectile.GetComponent<Rigidbody2D>().linearVelocity = direction * 10f;
                     projectile.GetComponent<Projectile>().damage = damage;
                     projectile.GetComponent<Projectile>().isPiercing = isPiercing;

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979626eb7acb0b74a84b1690373804f5, type: 3}
+  m_Name: Sniper
+  m_EditorClassIdentifier: 
+  weaponName: Sniper
+  weaponIcon: {fileID: 2087949621987537175, guid: 5cb7927719a6ec54185a373c18a112ff, type: 3}
+  level: 1
+  damage: 20
+  cooldown: 3
+  projectilePrefab: {fileID: 4247204747336912010, guid: 762552ace63437049b6ccf5a8d274ead, type: 3}
+  isPiercing: 1
+  range: 15

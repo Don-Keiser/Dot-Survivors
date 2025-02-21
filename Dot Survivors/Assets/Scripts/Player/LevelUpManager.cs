@@ -37,8 +37,11 @@ public class LevelUpManager : MonoBehaviour
 
         isProcessingLevelUp = true;
         Time.timeScale = 0f;
-        WeaponBase weaponToUpgrade = weaponManager.weapons.Count > 0 ?
-            weaponManager.weapons[Random.Range(0, weaponManager.weapons.Count)] : null;
+
+        WeaponBase weaponToUpgrade = weaponManager.weapons
+            .Where(w => w.CanUpgrade())
+            .OrderBy(_ => Random.value)
+            .FirstOrDefault();
 
         WeaponBase weaponToAcquire = null;
 

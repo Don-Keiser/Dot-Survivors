@@ -26,10 +26,15 @@ public class EMPFieldWeapon : AreaWeapon
 
     public override void UpgradeWeapon()
     {
+        if (!CanUpgrade()) return;
+
+        WeaponUpgradeStep upgrade = upgradeSteps[level - 1];
+        damage += upgrade.damageIncrease;
+        cooldown -= upgrade.cooldownReduction;
+        range += upgrade.rangeIncrease;
         level++;
-        damage += 10f;
-        cooldown -= 0.5f;
-        range += 1f;
+
+        Debug.Log($"{weaponName} upgraded to Level {level}");
 
         if (empInstance != null)
         {

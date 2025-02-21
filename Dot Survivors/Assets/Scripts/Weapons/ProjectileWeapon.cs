@@ -36,10 +36,16 @@ public class ProjectileWeapon : WeaponBase
 
     public override void UpgradeWeapon()
     {
+        if (!CanUpgrade()) return;
+
+        WeaponUpgradeStep upgrade = upgradeSteps[level - 1];
+        damage += upgrade.damageIncrease;
+        cooldown -= upgrade.cooldownReduction;
+        range += upgrade.rangeIncrease;
+        consecutiveShots += upgrade.extraShots;
         level++;
-        damage += 5f;
-        cooldown *= 0.9f;
-        consecutiveShots++;
+
+        Debug.Log($"{weaponName} upgraded to Level {level}");
     }
 
     private List<GameObject> FindClosestEnemies(Transform player, int count)

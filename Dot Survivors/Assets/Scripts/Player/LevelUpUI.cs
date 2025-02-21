@@ -24,12 +24,24 @@ public class LevelUpUI : MonoBehaviour
 
         panel.SetActive(true);
 
-        upgradeWeaponText.text = weaponToUpgrade != null ? 
-            $"Upgrade {weaponToUpgrade.weaponName}" : "No Weapons to Upgrade";
-        acquireWeaponText.text = weaponToAcquire != null ? 
-            $"Acquire {weaponToAcquire.weaponName}" : "No New Weapons Available";
+        if (weaponToUpgrade != null)
+        {
+            upgradeWeaponText.text = weaponToUpgrade.level < weaponToUpgrade.maxLevel
+                ? $"Upgrade {weaponToUpgrade.weaponName} (Level {weaponToUpgrade.level}/{weaponToUpgrade.maxLevel})"
+                : $"{weaponToUpgrade.weaponName} (Max Level)";
 
-        upgradeWeaponButton.interactable = weaponToUpgrade != null;
+            upgradeWeaponButton.interactable = weaponToUpgrade.level < weaponToUpgrade.maxLevel;
+        }
+        else
+        {
+            upgradeWeaponText.text = "No Weapons to Upgrade";
+            upgradeWeaponButton.interactable = false;
+        }
+
+        acquireWeaponText.text = weaponToAcquire != null 
+            ? $"Acquire {weaponToAcquire.weaponName}" 
+            : "No New Weapons Available";
+
         acquireWeaponButton.interactable = weaponToAcquire != null;
     }
 

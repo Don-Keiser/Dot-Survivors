@@ -15,8 +15,30 @@ MonoBehaviour:
   weaponName: Pistol
   weaponIcon: {fileID: 4503178127132509037, guid: 33e9981254ea1fe4c80fb28ce4cbc4da, type: 3}
   level: 1
+  maxLevel: 6
   damage: 10
   cooldown: 1
+  upgradeSteps:
+  - damageIncrease: 5
+    cooldownReduction: 0.1
+    rangeIncrease: 1
+    extraShots: 1
+  - damageIncrease: 10
+    cooldownReduction: 0.1
+    rangeIncrease: 0
+    extraShots: 0
+  - damageIncrease: 5
+    cooldownReduction: 0
+    rangeIncrease: 0
+    extraShots: 1
+  - damageIncrease: 10
+    cooldownReduction: 0.1
+    rangeIncrease: 0
+    extraShots: 0
+  - damageIncrease: 15
+    cooldownReduction: 0.2
+    rangeIncrease: 0
+    extraShots: 1
   projectilePrefab: {fileID: 761922942573321250, guid: 09fded82a7b5f2c498d318c88fcc2e55, type: 3}
   isPiercing: 0
   range: 4

@@ -12,7 +12,7 @@ public class PlayerWeaponManager : MonoBehaviour
 
     private void Start()
     {
-        hotbarUI.InitializeHotbar(maxWeapons); // Initialize with correct max slots
+        hotbarUI.InitializeHotbar(maxWeapons);
 
         List<WeaponBase> clonedWeapons = new List<WeaponBase>();
         foreach (var weapon in weapons)

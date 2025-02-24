@@ -9,46 +9,62 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8769ec5e9d0e2e140a9529d12c8262bc, type: 3}
-  m_Name: Pistol
+  m_Script: {fileID: 11500000, guid: 979626eb7acb0b74a84b1690373804f5, type: 3}
+  m_Name: OldPistol
   m_EditorClassIdentifier: 
-  weaponName: Pistol
+  weaponName: OldPistol
   weaponIcon: {fileID: 4503178127132509037, guid: 33e9981254ea1fe4c80fb28ce4cbc4da, type: 3}
   level: 1
-  maxLevel: 5
-  damage: 20
-  cooldown: 1.2
+  maxLevel: 6
+  damage: 10
+  cooldown: 1
   upgradeSteps:
   - upgrades:
     - statName: damageIncrease
       value: 5
     - statName: cooldownReduction
-      value: 0.2
-    - statName: extraBullets
+      value: 0.1
+    - statName: rangeIncrease
+      value: 1
+    - statName: extraShots
       value: 1
   - upgrades:
     - statName: damageIncrease
       value: 10
     - statName: cooldownReduction
+      value: 0.1
+    - statName: rangeIncrease
       value: 0
-    - statName: extraBullets
-      value: 2
+    - statName: extraShots
+      value: 1
   - upgrades:
     - statName: damageIncrease
       value: 5
     - statName: cooldownReduction
       value: 0.2
-    - statName: extraBullets
-      value: 2
+    - statName: rangeIncrease
+      value: 0
+    - statName: extraShots
+      value: 0
   - upgrades:
     - statName: damageIncrease
       value: 10
     - statName: cooldownReduction
-      value: 0.2
-    - statName: extraBullets
-      value: 4
+      value: 0
+    - statName: rangeIncrease
+      value: 0
+    - statName: extraShots
+      value: 1
+  - upgrades:
+    - statName: damageIncrease
+      value: 10
+    - statName: cooldownReduction
+      value: 0.1
+    - statName: rangeIncrease
+      value: 0
+    - statName: extraShots
+      value: 1
   projectilePrefab: {fileID: 761922942573321250, guid: 09fded82a7b5f2c498d318c88fcc2e55, type: 3}
-  bulletCount: 3
-  bulletSpeed: 10
-  bulletSpacing: 0.3
-  rowSpawnDelay: 0.1
+  isPiercing: 0
+  range: 4
+  consecutiveShots: 2

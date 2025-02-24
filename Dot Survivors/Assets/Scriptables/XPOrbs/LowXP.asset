@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xpOrbName: LowXP
   xpOrbPrefab: {fileID: 8695989966215259964, guid: 811803a9015273d448a9825cf1b773a6, type: 3}
-  xpAmount: 10
+  xpAmount: 15

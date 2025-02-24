@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abe3c07e4737df24b9bbdf836a620250, type: 3}
+  m_Name: GatlingGun
+  m_EditorClassIdentifier: 
+  weaponName: GatlingGun
+  weaponIcon: {fileID: -411512736448354516, guid: 05521c0524b2bcc40859d88c76b2bde5, type: 3}
+  level: 1
+  maxLevel: 3
+  damage: 5
+  cooldown: 2
+  upgradeSteps:
+  - upgrades:
+    - statName: damageIncrease
+      value: 5
+    - statName: cooldownReduction
+      value: 0
+    - statName: fireRateIncrease
+      value: 0.9
+    - statName: rotationSpeedIncrease
+      value: 10
+  - upgrades:
+    - statName: damageIncrease
+      value: 10
+    - statName: cooldownReduction
+      value: 0
+    - statName: fireRateIncrease
+      value: 0.9
+    - statName: rotationSpeedIncrease
+      value: 10
+  projectilePrefab: {fileID: 761922942573321250, guid: 09fded82a7b5f2c498d318c88fcc2e55, type: 3}
+  fireRate: 0.1
+  rotationSpeed: 120

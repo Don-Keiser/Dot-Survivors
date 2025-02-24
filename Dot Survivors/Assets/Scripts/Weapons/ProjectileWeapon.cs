@@ -4,10 +4,10 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "ProjectileWeapon", menuName = "ScriptableObjects/ProjectileWeapon", order = 1)]
 public class ProjectileWeapon : WeaponBase
 {
-    public GameObject projectilePrefab;
-    public bool isPiercing;
-    public float range;
-    public int consecutiveShots = 1;
+    [SerializeField] GameObject projectilePrefab;
+    [SerializeField] bool isPiercing;
+    [SerializeField] float range;
+    [SerializeField] int consecutiveShots = 1;
 
     private float cooldownTimer = 0f;
 
@@ -34,18 +34,18 @@ public class ProjectileWeapon : WeaponBase
         }
     }
 
-    public override void UpgradeWeapon()
+    protected override string[] GetPossibleUpgradeStats()
     {
-        if (!CanUpgrade()) return;
+        return new string[] { "damageIncrease", "cooldownReduction", "rangeIncrease", "extraShots" };
+    }
 
-        WeaponUpgradeStep upgrade = upgradeSteps[level - 1];
-        damage += upgrade.damageIncrease;
-        cooldown -= upgrade.cooldownReduction;
-        range += upgrade.rangeIncrease;
-        consecutiveShots += upgrade.extraShots;
-        level++;
 
-        Debug.Log($"{weaponName} upgraded to Level {level}");
+    protected override void ApplyUpgrade(WeaponUpgradeStep upgrade)
+    {
+        damage += upgrade.GetUpgradeValue("damageIncrease");
+        cooldown -= upgrade.GetUpgradeValue("cooldownReduction");
+        range += upgrade.GetUpgradeValue("rangeIncrease");
+        consecutiveShots += (int)upgrade.GetUpgradeValue("extraShots");
     }
 
     private List<GameObject> FindClosestEnemies(Transform player, int count)

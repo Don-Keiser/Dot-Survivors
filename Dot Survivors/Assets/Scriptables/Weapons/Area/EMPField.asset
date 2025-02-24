@@ -19,21 +19,33 @@ MonoBehaviour:
   damage: 10
   cooldown: 0.5
   upgradeSteps:
-  - damageIncrease: 5
-    cooldownReduction: 0
-    rangeIncrease: 1
-    extraShots: 0
-  - damageIncrease: 10
-    cooldownReduction: 0
-    rangeIncrease: 1
-    extraShots: 0
-  - damageIncrease: 10
-    cooldownReduction: 0
-    rangeIncrease: 0
-    extraShots: 0
-  - damageIncrease: 10
-    cooldownReduction: 0.2
-    rangeIncrease: 1
-    extraShots: 0
+  - upgrades:
+    - statName: damageIncrease
+      value: 5
+    - statName: cooldownReduction
+      value: 0.1
+    - statName: rangeIncrease
+      value: 1
+  - upgrades:
+    - statName: damageIncrease
+      value: 5
+    - statName: cooldownReduction
+      value: 0.05
+    - statName: rangeIncrease
+      value: 1
+  - upgrades:
+    - statName: damageIncrease
+      value: 5
+    - statName: cooldownReduction
+      value: 0
+    - statName: rangeIncrease
+      value: 1
+  - upgrades:
+    - statName: damageIncrease
+      value: 10
+    - statName: cooldownReduction
+      value: 0.05
+    - statName: rangeIncrease
+      value: 1
   range: 3
   areaEffectPrefab: {fileID: 2535584166664152274, guid: 1e7c712df41b72f47b780e6a6fab12c2, type: 3}

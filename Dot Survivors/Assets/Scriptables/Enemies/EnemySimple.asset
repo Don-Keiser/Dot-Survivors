@@ -20,4 +20,4 @@ MonoBehaviour:
   possibleDrops:
   - {fileID: 11400000, guid: 01132698c902b48499ea05ceb92be52c, type: 2}
   dropChances:
-  - 100
+  - 50

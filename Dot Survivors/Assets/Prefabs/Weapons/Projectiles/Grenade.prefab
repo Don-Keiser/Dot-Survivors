@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5181343475283612493}
   - component: {fileID: 5348306797064825179}
   - component: {fileID: 8951446685316709170}
+  - component: {fileID: -4871032104830564586}
   m_Layer: 7
   m_Name: Grenade
   m_TagString: Projectile
@@ -32,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 358.82663}
 --- !u!212 &5348306797064825179
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -101,3 +102,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionEffectPrefab: {fileID: 6045848306457943973, guid: b7c1d79b6f01dd04d807008e7999f3e4, type: 3}
+--- !u!111 &-4871032104830564586
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761922942573321250}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: ea5af88cc9a341c4faefa1106b8cc478, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: ea5af88cc9a341c4faefa1106b8cc478, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0

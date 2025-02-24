@@ -670,8 +670,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 11400000, guid: 827e132b9171ad841a401a6d6cbce2ab, type: 2}
   - {fileID: 11400000, guid: ccf87ab1451e9774c8c8c8889b403b3b, type: 2}
+  - {fileID: 11400000, guid: 827e132b9171ad841a401a6d6cbce2ab, type: 2}
   - {fileID: 11400000, guid: d3b2500a472eb504ab60bc2f7cea0dfc, type: 2}
   - {fileID: 11400000, guid: 5265d7cb77ce1aa459b72d21935ab5fa, type: 2}
   - {fileID: 11400000, guid: a9ff9fec361d97544aaddcb63c80cae7, type: 2}
@@ -1953,7 +1953,7 @@ PrefabInstance:
       objectReference: {fileID: 652287765}
     - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: availableWeapons.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: 'availableWeapons.Array.data[5]'
@@ -2000,9 +2000,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 652287766}
     - target: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: weapons.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: 'weapons.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 7382e15a60901db41bf354521de4537f, type: 2}
+      objectReference: {fileID: 11400000, guid: be79a4764b2999e48a60f7d00daa684f, type: 2}
     - target: {fileID: 7877710158319238251, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: m_Name
       value: Player

@@ -592,7 +592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d9ffe610d675fa4ea829023b02b4a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xpOrbConfig: {fileID: 11400000, guid: 01132698c902b48499ea05ceb92be52c, type: 2}
+  xpOrbConfig: {fileID: 11400000, guid: caf79085d4dd6324cbe8534b745c1e89, type: 2}
   xpAmount: 100
 --- !u!58 &4974746922383320724
 CircleCollider2D:

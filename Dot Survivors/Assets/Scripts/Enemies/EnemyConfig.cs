@@ -4,6 +4,7 @@ using UnityEngine;
 public class EnemyConfig : ScriptableObject
 {
     public string enemyName;
+    public EnemyType enemyType;
     public float health;
     public float moveSpeed;
     public int damage;
@@ -33,4 +34,12 @@ public class EnemyConfig : ScriptableObject
         }
         return null;
     }
+}
+
+public enum EnemyType
+{
+    Simple,
+    SimpleHarder,
+    Fast,
+    Tank
 }

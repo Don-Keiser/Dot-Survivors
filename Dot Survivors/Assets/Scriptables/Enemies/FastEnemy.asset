@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: FastEnemy
   m_EditorClassIdentifier: 
   enemyName: FastEnemy
+  enemyType: 2
   health: 80
   moveSpeed: 5
   damage: 5

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: EnemySimpleHarder
   m_EditorClassIdentifier: 
   enemyName: EnemySimpleHarder
+  enemyType: 1
   health: 150
   moveSpeed: 2
   damage: 10

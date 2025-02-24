@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TankEnemy
   m_EditorClassIdentifier: 
   enemyName: Tank
+  enemyType: 3
   health: 1500
   moveSpeed: 1
   damage: 15

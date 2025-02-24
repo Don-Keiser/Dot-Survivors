@@ -38,20 +38,27 @@ public class Enemy : MonoBehaviour
         MoveTowardsPlayer();
     }
 
-void MoveTowardsPlayer()
-{
-    if (player != null)
+    void MoveTowardsPlayer()
     {
-        Vector2 direction = (player.position - transform.position).normalized;
-        transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+        if (player != null && !isDying)
+        {
+            Vector2 direction = (player.position - transform.position).normalized;
+            RotateTowardsPlayer(direction);
 
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            transform.position = Vector2.MoveTowards(transform.position, player.position, enemyConfig.moveSpeed * Time.deltaTime);
+        }
     }
-}
+
+    private void RotateTowardsPlayer(Vector2 direction)
+    {
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, angle);
+    }
 
     void OnCollisionStay2D(Collision2D collision)
     {
+        if (isDying) return;
+
         if (collision.gameObject.CompareTag("Player"))
         {
             damageTimer += Time.deltaTime;
@@ -107,7 +114,7 @@ void MoveTowardsPlayer()
         }
     }
 
-        private IEnumerator FadeOutAndDestroy(GameObject obj)
+    private IEnumerator FadeOutAndDestroy(GameObject obj)
     {
         SpriteRenderer sr = obj.GetComponent<SpriteRenderer>();
         float fadeDuration = 0.3f;
@@ -150,8 +157,11 @@ void MoveTowardsPlayer()
         isDying = true;
         DropXp();
 
-        float randomSpeed = Random.Range(0.6f, 1.2f);
+        float randomSpeed = Random.Range(0.8f, 1.5f);
         animator.speed = randomSpeed;
+
+        int deathVariant = Random.Range(0, 3);
+        animator.SetInteger("DeathVariant", deathVariant);
 
         animator.SetTrigger("Die");
     }

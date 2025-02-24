@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EMPFieldWeapon", menuName = "ScriptableObjects/EMPFieldWeapon", order = 2)]
 public class EMPFieldWeapon : AreaWeapon
 {
-    private GameObject empInstance;
+    [SerializeField] GameObject empInstance;
 
     public void Activate(GameObject user)
     {
@@ -24,17 +24,16 @@ public class EMPFieldWeapon : AreaWeapon
         
     }
 
-    public override void UpgradeWeapon()
+    protected override string[] GetPossibleUpgradeStats()
     {
-        if (!CanUpgrade()) return;
-
-        WeaponUpgradeStep upgrade = upgradeSteps[level - 1];
-        damage += upgrade.damageIncrease;
-        cooldown -= upgrade.cooldownReduction;
-        range += upgrade.rangeIncrease;
-        level++;
-
-        Debug.Log($"{weaponName} upgraded to Level {level}");
+        return new string[] { "damageIncrease", "cooldownReduction", "rangeIncrease" };
+    }
+    
+    protected override void ApplyUpgrade(WeaponUpgradeStep upgrade)
+    {
+        damage += upgrade.GetUpgradeValue("damageIncrease");
+        cooldown -= upgrade.GetUpgradeValue("cooldownReduction");
+        range += upgrade.GetUpgradeValue("rangeIncrease");
 
         if (empInstance != null)
         {

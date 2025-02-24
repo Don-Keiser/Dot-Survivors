@@ -16,16 +16,15 @@ public abstract class AreaWeapon : WeaponBase
         }
     }
 
-    public override void UpgradeWeapon()
+    protected override string[] GetPossibleUpgradeStats()
     {
-        if (!CanUpgrade()) return;
+        return new string[] { "damageIncrease", "cooldownReduction", "rangeIncrease" };
+    }
 
-        WeaponUpgradeStep upgrade = upgradeSteps[level - 1];
-        damage += upgrade.damageIncrease;
-        cooldown -= upgrade.cooldownReduction;
-        range += upgrade.rangeIncrease;
-        level++;
-
-        Debug.Log($"{weaponName} upgraded to Level {level}");
+        protected override void ApplyUpgrade(WeaponUpgradeStep upgrade)
+    {
+        damage += upgrade.GetUpgradeValue("damageIncrease");
+        cooldown -= upgrade.GetUpgradeValue("cooldownReduction");
+        range += upgrade.GetUpgradeValue("rangeIncrease");
     }
 }

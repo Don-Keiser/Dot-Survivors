@@ -19,18 +19,33 @@ MonoBehaviour:
   damage: 20
   cooldown: 3
   upgradeSteps:
-  - damageIncrease: 10
-    cooldownReduction: 0.5
-    rangeIncrease: 0
-    extraShots: 1
-  - damageIncrease: 20
-    cooldownReduction: 0.5
-    rangeIncrease: 0
-    extraShots: 0
-  - damageIncrease: 20
-    cooldownReduction: 1
-    rangeIncrease: 0
-    extraShots: 1
+  - upgrades:
+    - statName: damageIncrease
+      value: 0
+    - statName: cooldownReduction
+      value: 0.5
+    - statName: rangeIncrease
+      value: 0
+    - statName: extraShots
+      value: 0
+  - upgrades:
+    - statName: damageIncrease
+      value: 15
+    - statName: cooldownReduction
+      value: 0.5
+    - statName: rangeIncrease
+      value: 1
+    - statName: extraShots
+      value: 1
+  - upgrades:
+    - statName: damageIncrease
+      value: 10
+    - statName: cooldownReduction
+      value: 0.8
+    - statName: rangeIncrease
+      value: 0
+    - statName: extraShots
+      value: 1
   projectilePrefab: {fileID: 4247204747336912010, guid: 762552ace63437049b6ccf5a8d274ead, type: 3}
   isPiercing: 1
   range: 6

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3072552122704842959}
   - component: {fileID: 3926397292519080992}
   - component: {fileID: 3665750002475464370}
+  - component: {fileID: -3647429250587904070}
   m_Layer: 8
   m_Name: FastEnemy
   m_TagString: Enemy
@@ -77,6 +78,10 @@ MonoBehaviour:
   enemyConfig: {fileID: 11400000, guid: cecc3131be5ddee47b1f862a64327618, type: 2}
   health: 50
   damage: 10
+  spriteRenderer: {fileID: 3715683755340657357}
+  hitEffectPrefab: {fileID: 7387746630755397446, guid: 44efa836d74573941894c72be0a12208, type: 3}
+  hitColor: {r: 0.19130436, g: 0.8, b: 0.5008696, a: 1}
+  animator: {fileID: -3647429250587904070}
 --- !u!58 &3665750002475464370
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -113,6 +118,28 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!95 &-3647429250587904070
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075620189348619413}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7841388be0623394fae619f35b3d8c0b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4567132028913356277
 GameObject:
   m_ObjectHideFlags: 0

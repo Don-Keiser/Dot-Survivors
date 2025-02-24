@@ -43,6 +43,7 @@ public class PlayerStats : MonoBehaviour
         currentHealth -= damage;
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
 
+        CameraShake.Instance?.Shake(0.2f, 0.15f);
         StartCoroutine(FlashRed());
         SpawnBloodParticles();
 
@@ -56,10 +57,15 @@ public class PlayerStats : MonoBehaviour
     {
         if (spriteRenderer != null)
         {
-            Color originalColor = spriteRenderer.color;
+            Color originalColor = Color.white;
+
+            // If already red, reset before applying again
+            if (spriteRenderer.color == damageColor)
+                spriteRenderer.color = originalColor; 
+
             spriteRenderer.color = damageColor;
-            yield return new WaitForSeconds(0.2f);
-            spriteRenderer.color = originalColor;
+            yield return new WaitForSeconds(0.1f); 
+            spriteRenderer.color = originalColor; // Reset to original color
         }
     }
 
@@ -67,7 +73,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (bloodParticlePrefab != null)
         {
-            for (int i = 0; i < 10; i++) // Number of blood particles
+            for (int i = 0; i < 8; i++)
             {
                 Vector2 spawnPos = (Vector2)transform.position + UnityEngine.Random.insideUnitCircle * 0.2f;
                 GameObject blood = Instantiate(bloodParticlePrefab, spawnPos, Quaternion.identity);

@@ -4,6 +4,7 @@ using UnityEngine;
 public class PassiveUpgrade : ScriptableObject
 {
     public string passiveName;
+    public PassiveType passiveType;
     public Sprite passiveIcon;
     public int level = 1;
     public int maxLevel = 5;
@@ -27,4 +28,14 @@ public class PassiveUpgrade : ScriptableObject
     {
         return Instantiate(this);
     }
+}
+
+public enum PassiveType
+{
+    IronCore,
+    RegenerativeShell,
+    BerserkerRage,
+    EvasiveInstinct,
+    SharpenedReflexes,
+    BattleHardened
 }

@@ -4,25 +4,35 @@ using System.Collections;
 
 public class PlayerStats : MonoBehaviour
 {
+    [Header("Health")]
     public int baseMaxHealth = 100;
     public int maxHealth;
     public int currentHealth { get; private set; }
+    [SerializeField] float regenRate = 0f;
+
+    [Header("Experience")]
     public int level { get; private set; }
     public int experiencePoints { get; private set; }
     public int experienceToNextLevel = 100;
 
-    [SerializeField] float regenRate = 0f;
-
+    [Header("Movement")]
     public float baseMoveSpeed = 5f;
     private float moveSpeed;
 
+    // Events
     public event Action<int, int> OnHealthChanged;
     public event Action<int, int> OnXPChanged;
     public event Action<int> OnLevelUp;
 
+    [Header("Visuals")]
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] GameObject bloodParticlePrefab;
     [SerializeField] Color damageColor;
+
+    // Constants
+    private static readonly float FlashDuration = 0.1f;
+    private static readonly float FadeDuration = 0.3f;
+    private static readonly int BloodParticleCount = 8;
 
     private void Awake()
     {
@@ -77,13 +87,9 @@ public class PlayerStats : MonoBehaviour
         {
             Color originalColor = Color.white;
 
-            // If already red, reset before applying again
-            if (spriteRenderer.color == damageColor)
-                spriteRenderer.color = originalColor; 
-
             spriteRenderer.color = damageColor;
-            yield return new WaitForSeconds(0.1f); 
-            spriteRenderer.color = originalColor; // Reset to original color
+            yield return new WaitForSeconds(FlashDuration);
+            spriteRenderer.color = originalColor;
         }
     }
 
@@ -91,7 +97,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (bloodParticlePrefab != null)
         {
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < BloodParticleCount; i++)
             {
                 Vector2 spawnPos = (Vector2)transform.position + UnityEngine.Random.insideUnitCircle * 0.2f;
                 GameObject blood = Instantiate(bloodParticlePrefab, spawnPos, Quaternion.identity);
@@ -108,16 +114,15 @@ public class PlayerStats : MonoBehaviour
     private IEnumerator FadeOutAndDestroy(GameObject obj)
     {
         SpriteRenderer sr = obj.GetComponent<SpriteRenderer>();
-        float fadeDuration = 0.3f;
         float elapsedTime = 0f;
 
-        while (elapsedTime < fadeDuration)
+        while (elapsedTime < FadeDuration)
         {
             elapsedTime += Time.deltaTime;
             if (sr != null)
             {
                 Color c = sr.color;
-                c.a = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
+                c.a = Mathf.Lerp(1f, 0f, elapsedTime / FadeDuration);
                 sr.color = c;
             }
             yield return null;

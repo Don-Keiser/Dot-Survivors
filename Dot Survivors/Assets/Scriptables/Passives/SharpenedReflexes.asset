@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: SharpenedReflexes
   m_EditorClassIdentifier: 
   passiveName: Sharpened Reflexes
+  passiveType: 4
   passiveIcon: {fileID: 4208262629212360823, guid: 497bfe2950bb5104493d61aed82ae5b2, type: 3}
+  level: 1
   maxLevel: 5
   baseValue: 1.1
   increasePerLevel: 0.1

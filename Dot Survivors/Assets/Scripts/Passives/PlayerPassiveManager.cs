@@ -7,6 +7,22 @@ public class PlayerPassiveManager : MonoBehaviour
     public int maxPassives = 6;
     private HashSet<string> acquiredPassiveNames = new HashSet<string>();
 
+    [SerializeField] PassiveHotbarUI passiveHotbarUI;
+
+    private void Start() 
+    {
+        passiveHotbarUI.InitializeHotbar(maxPassives);
+        List<PassiveUpgrade> clonedPassives = new List<PassiveUpgrade>();
+        foreach (var passive in acquiredPassives)
+        {
+            PassiveUpgrade passiveInstance = passive.Clone();
+            clonedPassives.Add(passiveInstance);
+            acquiredPassiveNames.Add(passiveInstance.passiveName);
+        }
+        acquiredPassives = clonedPassives;
+        passiveHotbarUI.UpdateHotbar(acquiredPassives);
+    }
+
     public void AddPassive(PassiveUpgrade newPassive)
     {
         if (acquiredPassiveNames.Contains(newPassive.passiveName))
@@ -26,6 +42,8 @@ public class PlayerPassiveManager : MonoBehaviour
         acquiredPassiveNames.Add(passiveInstance.passiveName);
 
         PlayerPassives.Instance.ApplyPassiveUpgrade(passiveInstance);
+
+        passiveHotbarUI.UpdateHotbar(acquiredPassives);
     }
 
     public void UpgradePassive(int passiveIndex)

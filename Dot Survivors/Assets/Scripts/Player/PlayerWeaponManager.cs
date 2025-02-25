@@ -8,7 +8,7 @@ public class PlayerWeaponManager : MonoBehaviour
     public Transform firePoint;
     private HashSet<string> acquiredWeaponNames = new HashSet<string>();
 
-    public WeaponHotbarUI hotbarUI;
+    [SerializeField] WeaponHotbarUI hotbarUI;
 
     private void Start()
     {

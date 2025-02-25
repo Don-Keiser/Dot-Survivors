@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: BerserkerRage
   m_EditorClassIdentifier: 
   passiveName: Berserker Rage
+  passiveType: 2
   passiveIcon: {fileID: 9132561136223709518, guid: e2f857340d68be048991e302db41a1ae, type: 3}
+  level: 1
   maxLevel: 5
   baseValue: 1.1
   increasePerLevel: 0.1

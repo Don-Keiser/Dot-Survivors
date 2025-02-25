@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: RegenerativeShell
   m_EditorClassIdentifier: 
   passiveName: Regenerative Shell
+  passiveType: 1
   passiveIcon: {fileID: 2482577957003703231, guid: 54fe408e199ed8348a4176d2c00bbfd5, type: 3}
   level: 1
   maxLevel: 5

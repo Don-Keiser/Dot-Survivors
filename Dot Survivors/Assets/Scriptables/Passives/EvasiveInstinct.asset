@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: EvasiveInstinct
   m_EditorClassIdentifier: 
   passiveName: Evasive Instinct
+  passiveType: 3
   passiveIcon: {fileID: -4121333647028359248, guid: 7c2a3900192d8f7469a555eee15045c0, type: 3}
   level: 1
   maxLevel: 5

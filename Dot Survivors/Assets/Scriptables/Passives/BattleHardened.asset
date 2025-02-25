@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: BattleHardened
   m_EditorClassIdentifier: 
   passiveName: Battle Hardened
+  passiveType: 5
   passiveIcon: {fileID: -8295225955887790645, guid: aaa54001569a26643bb0ff372404d761, type: 3}
   level: 1
   maxLevel: 5

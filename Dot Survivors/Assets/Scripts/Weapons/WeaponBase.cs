@@ -8,7 +8,7 @@ public abstract class WeaponBase : ScriptableObject
     public int level = 1;
     public int maxLevel = 5;
 
-    public float damage;
+    public float baseDamage;
     public float cooldown;
 
     [SerializeField]
@@ -57,5 +57,10 @@ public abstract class WeaponBase : ScriptableObject
     public virtual WeaponBase Clone()
     {
         return Instantiate(this);
+    }
+
+    public float GetModifiedDamage()
+    {
+        return baseDamage * PlayerPassives.Instance.GetDamageMultiplier();
     }
 }

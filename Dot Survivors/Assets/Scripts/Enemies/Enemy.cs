@@ -19,10 +19,23 @@ public class Enemy : MonoBehaviour
     [SerializeField] Animator animator;
     private bool isDying = false;
 
+    private static readonly float FlashDuration = 0.1f;
+    private static readonly float FadeDuration = 0.3f;
+    private static readonly float MinRandomSpeed = 0.8f;
+    private static readonly float MaxRandomSpeed = 1.5f;
+    private static readonly int DeathVariants = 3;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerStats = player.GetComponent<PlayerStats>();
+        if (player == null || playerStats == null)
+        {
+            Debug.LogError("Player or PlayerStats not found!");
+            enabled = false;
+            return;
+        }
+
         damageTimer = 0f;
         animator = GetComponent<Animator>();
 
@@ -83,10 +96,10 @@ public class Enemy : MonoBehaviour
         if (isDying) return;
 
         health -= damageAmount;
+        StartCoroutine(FlashRed());
 
         if (health > 0)
         {
-            StartCoroutine(FlashRed());
             SpawnHitEffect();
         }
         else
@@ -117,16 +130,15 @@ public class Enemy : MonoBehaviour
     private IEnumerator FadeOutAndDestroy(GameObject obj)
     {
         SpriteRenderer sr = obj.GetComponent<SpriteRenderer>();
-        float fadeDuration = 0.3f;
         float elapsedTime = 0f;
 
-        while (elapsedTime < fadeDuration)
+        while (elapsedTime < FadeDuration)
         {
             elapsedTime += Time.deltaTime;
             if (sr != null)
             {
                 Color c = sr.color;
-                c.a = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
+                c.a = Mathf.Lerp(1f, 0f, elapsedTime / FadeDuration);
                 sr.color = c;
             }
             yield return null;
@@ -141,11 +153,8 @@ public class Enemy : MonoBehaviour
         {
             Color originalColor = Color.white;
 
-            if (spriteRenderer.color == Color.red)
-                spriteRenderer.color = originalColor; 
-
             spriteRenderer.color = Color.red;
-            yield return new WaitForSeconds(0.1f); 
+            yield return new WaitForSeconds(FlashDuration);
             spriteRenderer.color = originalColor;
         }
     }
@@ -157,10 +166,10 @@ public class Enemy : MonoBehaviour
         isDying = true;
         DropXp();
 
-        float randomSpeed = Random.Range(0.8f, 1.5f);
+        float randomSpeed = Random.Range(MinRandomSpeed, MaxRandomSpeed);
         animator.speed = randomSpeed;
 
-        int deathVariant = Random.Range(0, 3);
+        int deathVariant = Random.Range(0, DeathVariants);
         animator.SetInteger("DeathVariant", deathVariant);
 
         animator.SetTrigger("Die");

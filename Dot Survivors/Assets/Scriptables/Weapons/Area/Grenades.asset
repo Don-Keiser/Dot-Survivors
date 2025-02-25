@@ -15,25 +15,39 @@ MonoBehaviour:
   weaponName: Grenades
   weaponIcon: {fileID: 8042637753007623959, guid: eee5c1bec59bd6049b3a92c496752088, type: 3}
   level: 1
-  maxLevel: 3
-  damage: 30
+  maxLevel: 4
+  baseDamage: 30
   cooldown: 3
   upgradeSteps:
   - upgrades:
     - statName: damageIncrease
-      value: 20
+      value: 10
     - statName: cooldownReduction
       value: 0.5
     - statName: explosionRadiusIncrease
-      value: 0.25
+      value: 0.2
+    - statName: extraGrenades
+      value: 1
   - upgrades:
     - statName: damageIncrease
-      value: 20
+      value: 5
     - statName: cooldownReduction
       value: 0.5
     - statName: explosionRadiusIncrease
-      value: 0.25
+      value: 0.1
+    - statName: extraGrenades
+      value: 1
+  - upgrades:
+    - statName: damageIncrease
+      value: 0
+    - statName: cooldownReduction
+      value: 0.5
+    - statName: explosionRadiusIncrease
+      value: 0.1
+    - statName: extraGrenades
+      value: 1
   grenadePrefab: {fileID: 761922942573321250, guid: cd439f173574cd64f99ca16dcb242fa7, type: 3}
-  throwRange: 5
-  explosionRadius: 1
-  grenadeSpeed: 5
+  throwRange: 3
+  explosionRadius: 0.65
+  grenadeSpeed: 5.5
+  grenadeCount: 1

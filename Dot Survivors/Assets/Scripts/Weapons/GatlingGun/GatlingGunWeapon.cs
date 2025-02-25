@@ -27,7 +27,7 @@ public class GatlingGunWeapon : WeaponBase
         Quaternion rotation = firePoint.rotation;
         GameObject bullet = Instantiate(projectilePrefab, firePoint.position, rotation);
         bullet.GetComponent<Rigidbody2D>().linearVelocity = bullet.transform.right * 10f;
-        bullet.GetComponent<Projectile>().damage = damage;
+        bullet.GetComponent<Projectile>().damage = GetModifiedDamage();
     }
 
     protected override string[] GetPossibleUpgradeStats()
@@ -37,7 +37,7 @@ public class GatlingGunWeapon : WeaponBase
 
     protected override void ApplyUpgrade(WeaponUpgradeStep upgrade)
     {
-        damage += upgrade.GetUpgradeValue("damageIncrease");
+        baseDamage += upgrade.GetUpgradeValue("damageIncrease");
         cooldown -= upgrade.GetUpgradeValue("cooldownReduction");
         fireRate *= upgrade.GetUpgradeValue("fireRateIncrease");
         rotationSpeed += upgrade.GetUpgradeValue("rotationSpeedIncrease");
@@ -47,7 +47,7 @@ public class GatlingGunWeapon : WeaponBase
     {
         GatlingGunWeapon copy = Instantiate(this);
         copy.level = this.level;
-        copy.damage = this.damage;
+        copy.baseDamage = this.baseDamage;
         copy.cooldown = this.cooldown;
         copy.fireRate = this.fireRate;
         return copy;

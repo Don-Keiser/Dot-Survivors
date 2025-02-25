@@ -25,7 +25,7 @@ public class ProjectileWeapon : WeaponBase
                     float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                     GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.Euler(new Vector3(0, 0, angle)));
                     projectile.GetComponent<Rigidbody2D>().linearVelocity = direction * 10f;
-                    projectile.GetComponent<Projectile>().damage = damage;
+                    projectile.GetComponent<Projectile>().damage = GetModifiedDamage();
                     projectile.GetComponent<Projectile>().isPiercing = isPiercing;
                 }
             }
@@ -42,7 +42,7 @@ public class ProjectileWeapon : WeaponBase
 
     protected override void ApplyUpgrade(WeaponUpgradeStep upgrade)
     {
-        damage += upgrade.GetUpgradeValue("damageIncrease");
+        baseDamage += upgrade.GetUpgradeValue("damageIncrease");
         cooldown -= upgrade.GetUpgradeValue("cooldownReduction");
         range += upgrade.GetUpgradeValue("rangeIncrease");
         consecutiveShots += (int)upgrade.GetUpgradeValue("extraShots");
@@ -77,7 +77,7 @@ public class ProjectileWeapon : WeaponBase
     {
         ProjectileWeapon copy = Instantiate(this);
         copy.level = this.level;
-        copy.damage = this.damage;
+        copy.baseDamage = this.baseDamage;
         copy.cooldown = this.cooldown;
         copy.range = this.range;
         copy.consecutiveShots = this.consecutiveShots;

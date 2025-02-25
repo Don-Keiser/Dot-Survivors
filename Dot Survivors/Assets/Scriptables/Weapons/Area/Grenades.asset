@@ -16,7 +16,7 @@ MonoBehaviour:
   weaponIcon: {fileID: 8042637753007623959, guid: eee5c1bec59bd6049b3a92c496752088, type: 3}
   level: 1
   maxLevel: 4
-  damage: 30
+  baseDamage: 30
   cooldown: 3
   upgradeSteps:
   - upgrades:

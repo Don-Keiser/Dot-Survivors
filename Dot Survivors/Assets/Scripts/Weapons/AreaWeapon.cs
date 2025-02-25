@@ -23,7 +23,7 @@ public abstract class AreaWeapon : WeaponBase
 
         protected override void ApplyUpgrade(WeaponUpgradeStep upgrade)
     {
-        damage += upgrade.GetUpgradeValue("damageIncrease");
+        baseDamage += upgrade.GetUpgradeValue("damageIncrease");
         cooldown -= upgrade.GetUpgradeValue("cooldownReduction");
         range += upgrade.GetUpgradeValue("rangeIncrease");
     }

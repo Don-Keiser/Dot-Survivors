@@ -52,7 +52,7 @@ public class PistolWeapon : WeaponBase
 
                 GameObject bullet = Instantiate(projectilePrefab, spawnPosition, Quaternion.Euler(0, 0, angle));
                 bullet.GetComponent<Rigidbody2D>().linearVelocity = fireDirection * bulletSpeed;
-                bullet.GetComponent<Projectile>().damage = damage;
+                bullet.GetComponent<Projectile>().damage = GetModifiedDamage();
             }
 
             yield return new WaitForSeconds(rowSpawnDelay); // Delay before spawning the next row
@@ -78,7 +78,7 @@ public class PistolWeapon : WeaponBase
 
     protected override void ApplyUpgrade(WeaponUpgradeStep upgrade)
     {
-        damage += upgrade.GetUpgradeValue("damageIncrease");
+        baseDamage += upgrade.GetUpgradeValue("damageIncrease");
         cooldown -= upgrade.GetUpgradeValue("cooldownReduction");
         bulletCount += (int)upgrade.GetUpgradeValue("extraBullets");
     }
@@ -87,7 +87,7 @@ public class PistolWeapon : WeaponBase
     {
         PistolWeapon copy = Instantiate(this);
         copy.level = this.level;
-        copy.damage = this.damage;
+        copy.baseDamage = this.baseDamage;
         copy.cooldown = this.cooldown;
         copy.bulletCount = this.bulletCount;
         return copy;

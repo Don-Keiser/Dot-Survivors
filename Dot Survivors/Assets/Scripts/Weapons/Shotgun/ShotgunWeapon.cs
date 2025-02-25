@@ -37,7 +37,7 @@ public class ShotgunWeapon : WeaponBase
 
             GameObject bullet = Instantiate(projectilePrefab, firePoint.position, bulletRotation);
             bullet.GetComponent<Rigidbody2D>().linearVelocity = bullet.transform.right * bulletSpeed;
-            bullet.GetComponent<Projectile>().damage = damage;
+            bullet.GetComponent<Projectile>().damage = GetModifiedDamage();
         }
     }
 
@@ -68,7 +68,7 @@ public class ShotgunWeapon : WeaponBase
 
     protected override void ApplyUpgrade(WeaponUpgradeStep upgrade)
     {
-        damage += upgrade.GetUpgradeValue("damageIncrease");
+        baseDamage += upgrade.GetUpgradeValue("damageIncrease");
         cooldown -= upgrade.GetUpgradeValue("cooldownReduction");
         spreadAngle += upgrade.GetUpgradeValue("spreadIncrease");
         pellets += (int)upgrade.GetUpgradeValue("morePellets");
@@ -78,7 +78,7 @@ public class ShotgunWeapon : WeaponBase
     {
         ShotgunWeapon copy = Instantiate(this);
         copy.level = this.level;
-        copy.damage = this.damage;
+        copy.baseDamage = this.baseDamage;
         copy.cooldown = this.cooldown;
         copy.spreadAngle = this.spreadAngle;
         copy.pellets = this.pellets;

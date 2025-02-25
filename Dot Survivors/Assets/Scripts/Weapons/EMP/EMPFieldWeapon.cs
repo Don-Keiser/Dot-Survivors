@@ -13,7 +13,7 @@ public class EMPFieldWeapon : AreaWeapon
             empInstance.transform.SetParent(user.transform);
 
             EMPAura empAura = empInstance.GetComponent<EMPAura>();
-            empAura.damage = damage;
+            empAura.damage = GetModifiedDamage();
             empAura.cooldown = cooldown;
             empAura.SetRange(range);
         }
@@ -31,14 +31,14 @@ public class EMPFieldWeapon : AreaWeapon
     
     protected override void ApplyUpgrade(WeaponUpgradeStep upgrade)
     {
-        damage += upgrade.GetUpgradeValue("damageIncrease");
+        baseDamage += upgrade.GetUpgradeValue("damageIncrease");
         cooldown -= upgrade.GetUpgradeValue("cooldownReduction");
         range += upgrade.GetUpgradeValue("rangeIncrease");
 
         if (empInstance != null)
         {
             EMPAura empAura = empInstance.GetComponent<EMPAura>();
-            empAura.damage = damage;
+            empAura.damage = GetModifiedDamage();
             empAura.cooldown = cooldown;
             empAura.SetRange(range);
         }
@@ -48,7 +48,7 @@ public class EMPFieldWeapon : AreaWeapon
     {
         EMPFieldWeapon copy = Instantiate(this);
         copy.level = this.level;
-        copy.damage = this.damage;
+        copy.baseDamage = this.baseDamage;
         copy.cooldown = this.cooldown;
         copy.range = this.range;
         return copy;

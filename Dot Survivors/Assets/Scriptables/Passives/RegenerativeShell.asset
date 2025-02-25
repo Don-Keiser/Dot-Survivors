@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22f08db05f5a94d4390ad9cf13a9d04f, type: 3}
+  m_Name: RegenerativeShell
+  m_EditorClassIdentifier: 
+  passiveName: Regenerative Shell
+  passiveIcon: {fileID: 2482577957003703231, guid: 54fe408e199ed8348a4176d2c00bbfd5, type: 3}
+  level: 1
+  maxLevel: 5
+  baseValue: 0.2
+  increasePerLevel: 0.4

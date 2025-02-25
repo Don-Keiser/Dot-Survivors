@@ -30,7 +30,7 @@ public class GrenadeWeapon : WeaponBase
         {
             Vector2 targetPoint = GetClockPosition(firePoint.position, hour);
             GameObject grenade = Instantiate(grenadePrefab, firePoint.position, Quaternion.identity);
-            grenade.GetComponent<Grenade>().Initialize(targetPoint, explosionRadius, damage, grenadeSpeed);
+            grenade.GetComponent<Grenade>().Initialize(targetPoint, explosionRadius, GetModifiedDamage(), grenadeSpeed);
         }
     }
 
@@ -67,7 +67,7 @@ public class GrenadeWeapon : WeaponBase
 
     protected override void ApplyUpgrade(WeaponUpgradeStep upgrade)
     {
-        damage += upgrade.GetUpgradeValue("damageIncrease");
+        baseDamage += upgrade.GetUpgradeValue("damageIncrease");
         cooldown -= upgrade.GetUpgradeValue("cooldownReduction");
         explosionRadius += upgrade.GetUpgradeValue("explosionRadiusIncrease");
         grenadeCount += (int)upgrade.GetUpgradeValue("extraGrenades");
@@ -77,7 +77,7 @@ public class GrenadeWeapon : WeaponBase
     {
         GrenadeWeapon copy = Instantiate(this);
         copy.level = this.level;
-        copy.damage = this.damage;
+        copy.baseDamage = this.baseDamage;
         copy.cooldown = this.cooldown;
         copy.explosionRadius = this.explosionRadius;
         copy.grenadeCount = this.grenadeCount;

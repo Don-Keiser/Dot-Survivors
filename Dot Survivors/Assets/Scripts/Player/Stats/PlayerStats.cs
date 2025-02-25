@@ -4,13 +4,17 @@ using System.Collections;
 
 public class PlayerStats : MonoBehaviour
 {
-    public int maxHealth = 100;
+    public int baseMaxHealth = 100;
+    public int maxHealth;
     public int currentHealth { get; private set; }
     public int level { get; private set; }
     public int experiencePoints { get; private set; }
     public int experienceToNextLevel = 100;
 
-    public float moveSpeed = 5f;
+    [SerializeField] float regenRate = 0f;
+
+    public float baseMoveSpeed = 5f;
+    private float moveSpeed;
 
     public event Action<int, int> OnHealthChanged;
     public event Action<int, int> OnXPChanged;
@@ -22,9 +26,23 @@ public class PlayerStats : MonoBehaviour
 
     private void Awake()
     {
+        maxHealth = baseMaxHealth;
         currentHealth = maxHealth;
+        moveSpeed = baseMoveSpeed;
         level = 1;
         experiencePoints = 0;
+
+        StartCoroutine(HealOverTime());
+    }
+
+    public void ApplyPassiveEffects(float maxHealthMultiplier, float newRegenRate, float moveSpeedMultiplier)
+    {
+        maxHealth = Mathf.RoundToInt(baseMaxHealth * maxHealthMultiplier);
+        regenRate = newRegenRate;
+        moveSpeed = baseMoveSpeed * moveSpeedMultiplier;
+
+        currentHealth = Mathf.Min(currentHealth, maxHealth);
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
 
     public void GainXP(int xp)
@@ -40,7 +58,7 @@ public class PlayerStats : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
+        currentHealth -= Mathf.RoundToInt(damage * PlayerPassives.Instance.GetDamageResistance());
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
 
         CameraShake.Instance?.Shake(0.2f, 0.15f);
@@ -108,10 +126,22 @@ public class PlayerStats : MonoBehaviour
         Destroy(obj);
     }
 
-    public void Heal(int amount)
+    public void Heal(float amount)
     {
-        currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
+        currentHealth = Mathf.Min(currentHealth + Mathf.RoundToInt(amount), maxHealth);
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
+    }
+
+    private IEnumerator HealOverTime()
+    {
+        while (true)
+        {
+            if (regenRate > 0)
+            {
+                Heal(regenRate);
+            }
+            yield return new WaitForSeconds(1f);
+        }
     }
 
     private void LevelUp()
@@ -122,6 +152,18 @@ public class PlayerStats : MonoBehaviour
 
         OnLevelUp?.Invoke(level);
         OnXPChanged?.Invoke(experiencePoints, experienceToNextLevel);
+    }
+
+    public void SetMaxHealth(int newMax)
+    {
+        maxHealth = newMax;
+        currentHealth = maxHealth;
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
+    }
+
+    public void SetRegenRate(float newRegen)
+    {
+        regenRate = newRegen;
     }
 
     private void Die()

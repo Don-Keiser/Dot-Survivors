@@ -4,7 +4,9 @@ using System.Linq;
 public class LevelUpManager : MonoBehaviour
 {
     public PlayerWeaponManager weaponManager;
+    public PlayerPassiveManager passiveManager;
     public WeaponBase[] availableWeapons;
+    public PassiveUpgrade[] availablePassives;
     public LevelUpUI levelUpUI;
 
     private int pendingLevelUps = 0;
@@ -44,7 +46,6 @@ public class LevelUpManager : MonoBehaviour
             .FirstOrDefault();
 
         WeaponBase weaponToAcquire = null;
-
         if (weaponManager.weapons.Count < weaponManager.maxWeapons)
         {
             weaponToAcquire = availableWeapons
@@ -53,7 +54,16 @@ public class LevelUpManager : MonoBehaviour
                 .FirstOrDefault();
         }
 
-        levelUpUI.Initialize(weaponManager, weaponToUpgrade, weaponToAcquire, OnLevelUpChoiceMade);
+        PassiveUpgrade passiveToUpgrade = passiveManager.acquiredPassives.Count > 0
+            ? passiveManager.acquiredPassives.OrderBy(_ => Random.value).FirstOrDefault()
+            : null;
+
+        PassiveUpgrade passiveToAcquire = availablePassives
+            .Where(p => !passiveManager.acquiredPassives.Any(acquired => acquired.passiveName == p.passiveName))
+            .OrderBy(_ => Random.value)
+            .FirstOrDefault();
+
+        levelUpUI.Initialize(weaponManager, passiveManager, weaponToUpgrade, weaponToAcquire, passiveToUpgrade, passiveToAcquire, OnLevelUpChoiceMade);
     }
 
     private void OnLevelUpChoiceMade()

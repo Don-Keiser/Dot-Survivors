@@ -1956,6 +1956,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: 'availableWeapons.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1bc19e00be8bc1346923288f55a4dd79, type: 2}
+    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: 'availableWeapons.Array.data[5]'
       value: 
       objectReference: {fileID: 11400000, guid: be79a4764b2999e48a60f7d00daa684f, type: 2}
@@ -2006,7 +2010,7 @@ PrefabInstance:
     - target: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: 'weapons.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 1bc19e00be8bc1346923288f55a4dd79, type: 2}
+      objectReference: {fileID: 11400000, guid: 7382e15a60901db41bf354521de4537f, type: 2}
     - target: {fileID: 7877710158319238251, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: m_Name
       value: Player

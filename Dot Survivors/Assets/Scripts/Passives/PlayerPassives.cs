@@ -13,9 +13,23 @@ public class PlayerPassives : MonoBehaviour
     private float moveSpeedMultiplier = 1f;
     private float projectileSpeedMultiplier = 1f;
     private float damageResistance = 1f;
+    private float afterimageCooldown = Mathf.Infinity;
+    private float afterimageDuration = 0.5f;
 
     private PlayerStats playerStats;
     private PlayerMovement playerMovement;
+
+    [SerializeField] SpriteRenderer playerSprite;
+
+    [Header("Iron Core Visuals")]
+    public SpriteRenderer ironCoreRenderer;
+    public Sprite[] ironCoreSprites;
+
+    [Header("Battle Hardened Visuals")]
+    public Sprite[] battleHardenedSprites;
+
+    [Header("Evasive Instinct Visuals")]
+    public GameObject afterimagePrefab;
 
     private void Awake()
     {
@@ -29,6 +43,19 @@ public class PlayerPassives : MonoBehaviour
         {
             Debug.LogError("PlayerStats or PlayerMovement component not found!");
             enabled = false;
+        }
+    }
+
+    private void Update()
+    {
+        if (moveSpeedMultiplier > 1f) 
+        {
+            afterimageCooldown -= Time.deltaTime;
+            if (afterimageCooldown <= 0f)
+            {
+                SpawnAfterimage();
+                afterimageCooldown = afterimageDuration; // Correct cooldown reset
+            }
         }
     }
 
@@ -49,7 +76,7 @@ public class PlayerPassives : MonoBehaviour
         switch (passive.passiveType)
         {
             case PassiveType.IronCore:
-                ApplyIronCore(upgradeValue); 
+                ApplyIronCore(upgradeValue, level); 
                 break;
             case PassiveType.RegenerativeShell:
                 ApplyRegenerativeShell(upgradeValue);
@@ -58,21 +85,27 @@ public class PlayerPassives : MonoBehaviour
                 ApplyBerserkerRage(upgradeValue);
                 break;
             case PassiveType.EvasiveInstinct:
-                ApplyEvasiveInstinct(upgradeValue);
+                ApplyEvasiveInstinct(upgradeValue, level);
                 break;
             case PassiveType.SharpenedReflexes:
                 ApplySharpenedReflexes(upgradeValue);
                 break;
             case PassiveType.BattleHardened:
-                ApplyBattleHardened(passive, upgradeValue, level);
+                ApplyBattleHardened(passive, level);
                 break;
         }
     }
 
-    private void ApplyIronCore(float upgradeValue)
+    private void ApplyIronCore(float upgradeValue, int level)
     {
         maxHealthMultiplier = upgradeValue;
         playerStats.SetMaxHealth(Mathf.RoundToInt(playerStats.baseMaxHealth * maxHealthMultiplier));
+
+        if (ironCoreRenderer != null && ironCoreSprites.Length > level -1) 
+        {
+            ironCoreRenderer.sprite = ironCoreSprites[level - 1];
+            ironCoreRenderer.enabled = true;
+        }
     }
 
     private void ApplyRegenerativeShell(float upgradeValue)
@@ -86,10 +119,14 @@ public class PlayerPassives : MonoBehaviour
         globalDamageMultiplier = upgradeValue;
     }
 
-    private void ApplyEvasiveInstinct(float upgradeValue)
+    private void ApplyEvasiveInstinct(float upgradeValue, int level)
     {
         moveSpeedMultiplier = upgradeValue;
         playerMovement.SetMoveSpeed(playerMovement.baseMoveSpeed * moveSpeedMultiplier);
+
+        // Afterimage duration decreases more at higher levels
+        afterimageDuration = Mathf.Max(0.5f / (moveSpeedMultiplier * level), 0.1f);
+        afterimageCooldown = afterimageDuration; // Maintain consistent frequency
     }
 
     private void ApplySharpenedReflexes(float upgradeValue)
@@ -97,9 +134,33 @@ public class PlayerPassives : MonoBehaviour
         projectileSpeedMultiplier = upgradeValue;
     }
 
-    private void ApplyBattleHardened(PassiveUpgrade passive, float upgradeValue, int level)
+    private void ApplyBattleHardened(PassiveUpgrade passive, int level)
     {
         damageResistance = 1 * (passive.baseValue - (passive.increasePerLevel * (level - 1)));
+
+        if (playerSprite != null && battleHardenedSprites.Length > level -1) 
+        {
+            playerSprite.sprite = battleHardenedSprites[level - 1];
+        }
+    }
+
+    private void SpawnAfterimage()
+    {
+        if (afterimagePrefab == null || playerSprite == null) return;
+
+        GameObject afterimage = Instantiate(afterimagePrefab, transform.position, transform.rotation);
+        AfterImage afterimageScript = afterimage.GetComponent<AfterImage>();
+
+        if (afterimageScript != null)
+        {
+            afterimageScript.Initialize(
+                playerSprite.sprite, 
+                ironCoreRenderer != null ? ironCoreRenderer.sprite : null, 
+                ironCoreRenderer != null && ironCoreRenderer.enabled
+            );
+        }
+
+        Destroy(afterimage, 0.5f);
     }
 
     public float GetDamageMultiplier() => globalDamageMultiplier;

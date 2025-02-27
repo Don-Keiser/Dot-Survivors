@@ -9,7 +9,7 @@ public class PistolWeapon : WeaponBase
     [SerializeField] private int bulletCount = 2;
     [SerializeField] private float bulletSpeed = 10f;
     [SerializeField] private float bulletSpacing = 0.3f; 
-    [SerializeField] private float rowSpawnDelay = 0.1f; // Delay between row spawning (adjustable)
+    [SerializeField] private float rowSpawnDelay = 0.1f;
 
     private float cooldownTimer = 0f;
 
@@ -33,7 +33,7 @@ public class PistolWeapon : WeaponBase
         if (playerMovement == null) yield break;
 
         Vector2 fireDirection = GetCardinalDirection(playerMovement.lastMovementDirection);
-        Vector2 perpendicularOffset = new Vector2(-fireDirection.y, fireDirection.x); // 90-degree offset
+        Vector2 perpendicularOffset = new Vector2(-fireDirection.y, fireDirection.x);
 
         float angle = Mathf.Atan2(fireDirection.y, fireDirection.x) * Mathf.Rad2Deg;
 
@@ -51,11 +51,11 @@ public class PistolWeapon : WeaponBase
                 Vector2 spawnPosition = rowStartPos + perpendicularOffset * offsetAmount;
 
                 GameObject bullet = Instantiate(projectilePrefab, spawnPosition, Quaternion.Euler(0, 0, angle));
-                bullet.GetComponent<Rigidbody2D>().linearVelocity = fireDirection * bulletSpeed;
+                bullet.GetComponent<Rigidbody2D>().linearVelocity = fireDirection * (bulletSpeed * PlayerPassives.Instance.GetProjectileSpeedMultiplier());
                 bullet.GetComponent<Projectile>().damage = GetModifiedDamage();
             }
 
-            yield return new WaitForSeconds(rowSpawnDelay); // Delay before spawning the next row
+            yield return new WaitForSeconds(rowSpawnDelay);
         }
     }
 

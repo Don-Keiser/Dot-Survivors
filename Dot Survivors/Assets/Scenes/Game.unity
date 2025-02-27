@@ -2806,7 +2806,7 @@ PrefabInstance:
     - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: 'availablePassives.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 4e62e63681f484041bfca221deec4ea0, type: 2}
+      objectReference: {fileID: 11400000, guid: 49e66090aa3d9714cb1a0687912ac6ee, type: 2}
     - target: {fileID: 2266792240343806365, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: passiveHotbarUI
       value: 

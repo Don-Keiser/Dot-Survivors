@@ -24,7 +24,7 @@ public class ProjectileWeapon : WeaponBase
                     Vector2 direction = (target.transform.position - firePoint.position).normalized;
                     float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                     GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.Euler(new Vector3(0, 0, angle)));
-                    projectile.GetComponent<Rigidbody2D>().linearVelocity = direction * 10f;
+                    projectile.GetComponent<Rigidbody2D>().linearVelocity = direction * (10f * PlayerPassives.Instance.GetProjectileSpeedMultiplier());
                     projectile.GetComponent<Projectile>().damage = GetModifiedDamage();
                     projectile.GetComponent<Projectile>().isPiercing = isPiercing;
                 }

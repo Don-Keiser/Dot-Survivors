@@ -36,7 +36,7 @@ public class ShotgunWeapon : WeaponBase
             Quaternion bulletRotation = Quaternion.Euler(0, 0, baseAngle + pelletOffset);
 
             GameObject bullet = Instantiate(projectilePrefab, firePoint.position, bulletRotation);
-            bullet.GetComponent<Rigidbody2D>().linearVelocity = bullet.transform.right * bulletSpeed;
+            bullet.GetComponent<Rigidbody2D>().linearVelocity = bullet.transform.right * (bulletSpeed * PlayerPassives.Instance.GetProjectileSpeedMultiplier());
             bullet.GetComponent<Projectile>().damage = GetModifiedDamage();
         }
     }

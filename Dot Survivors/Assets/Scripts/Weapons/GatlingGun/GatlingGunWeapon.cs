@@ -18,7 +18,6 @@ public class GatlingGunWeapon : WeaponBase
             FireGatling(firePoint);
         }
 
-        // Rotate the firing point around the player
         firePoint.Rotate(0, 0, rotationSpeed * Time.deltaTime);
     }
 
@@ -26,7 +25,7 @@ public class GatlingGunWeapon : WeaponBase
     {
         Quaternion rotation = firePoint.rotation;
         GameObject bullet = Instantiate(projectilePrefab, firePoint.position, rotation);
-        bullet.GetComponent<Rigidbody2D>().linearVelocity = bullet.transform.right * 10f;
+        bullet.GetComponent<Rigidbody2D>().linearVelocity = bullet.transform.right * (10f * PlayerPassives.Instance.GetProjectileSpeedMultiplier());
         bullet.GetComponent<Projectile>().damage = GetModifiedDamage();
     }
 

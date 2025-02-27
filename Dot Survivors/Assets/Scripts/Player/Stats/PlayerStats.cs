@@ -29,6 +29,8 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] GameObject bloodParticlePrefab;
     [SerializeField] Color damageColor;
 
+    private int regenShellLevel = 0;
+
     // Constants
     private static readonly float FlashDuration = 0.1f;
     private static readonly float FadeDuration = 0.3f;
@@ -144,9 +146,15 @@ public class PlayerStats : MonoBehaviour
             if (regenRate > 0)
             {
                 Heal(regenRate);
+                PlayerPassives.Instance.TriggerHealingAura(regenShellLevel);
             }
             yield return new WaitForSeconds(1f);
         }
+    }
+
+    public void SetRegenShellLevel(int level)
+    {
+        regenShellLevel = level;
     }
 
     private void LevelUp()

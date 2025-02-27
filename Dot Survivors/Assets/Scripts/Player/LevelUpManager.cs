@@ -55,7 +55,10 @@ public class LevelUpManager : MonoBehaviour
         }
 
         PassiveUpgrade passiveToUpgrade = passiveManager.acquiredPassives.Count > 0
-            ? passiveManager.acquiredPassives.OrderBy(_ => Random.value).FirstOrDefault()
+            ? passiveManager.acquiredPassives
+            .Where(p => p.CanUpgrade())
+            .OrderBy(_ => Random.value)
+            .FirstOrDefault()
             : null;
 
         PassiveUpgrade passiveToAcquire = availablePassives

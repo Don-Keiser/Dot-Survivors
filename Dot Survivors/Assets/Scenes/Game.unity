@@ -1220,11 +1220,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754848988}
   m_CullTransparentMesh: 1
---- !u!1 &957461065 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7877710158319238251, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-  m_PrefabInstance: {fileID: 7995766372259085775}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1001421766
 GameObject:
   m_ObjectHideFlags: 0
@@ -2786,42 +2781,10 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2719976312610856224, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
   m_PrefabInstance: {fileID: 7995766372259085775}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 957461065}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 327e1761e1a74aa4c99266e28825ae36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!212 &2131484852 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 6163749627876613791, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-  m_PrefabInstance: {fileID: 7995766372259085775}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2131484859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 957461065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e68959ac6e562445b9d82b280f1f21b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acquiredPassives: []
-  maxPassives: 6
-  passiveHotbarUI: {fileID: 652287767}
---- !u!114 &2131484860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 957461065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e1b87b44c3073541b0f4241f4436435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &7995766372259085775
@@ -2837,29 +2800,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 652287765}
     - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: passiveManager
-      value: 
-      objectReference: {fileID: 2131484859}
-    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: availableWeapons.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: availablePassives.Array.size
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: 'availableWeapons.Array.data[4]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 7382e15a60901db41bf354521de4537f, type: 2}
-    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: 'availableWeapons.Array.data[5]'
-      value: 
-      objectReference: {fileID: 11400000, guid: be79a4764b2999e48a60f7d00daa684f, type: 2}
-    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: 'availablePassives.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 3b0db4242d1358241a33ff11785a7921, type: 2}
+      objectReference: {fileID: 11400000, guid: 49e66090aa3d9714cb1a0687912ac6ee, type: 2}
     - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: 'availablePassives.Array.data[1]'
       value: 
@@ -2867,11 +2814,11 @@ PrefabInstance:
     - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: 'availablePassives.Array.data[2]'
       value: 
-      objectReference: {fileID: 11400000, guid: 4e62e63681f484041bfca221deec4ea0, type: 2}
+      objectReference: {fileID: 11400000, guid: 7d25e1b90c7bd30479431994405a929f, type: 2}
     - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: 'availablePassives.Array.data[3]'
       value: 
-      objectReference: {fileID: 11400000, guid: 7d25e1b90c7bd30479431994405a929f, type: 2}
+      objectReference: {fileID: 11400000, guid: 3b0db4242d1358241a33ff11785a7921, type: 2}
     - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: 'availablePassives.Array.data[4]'
       value: 
@@ -2879,55 +2826,19 @@ PrefabInstance:
     - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: 'availablePassives.Array.data[5]'
       value: 
-      objectReference: {fileID: 11400000, guid: 49e66090aa3d9714cb1a0687912ac6ee, type: 2}
-    - target: {fileID: 2059502886287353567, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: m_Camera
+      objectReference: {fileID: 11400000, guid: 4e62e63681f484041bfca221deec4ea0, type: 2}
+    - target: {fileID: 2266792240343806365, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: passiveHotbarUI
       value: 
-      objectReference: {fileID: 519420031}
-    - target: {fileID: 2719976312610856224, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: damageColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2719976312610856224, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: damageColor.b
-      value: 0.5036026
-      objectReference: {fileID: 0}
-    - target: {fileID: 2719976312610856224, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: damageColor.g
-      value: 0.5036026
-      objectReference: {fileID: 0}
-    - target: {fileID: 2719976312610856224, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: damageColor.r
-      value: 0.98490566
-      objectReference: {fileID: 0}
-    - target: {fileID: 2719976312610856224, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: spriteRenderer
-      value: 
-      objectReference: {fileID: 2131484852}
-    - target: {fileID: 2719976312610856224, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: bloodParticlePrefab
-      value: 
-      objectReference: {fileID: 7387746630755397446, guid: 836b7808dca1615498613fe73c8d8d56, type: 3}
-    - target: {fileID: 7368269122414493524, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368269122414493524, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+      objectReference: {fileID: 652287767}
+    - target: {fileID: 3913756579057680444, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: hotbarUI
       value: 
       objectReference: {fileID: 652287766}
-    - target: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: weapons.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: 'weapons.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 1bc19e00be8bc1346923288f55a4dd79, type: 2}
     - target: {fileID: 7877710158319238251, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2975,13 +2886,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7877710158319238251, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2131484859}
-    - targetCorrespondingSourceObject: {fileID: 7877710158319238251, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2131484860}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

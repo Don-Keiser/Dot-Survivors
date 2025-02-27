@@ -18,10 +18,8 @@ public class Grenade : MonoBehaviour
 
     private void Update()
     {
-        // Move towards the target
         transform.position = Vector2.MoveTowards(transform.position, targetPoint, speed * Time.deltaTime);
 
-        // If reached the target, explode
         if (Vector2.Distance(transform.position, targetPoint) < 0.1f)
         {
             Explode();
@@ -30,14 +28,12 @@ public class Grenade : MonoBehaviour
 
     private void Explode()
     {
-        // Spawn expanding explosion circle
         if (explosionEffectPrefab != null)
         {
             GameObject explosion = Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
             explosion.GetComponent<ExplosionEffect>().Initialize(explosionRadius);
         }
 
-        // Check for enemies within the explosion radius
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
         
         if (hitEnemies.Length == 0)
@@ -66,7 +62,7 @@ public class Grenade : MonoBehaviour
             }
         }
 
-        Destroy(gameObject); // Remove grenade after explosion
+        Destroy(gameObject);
     }
 
     private void OnDrawGizmos()

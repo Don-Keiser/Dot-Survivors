@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BerserkerRageTemp_0: 9132561136223709518
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

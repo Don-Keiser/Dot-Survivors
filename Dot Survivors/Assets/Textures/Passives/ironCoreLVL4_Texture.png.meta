@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 42c5127aa77f92c4cb73c6d4e7af11c9
+guid: 454a582458a085447b6a639ca9d9b363
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8390744438380193492
-    second: IronCoreTemp_0
+      213: 4287218957771659591
+    second: ironCoreLVL4_Texture_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IronCoreTemp_0
+      name: ironCoreLVL4_Texture_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4d66cb25c99e17470800000000000000
-      internalID: 8390744438380193492
+      spriteID: 749dc4c6de24f7b30800000000000000
+      internalID: 4287218957771659591
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IronCoreTemp_0: 8390744438380193492
+      ironCoreLVL4_Texture_0: 4287218957771659591
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

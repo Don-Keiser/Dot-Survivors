@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SharpenedReflexesTemp_0: 4208262629212360823
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

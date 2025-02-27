@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 42c5127aa77f92c4cb73c6d4e7af11c9
+guid: e2359855d0beae44487b88b5ffcc47a8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8390744438380193492
-    second: IronCoreTemp_0
+      213: 276526960851706169
+    second: playerOutline_Texture_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IronCoreTemp_0
+      name: playerOutline_Texture_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 108
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4d66cb25c99e17470800000000000000
-      internalID: 8390744438380193492
+      spriteID: 93162684ecb66d300800000000000000
+      internalID: 276526960851706169
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      IronCoreTemp_0: 8390744438380193492
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

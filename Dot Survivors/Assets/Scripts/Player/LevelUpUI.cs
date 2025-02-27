@@ -70,8 +70,11 @@ public class LevelUpUI : MonoBehaviour
         // Handle Passive Upgrade
         if (passiveToUpgrade != null)
         {
-            upgradePassiveText.text = $"Upgrade {passiveToUpgrade.passiveName} (Level {passiveToUpgrade.level}/{passiveToUpgrade.maxLevel})";
-            upgradePassiveButton.interactable = true;
+            upgradePassiveText.text = passiveToUpgrade.level < passiveToUpgrade.maxLevel
+                ? $"Upgrade {passiveToUpgrade.passiveName} (Level {passiveToUpgrade.level}/{passiveToUpgrade.maxLevel})"
+                : $"{passiveToUpgrade.passiveName} (Max Level)";
+
+            upgradePassiveButton.interactable = passiveToUpgrade.level < passiveToUpgrade.maxLevel;
         }
         else
         {

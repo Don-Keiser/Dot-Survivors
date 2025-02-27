@@ -30,6 +30,14 @@ public class PlayerPassives : MonoBehaviour
 
     [Header("Evasive Instinct Visuals")]
     public GameObject afterimagePrefab;
+    
+    [Header("Regenerative Shell Visuals")]
+    public GameObject auraPrefab;
+
+    [Header("Berserker Rage Visuals")]
+    [SerializeField] private SpriteRenderer berserkerOutline;
+    private Coroutine flickerCoroutine;
+    private float flickerSpeed = 0.5f;
 
     private void Awake()
     {
@@ -54,7 +62,7 @@ public class PlayerPassives : MonoBehaviour
             if (afterimageCooldown <= 0f)
             {
                 SpawnAfterimage();
-                afterimageCooldown = afterimageDuration; // Correct cooldown reset
+                afterimageCooldown = afterimageDuration;
             }
         }
     }
@@ -79,10 +87,10 @@ public class PlayerPassives : MonoBehaviour
                 ApplyIronCore(upgradeValue, level); 
                 break;
             case PassiveType.RegenerativeShell:
-                ApplyRegenerativeShell(upgradeValue);
+                ApplyRegenerativeShell(upgradeValue, level);
                 break;
             case PassiveType.BerserkerRage:
-                ApplyBerserkerRage(upgradeValue);
+                ApplyBerserkerRage(upgradeValue, level);
                 break;
             case PassiveType.EvasiveInstinct:
                 ApplyEvasiveInstinct(upgradeValue, level);
@@ -108,15 +116,48 @@ public class PlayerPassives : MonoBehaviour
         }
     }
 
-    private void ApplyRegenerativeShell(float upgradeValue)
+    private void ApplyRegenerativeShell(float upgradeValue, int level)
     {
         regenRate = upgradeValue;
         playerStats.SetRegenRate(regenRate);
+        playerStats.SetRegenShellLevel(level);
     }
 
-    private void ApplyBerserkerRage(float upgradeValue)
+    public void TriggerHealingAura(int level)
+    {
+        if (auraPrefab == null) return;
+
+        GameObject aura = Instantiate(auraPrefab, playerStats.transform.position, Quaternion.identity);
+        aura.transform.SetParent(playerStats.transform);
+
+        float fadeTime = 0.5f;
+        aura.GetComponent<ExpandingAura>().Initialize(1f, fadeTime, level);
+    }
+
+    private void ApplyBerserkerRage(float upgradeValue, int level)
     {
         globalDamageMultiplier = upgradeValue;
+
+        if (berserkerOutline != null)
+        {
+            if (flickerCoroutine != null)
+                StopCoroutine(flickerCoroutine);
+            
+            flickerSpeed = Mathf.Max(0.2f, 1f - (level * 0.15f));
+            flickerCoroutine = StartCoroutine(FlickerOutline());
+        }
+    }
+
+    private System.Collections.IEnumerator FlickerOutline()
+    {
+        float t = 0f;
+        while (true)
+        {
+            t += Time.deltaTime * (1f / flickerSpeed);
+            Color c = Color.Lerp(Color.black, Color.red, Mathf.PingPong(t, 1f));
+            berserkerOutline.color = c;
+            yield return null;
+        }
     }
 
     private void ApplyEvasiveInstinct(float upgradeValue, int level)
@@ -124,9 +165,8 @@ public class PlayerPassives : MonoBehaviour
         moveSpeedMultiplier = upgradeValue;
         playerMovement.SetMoveSpeed(playerMovement.baseMoveSpeed * moveSpeedMultiplier);
 
-        // Afterimage duration decreases more at higher levels
         afterimageDuration = Mathf.Max(0.5f / (moveSpeedMultiplier * level), 0.1f);
-        afterimageCooldown = afterimageDuration; // Maintain consistent frequency
+        afterimageCooldown = afterimageDuration;
     }
 
     private void ApplySharpenedReflexes(float upgradeValue)

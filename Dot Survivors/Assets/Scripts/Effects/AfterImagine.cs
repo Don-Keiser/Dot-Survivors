@@ -5,25 +5,27 @@ public class AfterImage : MonoBehaviour
 {
     [SerializeField] SpriteRenderer afterImageSpriteRenderer;
     [SerializeField] SpriteRenderer ironCoreSpriteRenderer;
+    [SerializeField] SpriteRenderer outlineSpriteRenderer;
     private float fadeDuration = 0.5f;
 
     public void Initialize(Sprite playerSprite, Sprite ironCoreSprite, bool ironCoreActive)
     {
-        // Get the main afterimage renderer
         if (afterImageSpriteRenderer != null)
         {
             afterImageSpriteRenderer.sprite = playerSprite;
             afterImageSpriteRenderer.color = new Color(1f, 1f, 1f, 0.5f);
         }
 
+        if (outlineSpriteRenderer != null)
+        {
+            outlineSpriteRenderer.color = new Color(1f, 1f, 1f, 0.5f);
+        }
+
         if (ironCoreSpriteRenderer != null)
         {
-            if (ironCoreSpriteRenderer != null)
-            {
-                ironCoreSpriteRenderer.sprite = ironCoreSprite; // Copy iron core sprite
-                ironCoreSpriteRenderer.enabled = ironCoreActive;
-                ironCoreSpriteRenderer.color = new Color(1f, 1f, 1f, 0.5f);
-            }
+            ironCoreSpriteRenderer.sprite = ironCoreSprite;
+            ironCoreSpriteRenderer.enabled = ironCoreActive;
+            ironCoreSpriteRenderer.color = new Color(1f, 1f, 1f, 0.6f);
         }
 
         StartCoroutine(FadeOut());
@@ -42,6 +44,13 @@ public class AfterImage : MonoBehaviour
                 Color c = afterImageSpriteRenderer.color;
                 c.a = alpha;
                 afterImageSpriteRenderer.color = c;
+            }
+
+            if (outlineSpriteRenderer != null)
+            {
+                Color c = outlineSpriteRenderer.color;
+                c.a = alpha;
+                outlineSpriteRenderer.color = c;
             }
 
             if (ironCoreSpriteRenderer != null)

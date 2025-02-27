@@ -16,22 +16,30 @@ public class EnemyConfig : ScriptableObject
 
     public XPOrbConfig GetRandomDrop() 
     {
-        float totalChance = 0f;
+        if (possibleDrops.Length != dropChances.Length)
+        {
+            Debug.LogError("Possible drops and drop chances arrays must be of the same length.");
+            return null;
+        }
 
+        float totalChance = 0f;
         foreach (float chance in dropChances)
         {
-            float randomValue = Random.Range(0f, totalChance);
-            float cumulativeChance = 0;
+            totalChance += chance;
+        }
 
-            for (int i = 0; i < possibleDrops.Length; i++) 
+        float randomValue = Random.Range(0f, totalChance);
+        float cumulativeChance = 0f;
+
+        for (int i = 0; i < possibleDrops.Length; i++) 
+        {
+            cumulativeChance += dropChances[i];
+            if (randomValue <= cumulativeChance) 
             {
-                cumulativeChance += dropChances[i];
-                if (randomValue <= cumulativeChance) 
-                {
-                    return possibleDrops[i];
-                }
+                return possibleDrops[i];
             }
         }
+
         return null;
     }
 }

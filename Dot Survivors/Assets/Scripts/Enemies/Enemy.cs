@@ -188,4 +188,41 @@ public class Enemy : MonoBehaviour
             Instantiate(drop.bonusPrefab, transform.position, Quaternion.identity);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Boundary"))
+        {
+            RepositionEnemy();
+        }
+    }
+
+    private void RepositionEnemy()
+    {
+        Camera mainCamera = Camera.main;
+        float camHeight = mainCamera.orthographicSize;
+        float camWidth = camHeight * mainCamera.aspect;
+        float spawnDistance = camWidth * 1.01f;
+
+        Vector2 newPos = Vector2.zero;
+        int side = Random.Range(0, 4); // 0 = left, 1 = right, 2 = top, 3 = bottom
+
+        switch (side)
+        {
+            case 0: // Left
+                newPos = new Vector2(mainCamera.transform.position.x - spawnDistance, Random.Range(mainCamera.transform.position.y - camHeight, mainCamera.transform.position.y + camHeight));
+                break;
+            case 1: // Right
+                newPos = new Vector2(mainCamera.transform.position.x + spawnDistance, Random.Range(mainCamera.transform.position.y - camHeight, mainCamera.transform.position.y + camHeight));
+                break;
+            case 2: // Top
+                newPos = new Vector2(Random.Range(mainCamera.transform.position.x - camWidth, mainCamera.transform.position.x + camWidth), mainCamera.transform.position.y + spawnDistance);
+                break;
+            case 3: // Bottom
+                newPos = new Vector2(Random.Range(mainCamera.transform.position.x - camWidth, mainCamera.transform.position.x + camWidth), mainCamera.transform.position.y - spawnDistance);
+                break;
+        }
+
+        transform.position = newPos;
+    }
 }

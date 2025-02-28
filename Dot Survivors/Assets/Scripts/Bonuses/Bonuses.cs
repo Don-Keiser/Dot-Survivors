@@ -1,20 +1,22 @@
 using UnityEngine;
 
-public class XPOrb : MonoBehaviour
+public class Bonuses : MonoBehaviour
 {
-    [SerializeField] XPOrbConfig xpOrbConfig;
-    [SerializeField] int xpAmount;
+    [SerializeField] BonusConfig bonusConfig;
+    [SerializeField] int bonusAmount;
 
     private Transform player;
     private bool isAttracted = false;
     private float attractionSpeed = 4f;
     private float pickupRange = 3f;
 
+    [SerializeField] BonusType bonusType;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        xpAmount = xpOrbConfig.xpAmount;
+        bonusAmount = bonusConfig.bonusAmount;
     }
 
     private void Update()
@@ -41,9 +43,29 @@ public class XPOrb : MonoBehaviour
             PlayerStats playerStats = collision.gameObject.GetComponent<PlayerStats>();
             if (playerStats != null) 
             {
-                playerStats.GainXP(xpAmount);
+                ApplyBonus(playerStats, bonusType);
             }
             Destroy(gameObject);
         }
     }
+
+    private void ApplyBonus(PlayerStats playerStats, BonusType bonusType)
+    {
+        switch (bonusType)
+        {
+            case BonusType.Health:
+                playerStats.Heal(bonusAmount);
+                break;
+            case BonusType.XP:
+                playerStats.GainXP(bonusAmount);
+                break;
+        }
+    }
+}
+
+public enum BonusType
+{
+    Health,
+    XP,
+    Damage
 }

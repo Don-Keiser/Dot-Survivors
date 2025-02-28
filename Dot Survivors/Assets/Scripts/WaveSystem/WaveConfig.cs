@@ -8,10 +8,10 @@ public class WaveConfig : ScriptableObject
     public class EnemySpawnInfo 
     {
         public GameObject enemyPrefab;
-        public float spawnChance;
+        [UnityEngine.Range(1, 100)] public float spawnChance;
     }
 
     public EnemySpawnInfo[] enemies;
-    public float spawnRate;
-    public float waveDuration;
+    [UnityEngine.Range(0.01f, 2.0f)] public float spawnRate;
+    [UnityEngine.Range(10, 300)] public float waveDuration;
 }

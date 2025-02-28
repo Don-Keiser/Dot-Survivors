@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: EnemySimpleHarder
   enemyType: 1
-  health: 150
-  moveSpeed: 2
+  health: 100
+  moveSpeed: 1.8
   damage: 10
   damageInterval: 0.2
   possibleDrops:

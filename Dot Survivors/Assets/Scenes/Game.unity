@@ -1189,11 +1189,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 11400000, guid: 827e132b9171ad841a401a6d6cbce2ab, type: 2}
+  - {fileID: 11400000, guid: ccf87ab1451e9774c8c8c8889b403b3b, type: 2}
   - {fileID: 11400000, guid: d3b2500a472eb504ab60bc2f7cea0dfc, type: 2}
+  - {fileID: 11400000, guid: 24e72849dd2db4d469fa648e94dea557, type: 2}
   - {fileID: 11400000, guid: 5265d7cb77ce1aa459b72d21935ab5fa, type: 2}
   - {fileID: 11400000, guid: a9ff9fec361d97544aaddcb63c80cae7, type: 2}
-  - {fileID: 11400000, guid: ccf87ab1451e9774c8c8c8889b403b3b, type: 2}
 --- !u!114 &652287765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3181,7 +3181,7 @@ PrefabInstance:
       objectReference: {fileID: 652287767}
     - target: {fileID: 3913756579057680444, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 500
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: hotbarUI

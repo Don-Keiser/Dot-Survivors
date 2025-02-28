@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - enemyPrefab: {fileID: 2075620189348619413, guid: e434e395b39586745a8932608f75a50e, type: 3}
-    spawnChance: 70
+    spawnChance: 80
   - enemyPrefab: {fileID: 2075620189348619413, guid: 1920189cadd14d349a05c1e1ecbe52aa, type: 3}
-    spawnChance: 20
+    spawnChance: 10
   - enemyPrefab: {fileID: 2075620189348619413, guid: 52b516cfc11cb414094986af6d789399, type: 3}
     spawnChance: 10
-  spawnRate: 0.8
-  waveDuration: 60
+  spawnRate: 0.2
+  waveDuration: 90

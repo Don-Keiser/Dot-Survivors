@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db03328e6ad75824b94c5d6af4a25c1b, type: 3}
-  m_Name: LowXP
+  m_Script: {fileID: 11500000, guid: 0d9d42d6beb550b469f249007fd1b4d5, type: 3}
+  m_Name: HighXP
   m_EditorClassIdentifier: 
-  xpOrbName: LowXP
-  xpOrbPrefab: {fileID: 8695989966215259964, guid: 811803a9015273d448a9825cf1b773a6, type: 3}
-  xpAmount: 15
+  bonusName: HighXP
+  bonusPrefab: {fileID: 8695989966215259964, guid: b7700bdac93284646bc186c671c25a04, type: 3}
+  bonusAmount: 100

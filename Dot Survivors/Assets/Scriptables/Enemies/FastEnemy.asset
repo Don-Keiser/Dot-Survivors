@@ -19,6 +19,6 @@ MonoBehaviour:
   damage: 5
   damageInterval: 0.2
   possibleDrops:
-  - {fileID: 11400000, guid: cab1cd9598083514b8e490045b15347e, type: 2}
+  - {fileID: 11400000, guid: 5f4052c3991e6bd4e9bc341f0c8524f0, type: 2}
   dropChances:
   - 100

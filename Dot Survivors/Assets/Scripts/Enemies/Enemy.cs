@@ -182,10 +182,10 @@ public class Enemy : MonoBehaviour
 
     private void DropXp()
     {
-        XPOrbConfig drop = enemyConfig.GetRandomDrop();
+        BonusConfig drop = enemyConfig.GetRandomDrop();
         if (drop != null)
         {
-            Instantiate(drop.xpOrbPrefab, transform.position, Quaternion.identity);
+            Instantiate(drop.bonusPrefab, transform.position, Quaternion.identity);
         }
     }
 }

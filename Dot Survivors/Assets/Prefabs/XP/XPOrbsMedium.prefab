@@ -535,8 +535,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5196493008617676593}
   - component: {fileID: 7036288328415906660}
-  - component: {fileID: -6084509193226669852}
   - component: {fileID: 4974746922383320724}
+  - component: {fileID: -8204695597666636634}
   m_Layer: 0
   m_Name: XPOrbsMedium
   m_TagString: Untagged
@@ -580,20 +580,6 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
---- !u!114 &-6084509193226669852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8695989966215259964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d9ffe610d675fa4ea829023b02b4a3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xpOrbConfig: {fileID: 11400000, guid: caf79085d4dd6324cbe8534b745c1e89, type: 2}
-  xpAmount: 100
 --- !u!58 &4974746922383320724
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -630,6 +616,21 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.2
+--- !u!114 &-8204695597666636634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8695989966215259964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27c69b705302f4046984d31c5e8b6f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bonusConfig: {fileID: 11400000, guid: dd1ef63f242753c40ad972136bfb1b56, type: 2}
+  bonusAmount: 100
+  bonusType: 1
 --- !u!1 &8806645885860709243
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,10 +11,10 @@ public class EnemyConfig : ScriptableObject
     public float damageInterval;
 
     [Header("XP Orb Drop Settings")]
-    public XPOrbConfig[] possibleDrops;
+    public BonusConfig[] possibleDrops;
     public float[] dropChances;
 
-    public XPOrbConfig GetRandomDrop() 
+    public BonusConfig GetRandomDrop() 
     {
         if (possibleDrops.Length != dropChances.Length)
         {

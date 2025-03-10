@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2694754453847130270}
   - component: {fileID: 2937172069744827822}
   - component: {fileID: 953838952909502320}
+  - component: {fileID: 1388427781218301506}
   m_Layer: 0
   m_Name: HitParticlePrefab
   m_TagString: Untagged
@@ -115,3 +116,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1388427781218301506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7387746630755397446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc5d35e440669c41a3696a95a8c0dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

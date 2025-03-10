@@ -121,30 +121,8 @@ public class Enemy : MonoBehaviour
 
                 Vector2 randomDirection = UnityEngine.Random.insideUnitCircle.normalized;
                 rb.linearVelocity = randomDirection * UnityEngine.Random.Range(1.5f, 5f);
-
-                StartCoroutine(FadeOutAndDestroy(hitEffect));
             }
         }
-    }
-
-    private IEnumerator FadeOutAndDestroy(GameObject obj)
-    {
-        SpriteRenderer sr = obj.GetComponent<SpriteRenderer>();
-        float elapsedTime = 0f;
-
-        while (elapsedTime < FadeDuration)
-        {
-            elapsedTime += Time.deltaTime;
-            if (sr != null)
-            {
-                Color c = sr.color;
-                c.a = Mathf.Lerp(1f, 0f, elapsedTime / FadeDuration);
-                sr.color = c;
-            }
-            yield return null;
-        }
-
-        Destroy(obj);
     }
 
     private IEnumerator FlashRed()

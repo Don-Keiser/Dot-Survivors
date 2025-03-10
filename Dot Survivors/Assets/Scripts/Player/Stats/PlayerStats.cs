@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -28,6 +29,11 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] GameObject bloodParticlePrefab;
     [SerializeField] Color damageColor;
+
+    [Header("Death")]
+    [SerializeField] bool isDead;
+    [SerializeField] GameObject deathPanel;
+    [SerializeField] GameObject deathScreenOverlay;
 
     private int regenShellLevel = 0;
 
@@ -181,6 +187,45 @@ public class PlayerStats : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("Player has died.");
+        if (isDead) return;
+        isDead = true;
+
+        Time.timeScale = 0f;
+
+        StartCoroutine(HandleDeathSequence());
+    }
+
+    private IEnumerator HandleDeathSequence() 
+    {
+        float deathFadeDuration = 1.5f;
+        float zoomDuration = 1.5f;
+        float targetZoom = Camera.main.orthographicSize * 1.5f;
+
+        StartCoroutine(FadeToBlack(deathFadeDuration));
+
+        float elapsedTime = 0f;
+        while (elapsedTime < zoomDuration) 
+        {
+            elapsedTime += Time.unscaledDeltaTime;
+            Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, targetZoom, elapsedTime / zoomDuration);
+            yield return null;
+        }
+
+        deathPanel.SetActive(true);
+    }
+
+    private IEnumerator FadeToBlack(float duration) 
+    {
+        float elapsedTime = 0f;
+        deathScreenOverlay.SetActive(true);
+        Color color = deathScreenOverlay.GetComponent<Image>().color;
+        while (elapsedTime < duration) 
+        {
+            elapsedTime += Time.unscaledDeltaTime;
+            float alpha = Mathf.Lerp(0f, 1f, elapsedTime / duration);
+            color.a = alpha;
+            deathScreenOverlay.GetComponent<Image>().color = color;
+            yield return null;
+        }
     }
 }

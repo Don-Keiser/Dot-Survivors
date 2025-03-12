@@ -2824,8 +2824,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2120652701}
   - {fileID: 1719235190}
+  - {fileID: 2120652701}
   m_Father: {fileID: 1193807142}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4364,14 +4364,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.14901961, g: 0.14901961, b: 0.14901961, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2953743181075542502, guid: 2740e880090cb3a44af9c0c7d9f0977a, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5055,7 +5055,7 @@ RectTransform:
   m_GameObject: {fileID: 2120652700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.995, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1332948668}
@@ -5131,34 +5131,6 @@ PrefabInstance:
       propertyPath: levelUpUI
       value: 
       objectReference: {fileID: 652287765}
-    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: availablePassives.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: 'availablePassives.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 49e66090aa3d9714cb1a0687912ac6ee, type: 2}
-    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: 'availablePassives.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: e869a63a963e2404eb0465219b13d790, type: 2}
-    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: 'availablePassives.Array.data[2]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 7d25e1b90c7bd30479431994405a929f, type: 2}
-    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: 'availablePassives.Array.data[3]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 3b0db4242d1358241a33ff11785a7921, type: 2}
-    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: 'availablePassives.Array.data[4]'
-      value: 
-      objectReference: {fileID: 11400000, guid: a6ce06d3951f53d47bc71fa28e3713c3, type: 2}
-    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: 'availablePassives.Array.data[5]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 4e62e63681f484041bfca221deec4ea0, type: 2}
     - target: {fileID: 2266792240343806365, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: passiveHotbarUI
       value: 
@@ -5171,14 +5143,6 @@ PrefabInstance:
       propertyPath: deathScreenOverlay
       value: 
       objectReference: {fileID: 641752182}
-    - target: {fileID: 3913756579057680444, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: m_DefaultControlScheme
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3913756579057680444, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: hotbarUI
       value: 

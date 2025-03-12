@@ -8,22 +8,24 @@ public class Enemy : MonoBehaviour
     private Transform player;
     private PlayerStats playerStats;
     private float damageTimer;
-    [SerializeField] float health;
+    [SerializeField] private float health;
     private float moveSpeed;
-    [SerializeField] int damage;
+    [SerializeField] private int damage;
     private float damageInterval;
 
-    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private GameObject hitEffectPrefab;
-    [SerializeField] Color hitColor;
-    [SerializeField] Animator animator;
+    [SerializeField] private Color hitColor;
+    [SerializeField] private Animator animator;
     private bool isDying = false;
 
     private static readonly float FlashDuration = 0.1f;
-    private static readonly float FadeDuration = 0.3f;
     private static readonly float MinRandomSpeed = 0.8f;
     private static readonly float MaxRandomSpeed = 1.5f;
     private static readonly int DeathVariants = 3;
+    private static readonly int HitEffectCount = 8;
+
+    private Camera mainCamera;
 
     void Start()
     {
@@ -44,6 +46,8 @@ public class Enemy : MonoBehaviour
         moveSpeed = enemyConfig.moveSpeed;
         damage = enemyConfig.damage;
         damageInterval = enemyConfig.damageInterval;
+
+        mainCamera = Camera.main;
     }
 
     void Update()
@@ -112,7 +116,7 @@ public class Enemy : MonoBehaviour
     {
         if (hitEffectPrefab != null)
         {
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < HitEffectCount; i++)
             {
                 Vector2 spawnPos = (Vector2)transform.position + UnityEngine.Random.insideUnitCircle * 0.2f;
                 GameObject hitEffect = Instantiate(hitEffectPrefab, spawnPos, Quaternion.identity);
@@ -177,7 +181,6 @@ public class Enemy : MonoBehaviour
 
     private void RepositionEnemy()
     {
-        Camera mainCamera = Camera.main;
         float camHeight = mainCamera.orthographicSize;
         float camWidth = camHeight * mainCamera.aspect;
         float spawnDistance = camWidth * 1.01f;
@@ -188,19 +191,39 @@ public class Enemy : MonoBehaviour
         switch (side)
         {
             case 0: // Left
-                newPos = new Vector2(mainCamera.transform.position.x - spawnDistance, Random.Range(mainCamera.transform.position.y - camHeight, mainCamera.transform.position.y + camHeight));
+                newPos = GetLeftSpawnPosition(camHeight, spawnDistance);
                 break;
             case 1: // Right
-                newPos = new Vector2(mainCamera.transform.position.x + spawnDistance, Random.Range(mainCamera.transform.position.y - camHeight, mainCamera.transform.position.y + camHeight));
+                newPos = GetRightSpawnPosition(camHeight, spawnDistance);
                 break;
             case 2: // Top
-                newPos = new Vector2(Random.Range(mainCamera.transform.position.x - camWidth, mainCamera.transform.position.x + camWidth), mainCamera.transform.position.y + spawnDistance);
+                newPos = GetTopSpawnPosition(camWidth, spawnDistance);
                 break;
             case 3: // Bottom
-                newPos = new Vector2(Random.Range(mainCamera.transform.position.x - camWidth, mainCamera.transform.position.x + camWidth), mainCamera.transform.position.y - spawnDistance);
+                newPos = GetBottomSpawnPosition(camWidth, spawnDistance);
                 break;
         }
 
         transform.position = newPos;
+    }
+
+    private Vector2 GetLeftSpawnPosition(float camHeight, float spawnDistance)
+    {
+        return new Vector2(mainCamera.transform.position.x - spawnDistance, Random.Range(mainCamera.transform.position.y - camHeight, mainCamera.transform.position.y + camHeight));
+    }
+
+    private Vector2 GetRightSpawnPosition(float camHeight, float spawnDistance)
+    {
+        return new Vector2(mainCamera.transform.position.x + spawnDistance, Random.Range(mainCamera.transform.position.y - camHeight, mainCamera.transform.position.y + camHeight));
+    }
+
+    private Vector2 GetTopSpawnPosition(float camWidth, float spawnDistance)
+    {
+        return new Vector2(Random.Range(mainCamera.transform.position.x - camWidth, mainCamera.transform.position.x + camWidth), mainCamera.transform.position.y + spawnDistance);
+    }
+
+    private Vector2 GetBottomSpawnPosition(float camWidth, float spawnDistance)
+    {
+        return new Vector2(Random.Range(mainCamera.transform.position.x - camWidth, mainCamera.transform.position.x + camWidth), mainCamera.transform.position.y - spawnDistance);
     }
 }

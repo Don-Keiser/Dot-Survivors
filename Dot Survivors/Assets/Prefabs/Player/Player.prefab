@@ -395,7 +395,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 100
+          m_IntArgument: 15
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -443,6 +443,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 6163749627876613791}
   bloodParticlePrefab: {fileID: 7387746630755397446, guid: 836b7808dca1615498613fe73c8d8d56, type: 3}
   damageColor: {r: 0.98490566, g: 0.5036026, b: 0.5036026, a: 1}
+  isDead: 0
+  deathPanel: {fileID: 0}
+  deathScreenOverlay: {fileID: 0}
 --- !u!61 &5448006238588542254
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -527,10 +530,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e5cf2c118067f00459f9242aefdea372, type: 2}
   - {fileID: 11400000, guid: 7382e15a60901db41bf354521de4537f, type: 2}
   availablePassives:
-  - {fileID: 11400000, guid: a6ce06d3951f53d47bc71fa28e3713c3, type: 2}
   - {fileID: 11400000, guid: e869a63a963e2404eb0465219b13d790, type: 2}
   - {fileID: 11400000, guid: 7d25e1b90c7bd30479431994405a929f, type: 2}
   - {fileID: 11400000, guid: 3b0db4242d1358241a33ff11785a7921, type: 2}
+  - {fileID: 11400000, guid: 4e62e63681f484041bfca221deec4ea0, type: 2}
+  - {fileID: 11400000, guid: a6ce06d3951f53d47bc71fa28e3713c3, type: 2}
+  - {fileID: 11400000, guid: 49e66090aa3d9714cb1a0687912ac6ee, type: 2}
   levelUpUI: {fileID: 0}
 --- !u!114 &2266792240343806365
 MonoBehaviour:

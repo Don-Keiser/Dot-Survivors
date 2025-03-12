@@ -12,10 +12,29 @@ public class LevelUpManager : MonoBehaviour
     private int pendingLevelUps = 0;
     private bool isProcessingLevelUp = false;
 
+    private const float TimeScalePaused = 0f;
+    private const float TimeScaleRunning = 1f;
+
     private void Start()
     {
         PlayerStats playerStats = GetComponent<PlayerStats>();
-        playerStats.OnLevelUp += HandleLevelUp;
+        if (playerStats != null)
+        {
+            playerStats.OnLevelUp += HandleLevelUp;
+        }
+        else
+        {
+            Debug.LogError("PlayerStats component not found!");
+        }
+    }
+
+    private void OnDestroy()
+    {
+        PlayerStats playerStats = GetComponent<PlayerStats>();
+        if (playerStats != null)
+        {
+            playerStats.OnLevelUp -= HandleLevelUp;
+        }
     }
 
     private void HandleLevelUp(int level)
@@ -25,6 +44,12 @@ public class LevelUpManager : MonoBehaviour
         if (!isProcessingLevelUp)
         {
             ProcessLevelUp();
+        }
+
+        if (weaponManager == null || passiveManager == null || levelUpUI == null)
+        {
+            Debug.LogError("WeaponManager, PassiveManager, or LevelUpUI is not assigned!");
+            enabled = false;
         }
     }
 

@@ -49,8 +49,6 @@ public abstract class WeaponBase : ScriptableObject
         WeaponUpgradeStep upgrade = upgradeSteps[level - 1];
         ApplyUpgrade(upgrade);
         level++;
-
-        Debug.Log($"{weaponName} upgraded to Level {level}");
     }
     protected abstract void ApplyUpgrade(WeaponUpgradeStep upgrade);
 

@@ -58,12 +58,12 @@ public class LevelUpManager : MonoBehaviour
         if (pendingLevelUps <= 0)
         {
             isProcessingLevelUp = false;
-            Time.timeScale = 1f;
+            TimeManager.Instance.ResumeGame();
             return;
         }
 
         isProcessingLevelUp = true;
-        Time.timeScale = 0f;
+        TimeManager.Instance.PauseGame();
 
         WeaponBase weaponToUpgrade = weaponManager.weapons
             .Where(w => w.CanUpgrade())
@@ -104,7 +104,7 @@ public class LevelUpManager : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 1f;
+            TimeManager.Instance.ResumeGame();
             isProcessingLevelUp = false;
         }
     }

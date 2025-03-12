@@ -19,19 +19,19 @@ public class PauseManager : MonoBehaviour
     {
         isPaused = true;
         pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
+        TimeManager.Instance.PauseGame();
     }
 
     public void ResumeGame() 
     {
         isPaused = false;
         pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
+        TimeManager.Instance.ResumeGame();
     }
 
     public void ReturnToMainMenu() 
     {
-        Time.timeScale = 1f;
+        TimeManager.Instance.ResumeGame();
         SceneManager.LoadScene("MainMenu");
     }
 }

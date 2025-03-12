@@ -1696,6 +1696,7 @@ GameObject:
   - component: {fileID: 652287766}
   - component: {fileID: 652287767}
   - component: {fileID: 652287768}
+  - component: {fileID: 652287769}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -1829,10 +1830,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 652287760}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aedca4b17eb643e4db975e69127efc86, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a97412953ae41f47a43d8775794aca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1882607004}
+--- !u!114 &652287769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652287760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5429e5f40df4c0f44aa50c2df74e2db5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &733460240
 GameObject:
   m_ObjectHideFlags: 0

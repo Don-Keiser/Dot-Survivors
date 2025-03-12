@@ -1,16 +1,37 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public GameObject pauseMenuUI;
+    private bool isPaused = false;
+
+    void Update() 
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused) ResumeGame();
+            else PauseGame();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PauseGame()
     {
-        
+        isPaused = true;
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void ResumeGame() 
+    {
+        isPaused = false;
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void ReturnToMainMenu() 
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
     }
 }

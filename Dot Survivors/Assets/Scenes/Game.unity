@@ -1695,6 +1695,7 @@ GameObject:
   - component: {fileID: 652287765}
   - component: {fileID: 652287766}
   - component: {fileID: 652287767}
+  - component: {fileID: 652287768}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -1819,6 +1820,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   passiveSlotPrefab: {fileID: 5810592826239482067, guid: 64a5f8d3f7a5b1e4f8c67200d7fe4937, type: 3}
   hotbarContainer: {fileID: 240069083}
+--- !u!114 &652287768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652287760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aedca4b17eb643e4db975e69127efc86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 1882607004}
 --- !u!1 &733460240
 GameObject:
   m_ObjectHideFlags: 0
@@ -3772,9 +3786,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1882607005}
-        m_TargetAssemblyTypeName: Menus, Assembly-CSharp
-        m_MethodName: ReturnToMenu
+      - m_Target: {fileID: 652287768}
+        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
+        m_MethodName: ReturnToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

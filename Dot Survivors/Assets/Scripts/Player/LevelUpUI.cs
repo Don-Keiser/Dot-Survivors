@@ -11,12 +11,16 @@ public class LevelUpUI : MonoBehaviour
     public Button acquireWeaponButton;
     public TMP_Text upgradeWeaponText;
     public TMP_Text acquireWeaponText;
+    public Image upgradeWeaponIcon;
+    public Image acquireWeaponIcon;
 
     // Passive UI Elements
     public Button upgradePassiveButton;
     public Button acquirePassiveButton;
     public TMP_Text upgradePassiveText;
     public TMP_Text acquirePassiveText;
+    public Image upgradePassiveIcon;
+    public Image acquirePassiveIcon;
 
     private System.Action onLevelUpComplete;
     private PlayerWeaponManager weaponManager;
@@ -52,6 +56,7 @@ public class LevelUpUI : MonoBehaviour
                 ? $"Upgrade {weaponToUpgrade.weaponName} (Level {weaponToUpgrade.level}/{weaponToUpgrade.maxLevel})"
                 : $"{weaponToUpgrade.weaponName} (Max Level)";
 
+            upgradeWeaponIcon.sprite = weaponToUpgrade.weaponIcon;
             upgradeWeaponButton.interactable = weaponToUpgrade.level < weaponToUpgrade.maxLevel;
         }
         else
@@ -65,6 +70,11 @@ public class LevelUpUI : MonoBehaviour
             ? $"Acquire {weaponToAcquire.weaponName}" 
             : "No New Weapons Available";
 
+        if (weaponToAcquire != null)
+        {
+            acquireWeaponIcon.sprite = weaponToAcquire.weaponIcon;
+        }
+
         acquireWeaponButton.interactable = weaponToAcquire != null;
 
         // Handle Passive Upgrade
@@ -74,6 +84,7 @@ public class LevelUpUI : MonoBehaviour
                 ? $"Upgrade {passiveToUpgrade.passiveName} (Level {passiveToUpgrade.level}/{passiveToUpgrade.maxLevel})"
                 : $"{passiveToUpgrade.passiveName} (Max Level)";
 
+            upgradePassiveIcon.sprite = passiveToUpgrade.passiveIcon;
             upgradePassiveButton.interactable = passiveToUpgrade.level < passiveToUpgrade.maxLevel;
         }
         else
@@ -86,6 +97,11 @@ public class LevelUpUI : MonoBehaviour
         acquirePassiveText.text = passiveToAcquire != null 
             ? $"Acquire {passiveToAcquire.passiveName}" 
             : "No New Passives Available";
+
+        if (passiveToAcquire != null)
+        {
+            acquirePassiveIcon.sprite = passiveToAcquire.passiveIcon;
+        }
 
         acquirePassiveButton.interactable = passiveToAcquire != null;
     }

@@ -49,5 +49,6 @@ public enum EnemyType
     Simple,
     SimpleHarder,
     Fast,
-    Tank
+    Tank,
+    Splitter,
 }

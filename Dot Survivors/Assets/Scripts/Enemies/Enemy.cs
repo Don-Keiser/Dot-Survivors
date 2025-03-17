@@ -118,13 +118,13 @@ public class Enemy : MonoBehaviour
         {
             for (int i = 0; i < HitEffectCount; i++)
             {
-                Vector2 spawnPos = (Vector2)transform.position + UnityEngine.Random.insideUnitCircle * 0.2f;
+                Vector2 spawnPos = (Vector2)transform.position + Random.insideUnitCircle * 0.2f;
                 GameObject hitEffect = Instantiate(hitEffectPrefab, spawnPos, Quaternion.identity);
                 hitEffect.GetComponent<SpriteRenderer>().color = hitColor;
                 Rigidbody2D rb = hitEffect.GetComponent<Rigidbody2D>();
 
-                Vector2 randomDirection = UnityEngine.Random.insideUnitCircle.normalized;
-                rb.linearVelocity = randomDirection * UnityEngine.Random.Range(1.5f, 5f);
+                Vector2 randomDirection = Random.insideUnitCircle.normalized;
+                rb.linearVelocity = randomDirection * Random.Range(1.5f, 5f);
             }
         }
     }

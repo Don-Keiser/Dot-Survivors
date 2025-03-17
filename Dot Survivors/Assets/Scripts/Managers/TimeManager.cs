@@ -5,6 +5,7 @@ public class TimeManager : MonoBehaviour
     public static TimeManager Instance { get; private set; }
 
     private int freezeCount = 0;
+    private bool isLevelUpPaused = false;
 
     private void Awake() 
     {
@@ -34,6 +35,24 @@ public class TimeManager : MonoBehaviour
         if (freezeCount == 0) 
         {
             Time.timeScale = 1f;
+        }
+    }
+
+    public void PauseForLevelUp()
+    {
+        if (!isLevelUpPaused)
+        {
+            isLevelUpPaused = true;
+            PauseGame();
+        }
+    }
+
+    public void ResumeFromLevelUp()
+    {
+        if (isLevelUpPaused)
+        {
+            isLevelUpPaused = false;
+            ResumeGame();
         }
     }
 }

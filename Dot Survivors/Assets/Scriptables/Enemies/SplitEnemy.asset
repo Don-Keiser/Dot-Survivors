@@ -10,18 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48dbabd46560ffd45a9073e1c698ab02, type: 3}
-  m_Name: EnemySimple
+  m_Name: SplitEnemy
   m_EditorClassIdentifier: 
-  enemyName: EnemySimple
-  health: 30
-  moveSpeed: 1.8
-  damage: 5
-  damageInterval: 0.3
+  enemyName: SplitEnemy
+  health: 20
+  moveSpeed: 5.2
+  damage: 3
+  damageInterval: 0.5
   possibleDrops:
   - {fileID: 11400000, guid: 0af4079b573fb36429682a408a933b2e, type: 2}
-  - {fileID: 11400000, guid: 72d9d48601db56846a00d64082477e20, type: 2}
   dropChances:
-  - 98
-  - 2
+  - 100
   splitEnemyPrefab: {fileID: 0}
   splitCount: 0

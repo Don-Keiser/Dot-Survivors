@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: FastEnemy
   m_EditorClassIdentifier: 
   enemyName: FastEnemy
-  enemyType: 2
   health: 80
   moveSpeed: 4.6
   damage: 5
-  damageInterval: 0.2
+  damageInterval: 0.4
   possibleDrops:
   - {fileID: 11400000, guid: 5f4052c3991e6bd4e9bc341f0c8524f0, type: 2}
   dropChances:
   - 100
+  splitEnemyPrefab: {fileID: 0}
+  splitCount: 0

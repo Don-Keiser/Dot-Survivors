@@ -13,6 +13,10 @@ public class EnemyConfig : ScriptableObject
     public BonusConfig[] possibleDrops;
     public float[] dropChances;
 
+    [Header("Splitter Settings")]
+    public GameObject splitEnemyPrefab;
+    public int splitCount = 0;
+
     public BonusConfig GetRandomDrop() 
     {
         if (possibleDrops.Length != dropChances.Length)

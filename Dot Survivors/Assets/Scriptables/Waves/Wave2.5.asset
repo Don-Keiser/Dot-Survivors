@@ -16,6 +16,8 @@ MonoBehaviour:
   - enemyPrefab: {fileID: 2075620189348619413, guid: 29731766dabb2c847b1f5df3d4b931ae, type: 3}
     spawnChance: 70
   - enemyPrefab: {fileID: 2075620189348619413, guid: e434e395b39586745a8932608f75a50e, type: 3}
-    spawnChance: 30
+    spawnChance: 25
+  - enemyPrefab: {fileID: 2075620189348619413, guid: 2dff07c937e8170449761c67f66dd9e4, type: 3}
+    spawnChance: 5
   spawnRate: 0.2
   waveDuration: 60

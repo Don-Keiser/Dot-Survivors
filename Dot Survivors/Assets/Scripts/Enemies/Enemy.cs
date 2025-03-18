@@ -91,6 +91,10 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            if (!isDying)
+            {
+                playerStats.TakeDamage(damage);
+            }
             damageTimer = 0f;
         }
     }

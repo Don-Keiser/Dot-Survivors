@@ -1567,7 +1567,7 @@ MonoBehaviour:
     colorShiftSpeed: 0.4
     tileSizeX: 0
     tileSizeY: 0
-  - layerPrefab: {fileID: 4821885091175328867, guid: df22d6be2d8c2c944ba09397162a3c76, type: 3}
+  - layerPrefab: {fileID: 4821885091175328867, guid: 8eef9e6c6de8a0b4c843dc9a5786974b, type: 3}
     parallaxSpeed: 0.05
     enableColorShift: 1
     startColor: {r: 0.22899963, g: 0.22899963, b: 0.8037735, a: 0.69803923}
@@ -1830,9 +1830,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 11400000, guid: 24e72849dd2db4d469fa648e94dea557, type: 2}
   - {fileID: 11400000, guid: ccf87ab1451e9774c8c8c8889b403b3b, type: 2}
   - {fileID: 11400000, guid: d3b2500a472eb504ab60bc2f7cea0dfc, type: 2}
+  - {fileID: 11400000, guid: 24e72849dd2db4d469fa648e94dea557, type: 2}
   - {fileID: 11400000, guid: 5265d7cb77ce1aa459b72d21935ab5fa, type: 2}
   - {fileID: 11400000, guid: a9ff9fec361d97544aaddcb63c80cae7, type: 2}
   - {fileID: 11400000, guid: f253525a97c6dc14da0ac86db4419dc4, type: 2}

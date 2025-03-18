@@ -15,8 +15,8 @@ MonoBehaviour:
   enemyName: 4SplitterEnemy
   health: 320
   moveSpeed: 3.2
-  damage: 25
-  damageInterval: 0.2
+  damage: 15
+  damageInterval: 0.3
   possibleDrops:
   - {fileID: 11400000, guid: 5f4052c3991e6bd4e9bc341f0c8524f0, type: 2}
   dropChances:

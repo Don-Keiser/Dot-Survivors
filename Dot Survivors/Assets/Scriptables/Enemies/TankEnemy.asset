@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: TankEnemy
   m_EditorClassIdentifier: 
   enemyName: Tank
-  enemyType: 3
   health: 800
   moveSpeed: 1
-  damage: 15
-  damageInterval: 0.2
+  damage: 20
+  damageInterval: 0.3
   possibleDrops:
   - {fileID: 11400000, guid: dd1ef63f242753c40ad972136bfb1b56, type: 2}
   - {fileID: 11400000, guid: 72d9d48601db56846a00d64082477e20, type: 2}
   dropChances:
   - 95
   - 5
+  splitEnemyPrefab: {fileID: 0}
+  splitCount: 0

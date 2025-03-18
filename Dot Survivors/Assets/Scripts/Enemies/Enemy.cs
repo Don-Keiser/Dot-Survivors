@@ -152,6 +152,11 @@ public class Enemy : MonoBehaviour
         isDying = true;
         DropXp();
 
+        if (enemyConfig.splitEnemyPrefab != null && enemyConfig.splitCount > 0)
+        {
+            SplitIntoEnemies();
+        }
+
         float randomSpeed = Random.Range(MinRandomSpeed, MaxRandomSpeed);
         animator.speed = randomSpeed;
 
@@ -180,6 +185,17 @@ public class Enemy : MonoBehaviour
         if (collision.CompareTag("Boundary"))
         {
             RepositionEnemy();
+        }
+    }
+
+    private void SplitIntoEnemies()
+    {
+        for (int i = 0; i < enemyConfig.splitCount; i++)
+        {
+            Vector2 spawnOffset = Random.insideUnitCircle * 0.5f;
+            Vector2 spawnPosition = (Vector2)transform.position + spawnOffset;
+
+            Instantiate(enemyConfig.splitEnemyPrefab, spawnPosition, Quaternion.identity);
         }
     }
 

@@ -10,20 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc0e4cdbd1cb0f74481cd4230b8b85a2, type: 3}
-  m_Name: Wave6
+  m_Name: SplitterWave
   m_EditorClassIdentifier: 
   enemies:
-  - enemyPrefab: {fileID: 2075620189348619413, guid: e434e395b39586745a8932608f75a50e, type: 3}
-    spawnChance: 50
-  - enemyPrefab: {fileID: 2075620189348619413, guid: 1920189cadd14d349a05c1e1ecbe52aa, type: 3}
-    spawnChance: 10
-  - enemyPrefab: {fileID: 2075620189348619413, guid: 52b516cfc11cb414094986af6d789399, type: 3}
-    spawnChance: 10
+  - enemyPrefab: {fileID: 2075620189348619413, guid: 50e5a53f582137147884eaad42ecb3d5, type: 3}
+    spawnChance: 5
   - enemyPrefab: {fileID: 2075620189348619413, guid: 2dff07c937e8170449761c67f66dd9e4, type: 3}
-    spawnChance: 10
+    spawnChance: 45
   - enemyPrefab: {fileID: 2075620189348619413, guid: 80e705460e55b2f478558a76ffc3ea6f, type: 3}
-    spawnChance: 10
+    spawnChance: 30
   - enemyPrefab: {fileID: 2075620189348619413, guid: 59039308a675d574e9a5ea0df25d6e5a, type: 3}
-    spawnChance: 10
-  spawnRate: 0.1
-  waveDuration: 300
+    spawnChance: 20
+  spawnRate: 0.4
+  waveDuration: 40

@@ -15,13 +15,31 @@ MonoBehaviour:
   weaponName: GatlingGun
   weaponIcon: {fileID: -411512736448354516, guid: 05521c0524b2bcc40859d88c76b2bde5, type: 3}
   level: 1
-  maxLevel: 3
+  maxLevel: 5
   baseDamage: 5
   cooldown: 2
   upgradeSteps:
   - upgrades:
     - statName: damageIncrease
       value: 5
+    - statName: cooldownReduction
+      value: 0
+    - statName: fireRateIncrease
+      value: 0.9
+    - statName: rotationSpeedIncrease
+      value: 10
+  - upgrades:
+    - statName: damageIncrease
+      value: 10
+    - statName: cooldownReduction
+      value: 0
+    - statName: fireRateIncrease
+      value: 0.9
+    - statName: rotationSpeedIncrease
+      value: 10
+  - upgrades:
+    - statName: damageIncrease
+      value: 10
     - statName: cooldownReduction
       value: 0
     - statName: fireRateIncrease

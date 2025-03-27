@@ -15,7 +15,7 @@ MonoBehaviour:
   weaponName: Sniper
   weaponIcon: {fileID: 2087949621987537175, guid: 5cb7927719a6ec54185a373c18a112ff, type: 3}
   level: 1
-  maxLevel: 4
+  maxLevel: 5
   baseDamage: 20
   cooldown: 3
   upgradeSteps:
@@ -35,6 +35,15 @@ MonoBehaviour:
       value: 0.5
     - statName: rangeIncrease
       value: 1
+    - statName: extraShots
+      value: 1
+  - upgrades:
+    - statName: damageIncrease
+      value: 10
+    - statName: cooldownReduction
+      value: 0.8
+    - statName: rangeIncrease
+      value: 0
     - statName: extraShots
       value: 1
   - upgrades:

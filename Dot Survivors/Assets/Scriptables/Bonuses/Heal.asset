@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bonusName: Heal
   bonusPrefab: {fileID: 3269961027680181322, guid: d09d1118653785b408f89fb98e357a18, type: 3}
-  bonusAmount: 20
+  bonusAmount: 50

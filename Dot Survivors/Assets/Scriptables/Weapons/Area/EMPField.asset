@@ -30,13 +30,6 @@ MonoBehaviour:
     - statName: damageIncrease
       value: 5
     - statName: cooldownReduction
-      value: 0.05
-    - statName: rangeIncrease
-      value: 1
-  - upgrades:
-    - statName: damageIncrease
-      value: 5
-    - statName: cooldownReduction
       value: 0
     - statName: rangeIncrease
       value: 1
@@ -45,6 +38,13 @@ MonoBehaviour:
       value: 10
     - statName: cooldownReduction
       value: 0.05
+    - statName: rangeIncrease
+      value: 1
+  - upgrades:
+    - statName: damageIncrease
+      value: 20
+    - statName: cooldownReduction
+      value: 0.1
     - statName: rangeIncrease
       value: 1
   range: 3

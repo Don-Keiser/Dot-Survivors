@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
     public Vector2 lastMovementDirection { get; private set; } = Vector2.right; // Default to right
 
+    [SerializeField] private ArrowController arrowController;
+
     private void Start()
     {
         moveSpeed = baseMoveSpeed;
@@ -19,10 +21,12 @@ public class PlayerMovement : MonoBehaviour
     {
         movement = context.ReadValue<Vector2>();
 
-        // Update last movement direction when player moves
         if (movement != Vector2.zero)
         {
             lastMovementDirection = movement.normalized;
+
+            if (arrowController != null)
+                arrowController.UpdateArrow(lastMovementDirection);
         }
     }
 

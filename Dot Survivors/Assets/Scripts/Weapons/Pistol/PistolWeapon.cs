@@ -61,14 +61,25 @@ public class PistolWeapon : WeaponBase
 
     private Vector2 GetCardinalDirection(Vector2 direction)
     {
+        direction.Normalize();
+
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
         {
             return direction.x > 0 ? Vector2.right : Vector2.left;
         }
-        else
+        else if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x))
         {
             return direction.y > 0 ? Vector2.up : Vector2.down;
         }
+        else
+        {
+            if (direction.x > 0 && direction.y > 0) return new Vector2(1, 1).normalized; // Top-right
+            if (direction.x < 0 && direction.y > 0) return new Vector2(-1, 1).normalized; // Top-left
+            if (direction.x > 0 && direction.y < 0) return new Vector2(1, -1).normalized; // Bottom-right
+            if (direction.x < 0 && direction.y < 0) return new Vector2(-1, -1).normalized; // Bottom-left
+        }
+
+        return Vector2.zero;
     }
 
     protected override string[] GetPossibleUpgradeStats()

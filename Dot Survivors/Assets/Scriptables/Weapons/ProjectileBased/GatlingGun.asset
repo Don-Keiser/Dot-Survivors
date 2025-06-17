@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GatlingGun
   m_EditorClassIdentifier: 
   weaponName: GatlingGun
-  weaponIcon: {fileID: -411512736448354516, guid: 05521c0524b2bcc40859d88c76b2bde5, type: 3}
+  weaponIcon: {fileID: 21300000, guid: 0b7fb47c85f7fea4f91894dafa70ff0f, type: 3}
   level: 1
   maxLevel: 5
   baseDamage: 5

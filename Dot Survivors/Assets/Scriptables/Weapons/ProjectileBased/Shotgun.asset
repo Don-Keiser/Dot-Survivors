@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shotgun
   m_EditorClassIdentifier: 
   weaponName: Shotgun
-  weaponIcon: {fileID: 2087949621987537175, guid: 5cb7927719a6ec54185a373c18a112ff, type: 3}
+  weaponIcon: {fileID: 21300000, guid: f82a4f319dfd29643bf828f1a95935fe, type: 3}
   level: 1
   maxLevel: 5
   baseDamage: 5

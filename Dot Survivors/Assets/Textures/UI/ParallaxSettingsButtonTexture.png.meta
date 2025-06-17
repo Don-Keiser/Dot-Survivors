@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5cb7927719a6ec54185a373c18a112ff
+guid: 7f2e907ac5b5116479beca27736cd9a2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2087949621987537175
-    second: sniperTemp_0
+      213: 2778111292538636837
+    second: ParallaxSettingsButtonTexture_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sniperTemp_0
+      name: ParallaxSettingsButtonTexture_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 425
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7117a776e13e9fc10800000000000000
-      internalID: 2087949621987537175
+      spriteID: 52a44426085dd8620800000000000000
+      internalID: 2778111292538636837
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sniperTemp_0: 2087949621987537175
+      ParallaxSettingsButtonTexture_0: 2778111292538636837
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

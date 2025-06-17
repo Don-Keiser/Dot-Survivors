@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48dbabd46560ffd45a9073e1c698ab02, type: 3}
+  m_Name: 4SpliterEnemy
+  m_EditorClassIdentifier: 
+  enemyName: 4SplitterEnemy
+  health: 240
+  moveSpeed: 3.8
+  damage: 10
+  damageInterval: 0.3
+  possibleDrops:
+  - {fileID: 11400000, guid: 5f4052c3991e6bd4e9bc341f0c8524f0, type: 2}
+  dropChances:
+  - 100
+  splitEnemyPrefab: {fileID: 2075620189348619413, guid: 50e5a53f582137147884eaad42ecb3d5, type: 3}
+  splitCount: 4

@@ -1,0 +1,1118 @@
+fileFormatVersion: 2
+guid: fdc2f414ec67dc646b0537b7a683c5b4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5425857325717964457
+    second: midLayerSpades_0
+  - first:
+      213: -5160924560663646628
+    second: midLayerSpades_1
+  - first:
+      213: -7644834380180845326
+    second: midLayerSpades_2
+  - first:
+      213: 1816307968329204924
+    second: midLayerSpades_3
+  - first:
+      213: -2940044763300803342
+    second: midLayerSpades_4
+  - first:
+      213: 901142258234447197
+    second: midLayerSpades_5
+  - first:
+      213: 775047531061936415
+    second: midLayerSpades_6
+  - first:
+      213: 2310385480737241027
+    second: midLayerSpades_7
+  - first:
+      213: -4353144076141364143
+    second: midLayerSpades_8
+  - first:
+      213: -6276030434697415376
+    second: midLayerSpades_9
+  - first:
+      213: 4778817004083240910
+    second: midLayerSpades_10
+  - first:
+      213: 4179176159558282652
+    second: midLayerSpades_11
+  - first:
+      213: 2485101194871392935
+    second: midLayerSpades_12
+  - first:
+      213: -7416787282383727732
+    second: midLayerSpades_13
+  - first:
+      213: -5010569971512942338
+    second: midLayerSpades_14
+  - first:
+      213: -401511076514084837
+    second: midLayerSpades_15
+  - first:
+      213: 5872702179332879178
+    second: midLayerSpades_16
+  - first:
+      213: -7480851491029534495
+    second: midLayerSpades_17
+  - first:
+      213: 5229025607347773937
+    second: midLayerSpades_18
+  - first:
+      213: -7142518517206713507
+    second: midLayerSpades_19
+  - first:
+      213: -2181801995232668983
+    second: midLayerSpades_20
+  - first:
+      213: 6225889897979297771
+    second: midLayerSpades_21
+  - first:
+      213: -7114717224409878662
+    second: midLayerSpades_22
+  - first:
+      213: 1464900549118589523
+    second: midLayerSpades_23
+  - first:
+      213: -2647590880062876002
+    second: midLayerSpades_24
+  - first:
+      213: -3569300295446146337
+    second: midLayerSpades_25
+  - first:
+      213: 3854271650521525757
+    second: midLayerSpades_26
+  - first:
+      213: -8248599787751485051
+    second: midLayerSpades_27
+  - first:
+      213: 4306434700628416475
+    second: midLayerSpades_28
+  - first:
+      213: 7463305915685070928
+    second: midLayerSpades_29
+  - first:
+      213: -4606624898367213783
+    second: midLayerSpades_30
+  - first:
+      213: 6138850858310859902
+    second: midLayerSpades_31
+  - first:
+      213: 8104669448582407669
+    second: midLayerSpades_32
+  - first:
+      213: -3225216998874561929
+    second: midLayerSpades_33
+  - first:
+      213: -4000929456771975236
+    second: midLayerSpades_34
+  - first:
+      213: 9114718116434033327
+    second: midLayerSpades_35
+  - first:
+      213: 8097899078406545074
+    second: midLayerSpades_36
+  - first:
+      213: 4460602124334955813
+    second: midLayerSpades_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: midLayerSpades_0
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 816
+        width: 131
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a6ce558d748c4b40800000000000000
+      internalID: 5425857325717964457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_1
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 888
+        width: 55
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5eed01b476b068b0800000000000000
+      internalID: -5160924560663646628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_2
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 768
+        width: 186
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc80a2a2a718e590800000000000000
+      internalID: -7644834380180845326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_3
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 927
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb449f65972d43910800000000000000
+      internalID: 1816307968329204924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_4
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 775
+        width: 201
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc45b36ddcd237d0800000000000000
+      internalID: -2940044763300803342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_5
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 886
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5558220c10818c00800000000000000
+      internalID: 901142258234447197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_6
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 752
+        width: 113
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f118df48f9581ca00800000000000000
+      internalID: 775047531061936415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_7
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 796
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c730919a53201020800000000000000
+      internalID: 2310385480737241027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_8
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 742
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15c7f75d6868693c0800000000000000
+      internalID: -4353144076141364143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 580
+        width: 185
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 035f15c429f07e8a0800000000000000
+      internalID: -6276030434697415376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_10
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 635
+        width: 119
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecf5af6feb4c15240800000000000000
+      internalID: 4778817004083240910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_11
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 674
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9da04c239a6ff930800000000000000
+      internalID: 4179176159558282652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_12
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 626
+        width: 120
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aa453fbe5adc7220800000000000000
+      internalID: 2485101194871392935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_13
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 645
+        width: 106
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8312e23347421990800000000000000
+      internalID: -7416787282383727732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_14
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 622
+        width: 113
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef06bb57821e67ab0800000000000000
+      internalID: -5010569971512942338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_15
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 486
+        width: 92
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b184efe9dcb8d6af0800000000000000
+      internalID: -401511076514084837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_16
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 350
+        width: 222
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a437cc66487008150800000000000000
+      internalID: 5872702179332879178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_17
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 477
+        width: 106
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e8bbb3443dae2890800000000000000
+      internalID: -7480851491029534495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_18
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 537
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f1a267d51b319840800000000000000
+      internalID: 5229025607347773937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_19
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 563
+        width: 85
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5b7e34504da0ec90800000000000000
+      internalID: -7142518517206713507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_20
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 494
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c21bef15aea8b1e0800000000000000
+      internalID: -2181801995232668983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_21
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 375
+        width: 124
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: befbfb340edc66650800000000000000
+      internalID: 6225889897979297771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_22
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 384
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7f22b93162734d90800000000000000
+      internalID: -7114717224409878662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_23
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 373
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35afc7db94f545410800000000000000
+      internalID: 1464900549118589523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_24
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 400
+        width: 109
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e96d9434f1ed14bd0800000000000000
+      internalID: -2647590880062876002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_25
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 254
+        width: 99
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd25c31da4c477ec0800000000000000
+      internalID: -3569300295446146337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_26
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 295
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfda13535af1d7530800000000000000
+      internalID: 3854271650521525757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_27
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 225
+        width: 130
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 581d5bc2236178d80800000000000000
+      internalID: -8248599787751485051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_28
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 288
+        width: 95
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd75f533b8783cb30800000000000000
+      internalID: 4306434700628416475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_29
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 202
+        width: 102
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 058ea72203df29760800000000000000
+      internalID: 7463305915685070928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_30
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 56
+        width: 135
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92f2a57df0bf110c0800000000000000
+      internalID: -4606624898367213783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_31
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 64
+        width: 199
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7c78b2a454913550800000000000000
+      internalID: 6138850858310859902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_32
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 45
+        width: 100
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f527b05ce1997070800000000000000
+      internalID: 8104669448582407669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_33
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 172
+        width: 79
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 772c78a3a3abd33d0800000000000000
+      internalID: -3225216998874561929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_34
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 122
+        width: 99
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb7b5bd5bd7d978c0800000000000000
+      internalID: -4000929456771975236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_35
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 66
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faa3ed5c5dbfd7e70800000000000000
+      internalID: 9114718116434033327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_36
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 18
+        width: 88
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be926bae44816070800000000000000
+      internalID: 8097899078406545074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: midLayerSpades_37
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 64
+        width: 79
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d7651bffd37ed30800000000000000
+      internalID: 4460602124334955813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      midLayerSpades_0: 5425857325717964457
+      midLayerSpades_1: -5160924560663646628
+      midLayerSpades_10: 4778817004083240910
+      midLayerSpades_11: 4179176159558282652
+      midLayerSpades_12: 2485101194871392935
+      midLayerSpades_13: -7416787282383727732
+      midLayerSpades_14: -5010569971512942338
+      midLayerSpades_15: -401511076514084837
+      midLayerSpades_16: 5872702179332879178
+      midLayerSpades_17: -7480851491029534495
+      midLayerSpades_18: 5229025607347773937
+      midLayerSpades_19: -7142518517206713507
+      midLayerSpades_2: -7644834380180845326
+      midLayerSpades_20: -2181801995232668983
+      midLayerSpades_21: 6225889897979297771
+      midLayerSpades_22: -7114717224409878662
+      midLayerSpades_23: 1464900549118589523
+      midLayerSpades_24: -2647590880062876002
+      midLayerSpades_25: -3569300295446146337
+      midLayerSpades_26: 3854271650521525757
+      midLayerSpades_27: -8248599787751485051
+      midLayerSpades_28: 4306434700628416475
+      midLayerSpades_29: 7463305915685070928
+      midLayerSpades_3: 1816307968329204924
+      midLayerSpades_30: -4606624898367213783
+      midLayerSpades_31: 6138850858310859902
+      midLayerSpades_32: 8104669448582407669
+      midLayerSpades_33: -3225216998874561929
+      midLayerSpades_34: -4000929456771975236
+      midLayerSpades_35: 9114718116434033327
+      midLayerSpades_36: 8097899078406545074
+      midLayerSpades_37: 4460602124334955813
+      midLayerSpades_4: -2940044763300803342
+      midLayerSpades_5: 901142258234447197
+      midLayerSpades_6: 775047531061936415
+      midLayerSpades_7: 2310385480737241027
+      midLayerSpades_8: -4353144076141364143
+      midLayerSpades_9: -6276030434697415376
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

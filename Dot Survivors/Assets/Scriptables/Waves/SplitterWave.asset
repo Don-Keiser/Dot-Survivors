@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc0e4cdbd1cb0f74481cd4230b8b85a2, type: 3}
+  m_Name: SplitterWave
+  m_EditorClassIdentifier: 
+  enemies:
+  - enemyPrefab: {fileID: 2075620189348619413, guid: 50e5a53f582137147884eaad42ecb3d5, type: 3}
+    spawnChance: 5
+  - enemyPrefab: {fileID: 2075620189348619413, guid: 2dff07c937e8170449761c67f66dd9e4, type: 3}
+    spawnChance: 45
+  - enemyPrefab: {fileID: 2075620189348619413, guid: 80e705460e55b2f478558a76ffc3ea6f, type: 3}
+    spawnChance: 30
+  - enemyPrefab: {fileID: 2075620189348619413, guid: 59039308a675d574e9a5ea0df25d6e5a, type: 3}
+    spawnChance: 20
+  spawnRate: 0.4
+  waveDuration: 40

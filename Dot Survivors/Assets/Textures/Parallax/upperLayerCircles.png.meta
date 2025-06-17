@@ -1,0 +1,1872 @@
+fileFormatVersion: 2
+guid: 0b8545a7ea3726a4abd8ceca731a2367
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1200912851876402204
+    second: upperLayerCircles_0
+  - first:
+      213: -3012113292663660054
+    second: upperLayerCircles_1
+  - first:
+      213: 7524795147627623730
+    second: upperLayerCircles_2
+  - first:
+      213: 7128721960344708278
+    second: upperLayerCircles_3
+  - first:
+      213: 3419196594052013387
+    second: upperLayerCircles_4
+  - first:
+      213: 5177502005254782818
+    second: upperLayerCircles_5
+  - first:
+      213: -6887590823716295164
+    second: upperLayerCircles_6
+  - first:
+      213: -354759033885470879
+    second: upperLayerCircles_7
+  - first:
+      213: 3063620372794192217
+    second: upperLayerCircles_8
+  - first:
+      213: -9011364044437869078
+    second: upperLayerCircles_9
+  - first:
+      213: -7481317013295853991
+    second: upperLayerCircles_10
+  - first:
+      213: -8345887430302413731
+    second: upperLayerCircles_11
+  - first:
+      213: -2479027591424556994
+    second: upperLayerCircles_12
+  - first:
+      213: 818630005861231427
+    second: upperLayerCircles_13
+  - first:
+      213: 5399728676549592653
+    second: upperLayerCircles_14
+  - first:
+      213: 7492696629890308444
+    second: upperLayerCircles_15
+  - first:
+      213: -5554937191638161939
+    second: upperLayerCircles_16
+  - first:
+      213: 5513591771494156742
+    second: upperLayerCircles_17
+  - first:
+      213: -1391411741666965790
+    second: upperLayerCircles_18
+  - first:
+      213: -9098514743598494591
+    second: upperLayerCircles_19
+  - first:
+      213: 988013357702417664
+    second: upperLayerCircles_20
+  - first:
+      213: 347147490426721710
+    second: upperLayerCircles_21
+  - first:
+      213: -902530369958360976
+    second: upperLayerCircles_22
+  - first:
+      213: -2047780127590049914
+    second: upperLayerCircles_23
+  - first:
+      213: 5264836264735141824
+    second: upperLayerCircles_24
+  - first:
+      213: -3097004160771867929
+    second: upperLayerCircles_25
+  - first:
+      213: -5727162031353668446
+    second: upperLayerCircles_26
+  - first:
+      213: -4048837435796164638
+    second: upperLayerCircles_27
+  - first:
+      213: 1345922919613654860
+    second: upperLayerCircles_28
+  - first:
+      213: -964270374499247368
+    second: upperLayerCircles_29
+  - first:
+      213: 5220348034401446452
+    second: upperLayerCircles_30
+  - first:
+      213: -1868808384969871804
+    second: upperLayerCircles_31
+  - first:
+      213: -769290624841578421
+    second: upperLayerCircles_32
+  - first:
+      213: -7297014608960849098
+    second: upperLayerCircles_33
+  - first:
+      213: 1010207257270476508
+    second: upperLayerCircles_34
+  - first:
+      213: 3214983512344193896
+    second: upperLayerCircles_35
+  - first:
+      213: -6666938741399348401
+    second: upperLayerCircles_36
+  - first:
+      213: -2889185826263912519
+    second: upperLayerCircles_37
+  - first:
+      213: -7683350521028582908
+    second: upperLayerCircles_38
+  - first:
+      213: -5123188846509216261
+    second: upperLayerCircles_39
+  - first:
+      213: 1167050212215910106
+    second: upperLayerCircles_40
+  - first:
+      213: 4984318693601131326
+    second: upperLayerCircles_41
+  - first:
+      213: -1225235164861004521
+    second: upperLayerCircles_42
+  - first:
+      213: 1403515673171366147
+    second: upperLayerCircles_43
+  - first:
+      213: -5686667177666587481
+    second: upperLayerCircles_44
+  - first:
+      213: -4313698709235543801
+    second: upperLayerCircles_45
+  - first:
+      213: -6823352602693191559
+    second: upperLayerCircles_46
+  - first:
+      213: -8577074510384498364
+    second: upperLayerCircles_47
+  - first:
+      213: 8056960622955505048
+    second: upperLayerCircles_48
+  - first:
+      213: -462327958540879968
+    second: upperLayerCircles_49
+  - first:
+      213: 4383740375585168612
+    second: upperLayerCircles_50
+  - first:
+      213: -3905652776844218037
+    second: upperLayerCircles_51
+  - first:
+      213: 6442374602805010609
+    second: upperLayerCircles_52
+  - first:
+      213: -6509546229250398884
+    second: upperLayerCircles_53
+  - first:
+      213: -1847758190291542919
+    second: upperLayerCircles_54
+  - first:
+      213: -1088968167813629174
+    second: upperLayerCircles_55
+  - first:
+      213: -3577755729924464832
+    second: upperLayerCircles_56
+  - first:
+      213: 6088945723296688589
+    second: upperLayerCircles_57
+  - first:
+      213: 862068946211623122
+    second: upperLayerCircles_58
+  - first:
+      213: -3271862873849118184
+    second: upperLayerCircles_59
+  - first:
+      213: -814562903518306644
+    second: upperLayerCircles_60
+  - first:
+      213: 1967228071566103505
+    second: upperLayerCircles_61
+  - first:
+      213: -8809911479966938003
+    second: upperLayerCircles_62
+  - first:
+      213: -2131044856866816006
+    second: upperLayerCircles_63
+  - first:
+      213: -2855075587685480076
+    second: upperLayerCircles_64
+  - first:
+      213: -2289833634941475237
+    second: upperLayerCircles_65
+  - first:
+      213: -4677000593184303888
+    second: upperLayerCircles_66
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: upperLayerCircles_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 910
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eba4b9bf10855fe0800000000000000
+      internalID: -1200912851876402204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 699
+        width: 277
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae1ec8f4be2d236d0800000000000000
+      internalID: -3012113292663660054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_2
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 965
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2357de591517d6860800000000000000
+      internalID: 7524795147627623730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_3
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 965
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b46fd47ade4ee260800000000000000
+      internalID: 7128721960344708278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_4
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 909
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4d12b5cf2d637f20800000000000000
+      internalID: 3419196594052013387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_5
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 948
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26f751764ae2ad740800000000000000
+      internalID: 5177502005254782818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_6
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 950
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40e662a43ac5a60a0800000000000000
+      internalID: -6887590823716295164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_7
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 882
+        width: 106
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16f456cc984a31bf0800000000000000
+      internalID: -354759033885470879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_8
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 968
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9513c0f4f7a248a20800000000000000
+      internalID: 3063620372794192217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_9
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 927
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aedad85552431f280800000000000000
+      internalID: -9011364044437869078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_10
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 961
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95e0a6a60d50d2890800000000000000
+      internalID: -7481317013295853991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_11
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 956
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5c4d6db9937d2c80800000000000000
+      internalID: -8345887430302413731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_12
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 847
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e304fb04a89b89dd0800000000000000
+      internalID: -2479027591424556994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_13
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 895
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34ba5dd27ab5c5b00800000000000000
+      internalID: 818630005861231427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_14
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 792
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d468a315f90bfea40800000000000000
+      internalID: 5399728676549592653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_15
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 909
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c59d06a03e76bf760800000000000000
+      internalID: 7492696629890308444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_16
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 866
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de52dc63e06e8e2b0800000000000000
+      internalID: -5554937191638161939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_17
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 850
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c90d600186348c40800000000000000
+      internalID: 5513591771494156742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_18
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 826
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e602a99466b0bce0800000000000000
+      internalID: -1391411741666965790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_19
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 844
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c4824fb059bb180800000000000000
+      internalID: -9098514743598494591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_20
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 803
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00d81330ae026bd00800000000000000
+      internalID: 988013357702417664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_21
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 764
+        width: 141
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea59d83adc051d400800000000000000
+      internalID: 347147490426721710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_22
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 727
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07841ab09619973f0800000000000000
+      internalID: -902530369958360976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_23
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 802
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68714e4d2d2d493e0800000000000000
+      internalID: -2047780127590049914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_24
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 759
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cfe12040b4701940800000000000000
+      internalID: 5264836264735141824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_25
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 714
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea3949df1b3505d0800000000000000
+      internalID: -3097004160771867929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_26
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 784
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ac5f0ee9780580b0800000000000000
+      internalID: -5727162031353668446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_27
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 749
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2efe016cdc3afc7c0800000000000000
+      internalID: -4048837435796164638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_28
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 753
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c47e0aea3cdada210800000000000000
+      internalID: 1345922919613654860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_29
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 549
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fa1a8c04393e92f0800000000000000
+      internalID: -964270374499247368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_30
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 618
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43a2862f0e6627840800000000000000
+      internalID: 5220348034401446452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_31
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 652
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44e699cdca8a016e0800000000000000
+      internalID: -1868808384969871804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_32
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 624
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b488749a04ee255f0800000000000000
+      internalID: -769290624841578421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_33
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 220
+        width: 551
+        height: 551
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63b7d08dfdbcbba90800000000000000
+      internalID: -7297014608960849098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_34
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 660
+        width: 98
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cded02fe52af40e00800000000000000
+      internalID: 1010207257270476508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_35
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 357
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86b6304887aed9c20800000000000000
+      internalID: 3214983512344193896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_36
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 588
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4b1a93a9864a73a0800000000000000
+      internalID: -6666938741399348401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_37
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 545
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bf227f6ccc87e7d0800000000000000
+      internalID: -2889185826263912519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_38
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 590
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4026745c8614f5590800000000000000
+      internalID: -7683350521028582908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_39
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 458
+        width: 93
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfd239e43e6c6e8b0800000000000000
+      internalID: -5123188846509216261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_40
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 424
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade6c261cf1323010800000000000000
+      internalID: 1167050212215910106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 354
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b3f6b917bdb2540800000000000000
+      internalID: 4984318693601131326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_42
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 397
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7158420fb171ffee0800000000000000
+      internalID: -1225235164861004521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_43
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 317
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3019210911a4a7310800000000000000
+      internalID: 1403515673171366147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_44
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 375
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a45f47c456e411b0800000000000000
+      internalID: -5686667177666587481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_45
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 189
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70154fff0e9a224c0800000000000000
+      internalID: -4313698709235543801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_46
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 296
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9783c33a5f49e41a0800000000000000
+      internalID: -6823352602693191559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_47
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 286
+        width: 106
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44979741d2c18f880800000000000000
+      internalID: -8577074510384498364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_48
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 16
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 895a29cbff210df60800000000000000
+      internalID: 8056960622955505048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_49
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 279
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a77075db2b7599f0800000000000000
+      internalID: -462327958540879968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_50
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 285
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ec9a4245ac26dc30800000000000000
+      internalID: 4383740375585168612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_51
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 197
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b41be241e755cc9c0800000000000000
+      internalID: -3905652776844218037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_52
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 18
+        width: 196
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b0e03e6199e76950800000000000000
+      internalID: 6442374602805010609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_53
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 153
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c55eb8c813279a5a0800000000000000
+      internalID: -6509546229250398884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_54
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 77
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97c9adc37b17b56e0800000000000000
+      internalID: -1847758190291542919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_55
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 137
+        width: 147
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0bb2c1983533e0f0800000000000000
+      internalID: -1088968167813629174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04fdbb09e12495ec0800000000000000
+      internalID: -3577755729924464832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_57
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 120
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc9abbdefd7408450800000000000000
+      internalID: 6088945723296688589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_58
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 70
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d0d6de932fa6fb00800000000000000
+      internalID: 862068946211623122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_59
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 20
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8124f622d020892d0800000000000000
+      internalID: -3271862873849118184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_60
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 89
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae9490ea5712b4f0800000000000000
+      internalID: -814562903518306644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_61
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 5
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d3dfdd128ffc4b10800000000000000
+      internalID: 1967228071566103505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_62
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 1
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6c4fe59f28ecb580800000000000000
+      internalID: -8809911479966938003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_63
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 0
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: affb7025ef10d62e0800000000000000
+      internalID: -2131044856866816006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_64
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 20
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4790e1d31ebb068d0800000000000000
+      internalID: -2855075587685480076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_65
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 10
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b56629ae070e830e0800000000000000
+      internalID: -2289833634941475237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upperLayerCircles_66
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 2
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f455f48db4f71fb0800000000000000
+      internalID: -4677000593184303888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      upperLayerCircles_0: -1200912851876402204
+      upperLayerCircles_1: -3012113292663660054
+      upperLayerCircles_10: -7481317013295853991
+      upperLayerCircles_11: -8345887430302413731
+      upperLayerCircles_12: -2479027591424556994
+      upperLayerCircles_13: 818630005861231427
+      upperLayerCircles_14: 5399728676549592653
+      upperLayerCircles_15: 7492696629890308444
+      upperLayerCircles_16: -5554937191638161939
+      upperLayerCircles_17: 5513591771494156742
+      upperLayerCircles_18: -1391411741666965790
+      upperLayerCircles_19: -9098514743598494591
+      upperLayerCircles_2: 7524795147627623730
+      upperLayerCircles_20: 988013357702417664
+      upperLayerCircles_21: 347147490426721710
+      upperLayerCircles_22: -902530369958360976
+      upperLayerCircles_23: -2047780127590049914
+      upperLayerCircles_24: 5264836264735141824
+      upperLayerCircles_25: -3097004160771867929
+      upperLayerCircles_26: -5727162031353668446
+      upperLayerCircles_27: -4048837435796164638
+      upperLayerCircles_28: 1345922919613654860
+      upperLayerCircles_29: -964270374499247368
+      upperLayerCircles_3: 7128721960344708278
+      upperLayerCircles_30: 5220348034401446452
+      upperLayerCircles_31: -1868808384969871804
+      upperLayerCircles_32: -769290624841578421
+      upperLayerCircles_33: -7297014608960849098
+      upperLayerCircles_34: 1010207257270476508
+      upperLayerCircles_35: 3214983512344193896
+      upperLayerCircles_36: -6666938741399348401
+      upperLayerCircles_37: -2889185826263912519
+      upperLayerCircles_38: -7683350521028582908
+      upperLayerCircles_39: -5123188846509216261
+      upperLayerCircles_4: 3419196594052013387
+      upperLayerCircles_40: 1167050212215910106
+      upperLayerCircles_41: 4984318693601131326
+      upperLayerCircles_42: -1225235164861004521
+      upperLayerCircles_43: 1403515673171366147
+      upperLayerCircles_44: -5686667177666587481
+      upperLayerCircles_45: -4313698709235543801
+      upperLayerCircles_46: -6823352602693191559
+      upperLayerCircles_47: -8577074510384498364
+      upperLayerCircles_48: 8056960622955505048
+      upperLayerCircles_49: -462327958540879968
+      upperLayerCircles_5: 5177502005254782818
+      upperLayerCircles_50: 4383740375585168612
+      upperLayerCircles_51: -3905652776844218037
+      upperLayerCircles_52: 6442374602805010609
+      upperLayerCircles_53: -6509546229250398884
+      upperLayerCircles_54: -1847758190291542919
+      upperLayerCircles_55: -1088968167813629174
+      upperLayerCircles_56: -3577755729924464832
+      upperLayerCircles_57: 6088945723296688589
+      upperLayerCircles_58: 862068946211623122
+      upperLayerCircles_59: -3271862873849118184
+      upperLayerCircles_6: -6887590823716295164
+      upperLayerCircles_60: -814562903518306644
+      upperLayerCircles_61: 1967228071566103505
+      upperLayerCircles_62: -8809911479966938003
+      upperLayerCircles_63: -2131044856866816006
+      upperLayerCircles_64: -2855075587685480076
+      upperLayerCircles_65: -2289833634941475237
+      upperLayerCircles_66: -4677000593184303888
+      upperLayerCircles_7: -354759033885470879
+      upperLayerCircles_8: 3063620372794192217
+      upperLayerCircles_9: -9011364044437869078
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

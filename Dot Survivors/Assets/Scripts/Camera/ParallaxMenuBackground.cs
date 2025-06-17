@@ -4,18 +4,37 @@ using System.Collections.Generic;
 public class ParallaxMenuBackground : MonoBehaviour
 {
     [System.Serializable]
-    public class ParallaxLayer
+    public class ParallaxLayer : IParallaxLayer
     {
         public List<GameObject> availablePrefabs;
-        public int currentPrefabIndex = 0;
+        private int _currentPrefabIndex = 0;
+        public int currentPrefabIndex
+        {
+            get => _currentPrefabIndex;
+            set => _currentPrefabIndex = value;
+        }
+
         [HideInInspector] public GameObject layerPrefab;
 
         public float parallaxSpeed = 0.1f;
 
         [Header("Color Shift Settings")]
         public bool enableColorShift = false;
-        public Color startColor = Color.blue;
-        public Color endColor = Color.magenta;
+
+        private Color _startColor = Color.blue;
+        public Color startColor
+        {
+            get => _startColor;
+            set => _startColor = value;
+        }
+
+        private Color _endColor = Color.magenta;
+        public Color endColor
+        {
+            get => _endColor;
+            set => _endColor = value;
+        }
+
         public float colorShiftSpeed = 0.2f;
 
         [HideInInspector] public GameObject[,] tiles;
@@ -32,7 +51,7 @@ public class ParallaxMenuBackground : MonoBehaviour
             shiftOffset = Random.Range(0f, 1f);
         }
 
-        public void UpdateEffects(float time)
+        public void UpdateEffects(float time = 0f)
         {
             if (!enableColorShift) return;
 
@@ -95,9 +114,9 @@ public class ParallaxMenuBackground : MonoBehaviour
                     layer.tiles[x, y] = tile;
                 }
             }
-
-            // layer.layerPrefab.SetActive(false);
         }
+
+        ParallaxConfigManager.LoadConfig(layers, RefreshLayer);
     }
 
     private void Update()

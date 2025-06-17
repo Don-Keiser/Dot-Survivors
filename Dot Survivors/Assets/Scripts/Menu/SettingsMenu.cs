@@ -23,6 +23,8 @@ public class SettingsMenu : MonoBehaviour
     [Header("Current Settings Panel")]
     [SerializeField] private GameObject currentSettingsPanel;
 
+    [SerializeField] private ParallaxSettingsUI pSUI;
+
     private void Start()
     {
         settingsButton.onClick.AddListener(OpenSettingsMenu);
@@ -43,6 +45,7 @@ public class SettingsMenu : MonoBehaviour
 
     private void BackToMainMenu()
     {
+        pSUI.SaveParallaxSettings();
         settingsMenuUI.SetActive(false);
         mainMenuUI.SetActive(true);
     }

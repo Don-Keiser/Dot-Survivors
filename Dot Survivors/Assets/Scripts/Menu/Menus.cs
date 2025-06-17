@@ -3,8 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class Menus : MonoBehaviour
 {
+    [SerializeField] private ParallaxSettingsUI pSUI;
+
     public void PlayGame()
     {
+        if (pSUI != null)
+        {
+            pSUI.SaveParallaxSettings();
+        }
         SceneManager.LoadScene("Game");
         Time.timeScale = 1f;
     }

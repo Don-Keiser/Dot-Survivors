@@ -1143,6 +1143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a367f6f3c3d5944eac989d5e14e324a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pSUI: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,28 +1552,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layers:
-  - layerPrefab: {fileID: 3121546691094068246, guid: 902c5b477ebdf3b439703df903f5f2dd, type: 3}
-    parallaxSpeed: 0.02
+  - availablePrefabs:
+    - {fileID: 3121546691094068246, guid: 902c5b477ebdf3b439703df903f5f2dd, type: 3}
+    layerPrefab: {fileID: 3121546691094068246, guid: 902c5b477ebdf3b439703df903f5f2dd, type: 3}
+    parallaxSpeed: 0.1
     enableColorShift: 0
-    startColor: {r: 0, g: 0, b: 1, a: 1}
-    endColor: {r: 1, g: 0, b: 1, a: 1}
+    _startColor: {r: 0, g: 0, b: 1, a: 1}
+    _endColor: {r: 1, g: 0, b: 1, a: 1}
     colorShiftSpeed: 0.2
     tileSizeX: 0
     tileSizeY: 0
-  - layerPrefab: {fileID: 3324752424373825033, guid: e6c90dc1ec97334478947cc591c745bb, type: 3}
+  - availablePrefabs:
+    - {fileID: 3324752424373825033, guid: c38b93a761d0bf14b854b3df69ef64b3, type: 3}
+    - {fileID: 3324752424373825033, guid: 2bb17957483b5d84dbb8dad3281e981d, type: 3}
+    - {fileID: 3324752424373825033, guid: e6c90dc1ec97334478947cc591c745bb, type: 3}
+    - {fileID: 3324752424373825033, guid: b2121bdb46c6d5348bc8c23326c54902, type: 3}
+    layerPrefab: {fileID: 3324752424373825033, guid: e6c90dc1ec97334478947cc591c745bb, type: 3}
     parallaxSpeed: 0.1
     enableColorShift: 1
-    startColor: {r: 0.8415094, g: 0.2264617, b: 0.22069769, a: 0.6}
-    endColor: {r: 0.48893902, g: 0.79622644, b: 0.22684944, a: 0.6}
-    colorShiftSpeed: 0.4
+    _startColor: {r: 0, g: 0, b: 1, a: 1}
+    _endColor: {r: 1, g: 0, b: 1, a: 1}
+    colorShiftSpeed: 0.2
     tileSizeX: 0
     tileSizeY: 0
-  - layerPrefab: {fileID: 4821885091175328867, guid: ae4adb60b00231d4aa3812764b7b218a, type: 3}
+  - availablePrefabs:
+    - {fileID: 4821885091175328867, guid: ae4adb60b00231d4aa3812764b7b218a, type: 3}
+    - {fileID: 4821885091175328867, guid: 8eef9e6c6de8a0b4c843dc9a5786974b, type: 3}
+    - {fileID: 4821885091175328867, guid: df22d6be2d8c2c944ba09397162a3c76, type: 3}
+    layerPrefab: {fileID: 4821885091175328867, guid: ae4adb60b00231d4aa3812764b7b218a, type: 3}
     parallaxSpeed: 0.05
     enableColorShift: 1
-    startColor: {r: 0.22899963, g: 0.22899963, b: 0.8037735, a: 0.69803923}
-    endColor: {r: 0.7433963, g: 0.1837451, b: 0.5685557, a: 0.69803923}
-    colorShiftSpeed: 0.2
+    _startColor: {r: 0, g: 0, b: 1, a: 1}
+    _endColor: {r: 1, g: 0, b: 1, a: 1}
+    colorShiftSpeed: 0.4
     tileSizeX: 0
     tileSizeY: 0
   player: {fileID: 2131484838}
@@ -4586,6 +4598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a367f6f3c3d5944eac989d5e14e324a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pSUI: {fileID: 0}
 --- !u!114 &1882607006
 MonoBehaviour:
   m_ObjectHideFlags: 0

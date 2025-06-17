@@ -1,19 +1,42 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ParallaxBackground : MonoBehaviour
 {
     [System.Serializable]
-    public class ParallaxLayer
+    public class ParallaxLayer : IParallaxLayer
     {
-        public GameObject layerPrefab;
+        public List<GameObject> availablePrefabs;
+        private int _currentPrefabIndex = 0;
+        public int currentPrefabIndex
+        {
+            get => _currentPrefabIndex;
+            set => _currentPrefabIndex = value;
+        }
+
+        [HideInInspector] public GameObject layerPrefab;
+
         public float parallaxSpeed = 0.1f;
 
         [Header("Color Shift Settings")]
         public bool enableColorShift = false;
-        public Color startColor = Color.blue;
-        public Color endColor = Color.magenta;
+        [SerializeField] private Color _startColor = Color.blue;
+        [SerializeField] private Color _endColor = Color.magenta;
+
+        public Color startColor
+        {
+            get => _startColor;
+            set => _startColor = value;
+        }
+
+        public Color endColor
+        {
+            get => _endColor;
+            set => _endColor = value;
+        }
+
         public float colorShiftSpeed = 0.2f;
-        
+
         [HideInInspector] public Transform[,] tiles;
         [HideInInspector] public float tileSizeX, tileSizeY;
         private SpriteRenderer layerRenderer;
@@ -21,17 +44,26 @@ public class ParallaxBackground : MonoBehaviour
 
         public void Initialize()
         {
+            if (availablePrefabs.Count > 0)
+            {
+                layerPrefab = availablePrefabs[currentPrefabIndex];
+            }
+            else
+            {
+                Debug.LogError("No available prefabs for in-game parallax layer.");
+            }
+
             SpriteRenderer sr = layerPrefab.GetComponent<SpriteRenderer>();
             if (sr != null)
             {
                 layerRenderer = sr;
                 layerRenderer.color = startColor;
             }
-            
+
             shiftOffset = Random.Range(0f, 1f);
         }
 
-        public void UpdateEffects()
+        public void UpdateEffects(float time = 0f)
         {
             if (enableColorShift)
             {
@@ -72,7 +104,7 @@ public class ParallaxBackground : MonoBehaviour
 
         foreach (var layer in layers)
         {
-            SpriteRenderer sr = layer.layerPrefab.GetComponent<SpriteRenderer>();
+            SpriteRenderer sr = layer.layerPrefab?.GetComponent<SpriteRenderer>();
             if (sr == null)
             {
                 Debug.LogError("Layer prefab is missing a SpriteRenderer!");
@@ -96,27 +128,77 @@ public class ParallaxBackground : MonoBehaviour
                 }
             }
         }
+
+        Debug.Log("🎮 ParallaxBackground Start — loading config");
+        ParallaxConfigManager.LoadConfig(layers);
+
+        for (int i = 0; i < layers.Length; i++)
+        {
+            RefreshLayer(i);
+        }
+    }
+
+    public void RefreshLayer(int layerIndex)
+    {
+        if (layerIndex < 0 || layerIndex >= layers.Length) return;
+
+        var layer = layers[layerIndex];
+
+        if (layer.tiles != null)
+        {
+            foreach (var tile in layer.tiles)
+            {
+                if (tile != null)
+                    Destroy(tile.gameObject);
+            }
+        }
+
+        layer.Initialize();
+
+        SpriteRenderer sr = layer.layerPrefab.GetComponent<SpriteRenderer>();
+        if (sr == null)
+        {
+            Debug.LogError("Missing SpriteRenderer on new layerPrefab");
+            return;
+        }
+
+        layer.tileSizeX = sr.bounds.size.x;
+        layer.tileSizeY = sr.bounds.size.y;
+        layer.tiles = new Transform[GridSize, GridSize];
+
+        for (int x = 0; x < GridSize; x++)
+        {
+            for (int y = 0; y < GridSize; y++)
+            {
+                Vector2 spawnPos = new Vector2(
+                    (x - 1) * layer.tileSizeX,
+                    (y - 1) * layer.tileSizeY
+                );
+                GameObject tile = Instantiate(layer.layerPrefab, spawnPos, Quaternion.identity, transform);
+                layer.tiles[x, y] = tile.transform;
+            }
+        }
     }
 
     private void Update()
-{
-    Vector2 playerDelta = (Vector2)player.position - lastPlayerPosition;
-
-    foreach (var layer in layers)
     {
-        if (layer.tiles == null) continue;
+        Vector2 playerDelta = (Vector2)player.position - lastPlayerPosition;
 
-        foreach (Transform tile in layer.tiles)
+        foreach (var layer in layers)
         {
-            tile.position += (Vector3)(playerDelta * layer.parallaxSpeed);
+            if (layer.tiles == null) continue;
+
+            foreach (Transform tile in layer.tiles)
+            {
+                tile.position += (Vector3)(playerDelta * layer.parallaxSpeed);
+            }
+
+            layer.UpdateEffects();
+            CheckAndShiftLayer(layer);
         }
 
-        layer.UpdateEffects();
-        CheckAndShiftLayer(layer);
+        lastPlayerPosition = player.position;
     }
-
-    lastPlayerPosition = player.position;
-}
 
     private void CheckAndShiftLayer(ParallaxLayer layer)
     {

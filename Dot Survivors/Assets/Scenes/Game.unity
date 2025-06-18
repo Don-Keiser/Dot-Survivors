@@ -2852,7 +2852,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.11764706, g: 0.11764706, b: 0.11764706, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5087,7 +5087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.11764706, g: 0.11764706, b: 0.11764706, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5972,7 +5972,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2719976312610856224, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
   m_PrefabInstance: {fileID: 7995766372259085775}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 7995766372259085778}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 327e1761e1a74aa4c99266e28825ae36, type: 3}
@@ -6015,9 +6015,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: b18db752801de5c4bbceab270c95bbb6, type: 2}
     - target: {fileID: 2266792240343806365, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: synergyManager
+      value: 
+      objectReference: {fileID: 7995766372259085779}
+    - target: {fileID: 2266792240343806365, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: passiveHotbarUI
       value: 
       objectReference: {fileID: 652287767}
+    - target: {fileID: 2266792240343806365, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: acquiredPassives.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2266792240343806365, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: 'acquiredPassives.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: a6ce06d3951f53d47bc71fa28e3713c3, type: 2}
     - target: {fileID: 2719976312610856224, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: deathPanel
       value: 
@@ -6031,9 +6043,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 652287766}
     - target: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: synergyManager
+      value: 
+      objectReference: {fileID: 7995766372259085779}
+    - target: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: weapons.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: 'weapons.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 1bc19e00be8bc1346923288f55a4dd79, type: 2}
+      objectReference: {fileID: 11400000, guid: c530c3d0ab1cec04f89574275988c5fc, type: 2}
+    - target: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: 'weapons.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: c530c3d0ab1cec04f89574275988c5fc, type: 2}
     - target: {fileID: 7877710158319238251, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -6081,8 +6105,57 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7877710158319238251, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7995766372259085779}
   m_SourcePrefab: {fileID: 100100000, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+--- !u!114 &7995766372259085776 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2266792240343806365, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+  m_PrefabInstance: {fileID: 7995766372259085775}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7995766372259085778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e68959ac6e562445b9d82b280f1f21b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7995766372259085777 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+  m_PrefabInstance: {fileID: 7995766372259085775}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7995766372259085778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72bc94d1e9a241f43809a558ce6e068a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &7995766372259085778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7877710158319238251, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+  m_PrefabInstance: {fileID: 7995766372259085775}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7995766372259085779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7995766372259085778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb0b1f5a6a65c84094a594bab8028b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  synergyDefinitions:
+  - synergyName: "\xC6oth\u2019s Halo"
+    baseWeapon: {fileID: 11400000, guid: c530c3d0ab1cec04f89574275988c5fc, type: 2}
+    requiredPassive: 1
+    synergyWeapon: {fileID: 11400000, guid: 8fba0e3fad1860a4c97084372cd68dae, type: 2}
+  weaponManager: {fileID: 7995766372259085777}
+  passiveManager: {fileID: 7995766372259085776}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

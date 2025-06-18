@@ -128,8 +128,6 @@ public class ParallaxBackground : MonoBehaviour
                 }
             }
         }
-
-        Debug.Log("🎮 ParallaxBackground Start — loading config");
         ParallaxConfigManager.LoadConfig(layers);
 
         for (int i = 0; i < layers.Length; i++)

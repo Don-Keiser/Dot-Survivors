@@ -109,7 +109,6 @@ public class ParallaxSettingsUI : MonoBehaviour
     public void SaveParallaxSettings()
     {
         ParallaxConfigManager.SaveConfig(parallaxBackground.layers);
-        Debug.Log("✅ Parallax config saved: " + PlayerPrefs.GetString("ParallaxConfig"));
     }
 
 }

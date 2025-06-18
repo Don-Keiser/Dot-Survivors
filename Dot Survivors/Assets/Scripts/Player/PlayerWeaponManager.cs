@@ -60,6 +60,10 @@ public class PlayerWeaponManager : MonoBehaviour
         {
             empFieldWeapon.Activate(gameObject);
         }
+        else if (weaponInstance is AeothsHaloWeapon haloWeapon)
+        {
+            haloWeapon.Activate(gameObject);
+        }
 
         hotbarUI.UpdateHotbar(weapons);
     }
@@ -76,7 +80,15 @@ public class PlayerWeaponManager : MonoBehaviour
     {
         if (weaponIndex >= 0 && weaponIndex < weapons.Count)
         {
-            acquiredWeaponNames.Remove(weapons[weaponIndex].weaponName);
+            WeaponBase weapon = weapons[weaponIndex];
+
+            // Cleanup for EMPFieldWeapon
+            if (weapon is EMPFieldWeapon empField)
+            {
+                empField.Deactivate();
+            }
+
+            acquiredWeaponNames.Remove(weapon.weaponName);
             weapons.RemoveAt(weaponIndex);
             hotbarUI.UpdateHotbar(weapons);
         }

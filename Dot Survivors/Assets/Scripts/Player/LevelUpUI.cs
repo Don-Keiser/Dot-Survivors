@@ -110,7 +110,7 @@ public class LevelUpUI : MonoBehaviour
                 : $"{passiveToUpgrade.passiveName} (Max Level)";
 
             upgradePassiveIcon.sprite = passiveToUpgrade.passiveIcon;
-            passiveDescriptionText.text = weaponToAcquire.description;
+            passiveDescriptionText.text = passiveToUpgrade.description;
             upgradePassiveButton.interactable = passiveToUpgrade.level < passiveToUpgrade.maxLevel;
         }
         else
@@ -129,7 +129,7 @@ public class LevelUpUI : MonoBehaviour
         if (passiveToAcquire != null)
         {
             acquirePassiveIcon.sprite = passiveToAcquire.passiveIcon;
-            passiveADescriptionText.text = weaponToAcquire.description;
+            passiveADescriptionText.text = passiveToAcquire.description;
         }
 
         acquirePassiveButton.interactable = passiveToAcquire != null;
@@ -140,6 +140,7 @@ public class LevelUpUI : MonoBehaviour
         if (weaponToUpgrade != null)
         {
             weaponToUpgrade.UpgradeWeapon();
+            SynergyManager.Instance?.TryCheckSynergies();
         }
         CloseMenu();
     }
@@ -159,6 +160,7 @@ public class LevelUpUI : MonoBehaviour
         {
             passiveToUpgrade.UpgradePassive();
             PlayerPassives.Instance.ApplyPassiveUpgrade(passiveToUpgrade);
+            SynergyManager.Instance?.TryCheckSynergies();
         }
         CloseMenu();
     }

@@ -9,7 +9,8 @@ public class PlayerPassiveManager : MonoBehaviour
 
     [SerializeField] PassiveHotbarUI passiveHotbarUI;
 
-    private void Start() 
+
+    private void Start()
     {
         passiveHotbarUI.InitializeHotbar(maxPassives);
         List<PassiveUpgrade> clonedPassives = new List<PassiveUpgrade>();

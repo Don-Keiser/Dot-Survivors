@@ -23,8 +23,6 @@ public static class ParallaxConfigManager
         string json = JsonUtility.ToJson(config);
         PlayerPrefs.SetString(SaveKey, json);
         PlayerPrefs.Save();
-
-        Debug.Log("✅ Parallax config saved: " + json);
     }
 
     public static void LoadConfig<T>(T[] layers, System.Action<int> refreshCallback = null) where T : IParallaxLayer
@@ -36,7 +34,6 @@ public static class ParallaxConfigManager
         }
 
         string json = PlayerPrefs.GetString(SaveKey);
-        Debug.Log("[LoadConfig] JSON: " + json);
 
         var config = JsonUtility.FromJson<ParallaxConfig>(json);
         if (config == null || config.layers.Count != layers.Length)
@@ -53,8 +50,6 @@ public static class ParallaxConfigManager
             layer.startColor = saved.startColor;
             layer.endColor = saved.endColor;
             layer.currentPrefabIndex = saved.prefabIndex;
-
-            Debug.Log($"Layer {i}: start={saved.startColor}, end={saved.endColor}, prefabIndex={saved.prefabIndex}");
 
             layer.Initialize();
             layer.UpdateEffects(Time.time);

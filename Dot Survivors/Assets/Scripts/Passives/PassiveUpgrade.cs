@@ -6,6 +6,7 @@ public class PassiveUpgrade : ScriptableObject
     public string passiveName;
     public PassiveType passiveType;
     public Sprite passiveIcon;
+    [TextArea(2, 5)] public string description;
     public int level = 1;
     public int maxLevel = 5;
     public float baseValue;

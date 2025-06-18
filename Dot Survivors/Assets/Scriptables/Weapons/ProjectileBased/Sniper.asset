@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Sniper
   weaponIcon: {fileID: 2087949621987537175, guid: 5cb7927719a6ec54185a373c18a112ff, type: 3}
+  description: Targets the closest enemy. Has penetrating bullets.
   level: 1
   maxLevel: 5
   baseDamage: 20

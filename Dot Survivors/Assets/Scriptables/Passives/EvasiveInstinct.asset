@@ -15,6 +15,7 @@ MonoBehaviour:
   passiveName: Evasive Instinct
   passiveType: 3
   passiveIcon: {fileID: 21300000, guid: 7c2a3900192d8f7469a555eee15045c0, type: 3}
+  description: Boosts movement speed.
   level: 1
   maxLevel: 5
   baseValue: 1.1

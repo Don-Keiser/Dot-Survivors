@@ -4,6 +4,7 @@ public abstract class WeaponBase : ScriptableObject
 {
     public string weaponName;
     public Sprite weaponIcon;
+    [TextArea(2, 5)] public string description;
 
     public int level = 1;
     public int maxLevel = 5;

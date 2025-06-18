@@ -15,6 +15,7 @@ MonoBehaviour:
   passiveName: Battle Hardened
   passiveType: 5
   passiveIcon: {fileID: 21300000, guid: aaa54001569a26643bb0ff372404d761, type: 3}
+  description: Hardened by combat. Reduces all damage taken.
   level: 1
   maxLevel: 5
   baseValue: 0.95

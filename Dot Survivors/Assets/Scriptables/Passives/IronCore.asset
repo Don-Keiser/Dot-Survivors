@@ -15,6 +15,7 @@ MonoBehaviour:
   passiveName: Iron Core
   passiveType: 0
   passiveIcon: {fileID: 21300000, guid: 42c5127aa77f92c4cb73c6d4e7af11c9, type: 3}
+  description: Reinforced structure. Increases max HP.
   level: 1
   maxLevel: 5
   baseValue: 1.2

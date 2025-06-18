@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Grenades
   weaponIcon: {fileID: 21300000, guid: eee5c1bec59bd6049b3a92c496752088, type: 3}
+  description: Toss explosives in a clock pattern. Deals area damage.
   level: 1
   maxLevel: 5
   baseDamage: 30

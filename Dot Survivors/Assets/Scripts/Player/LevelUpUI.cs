@@ -22,6 +22,12 @@ public class LevelUpUI : MonoBehaviour
     public Image upgradePassiveIcon;
     public Image acquirePassiveIcon;
 
+    [Header("Descriptions")]
+    public TMP_Text weaponDescriptionText;
+    public TMP_Text passiveDescriptionText;
+    public TMP_Text weaponADescriptionText;
+    public TMP_Text passiveADescriptionText;
+
     // Private fields
     private System.Action onLevelUpComplete;
     private PlayerWeaponManager weaponManager;
@@ -70,6 +76,7 @@ public class LevelUpUI : MonoBehaviour
                 : $"{weaponToUpgrade.weaponName} (Max Level)";
 
             upgradeWeaponIcon.sprite = weaponToUpgrade.weaponIcon;
+            weaponDescriptionText.text = weaponToUpgrade.description;
             upgradeWeaponButton.interactable = weaponToUpgrade.level < weaponToUpgrade.maxLevel;
         }
         else
@@ -88,6 +95,7 @@ public class LevelUpUI : MonoBehaviour
         if (weaponToAcquire != null)
         {
             acquireWeaponIcon.sprite = weaponToAcquire.weaponIcon;
+            weaponADescriptionText.text = weaponToAcquire.description;
         }
 
         acquireWeaponButton.interactable = weaponToAcquire != null;
@@ -102,6 +110,7 @@ public class LevelUpUI : MonoBehaviour
                 : $"{passiveToUpgrade.passiveName} (Max Level)";
 
             upgradePassiveIcon.sprite = passiveToUpgrade.passiveIcon;
+            passiveDescriptionText.text = weaponToAcquire.description;
             upgradePassiveButton.interactable = passiveToUpgrade.level < passiveToUpgrade.maxLevel;
         }
         else
@@ -120,6 +129,7 @@ public class LevelUpUI : MonoBehaviour
         if (passiveToAcquire != null)
         {
             acquirePassiveIcon.sprite = passiveToAcquire.passiveIcon;
+            passiveADescriptionText.text = weaponToAcquire.description;
         }
 
         acquirePassiveButton.interactable = passiveToAcquire != null;

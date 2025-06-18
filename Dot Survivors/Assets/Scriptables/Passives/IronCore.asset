@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: IronCore
   m_EditorClassIdentifier: 
   passiveName: Iron Core
-  passiveIcon: {fileID: 8390744438380193492, guid: 42c5127aa77f92c4cb73c6d4e7af11c9, type: 3}
+  passiveType: 0
+  passiveIcon: {fileID: 21300000, guid: 42c5127aa77f92c4cb73c6d4e7af11c9, type: 3}
+  level: 1
   maxLevel: 5
   baseValue: 1.2
   increasePerLevel: 0.2

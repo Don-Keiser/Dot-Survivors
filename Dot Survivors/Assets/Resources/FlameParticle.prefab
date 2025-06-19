@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 8350129760964306978}
   - component: {fileID: 3305616504480465667}
   - component: {fileID: 1644578354470038860}
+  - component: {fileID: 7351643021375773825}
   m_Layer: 0
-  m_Name: FireParticule
+  m_Name: FlameParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,13 +77,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
-  m_Sprite: {fileID: 6386223002046955824, guid: 928b21f753e72ca4f97e7265eb772b60, type: 3}
+  m_SortingOrder: 6
+  m_Sprite: {fileID: 21300000, guid: 928b21f753e72ca4f97e7265eb772b60, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.35, y: 0.35}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -115,3 +116,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7351643021375773825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2714482869200971589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09d34697f023e704992600c4be0bef89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

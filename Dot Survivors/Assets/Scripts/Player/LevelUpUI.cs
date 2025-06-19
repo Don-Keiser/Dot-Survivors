@@ -14,6 +14,8 @@ public class LevelUpUI : MonoBehaviour
     public Image upgradeWeaponIcon;
     public Image acquireWeaponIcon;
 
+    public Sprite noAvaibleIcon;
+
     [Header("Passive UI Elements")]
     public Button upgradePassiveButton;
     public Button acquirePassiveButton;
@@ -83,19 +85,24 @@ public class LevelUpUI : MonoBehaviour
         {
             upgradeWeaponText.text = NoWeaponsToUpgrade;
             upgradeWeaponButton.interactable = false;
+            upgradeWeaponIcon.sprite = noAvaibleIcon;
+            weaponDescriptionText.text = "";
         }
     }
 
     private void HandleWeaponAcquisition()
     {
-        acquireWeaponText.text = weaponToAcquire != null 
-            ? $"Acquire {weaponToAcquire.weaponName}" 
-            : NoNewWeaponsAvailable;
-
         if (weaponToAcquire != null)
         {
+            acquireWeaponText.text = $"Acquire {weaponToAcquire.weaponName}";
             acquireWeaponIcon.sprite = weaponToAcquire.weaponIcon;
             weaponADescriptionText.text = weaponToAcquire.description;
+        }
+        else
+        {
+            acquireWeaponText.text = NoNewWeaponsAvailable;
+            acquireWeaponIcon.sprite = noAvaibleIcon;
+            weaponADescriptionText.text = "";
         }
 
         acquireWeaponButton.interactable = weaponToAcquire != null;
@@ -116,20 +123,25 @@ public class LevelUpUI : MonoBehaviour
         else
         {
             upgradePassiveText.text = NoPassivesToUpgrade;
+            upgradePassiveIcon.sprite = noAvaibleIcon;
+            passiveDescriptionText.text = "";
             upgradePassiveButton.interactable = false;
         }
     }
 
     private void HandlePassiveAcquisition()
     {
-        acquirePassiveText.text = passiveToAcquire != null 
-            ? $"Acquire {passiveToAcquire.passiveName}" 
-            : NoNewPassivesAvailable;
-
         if (passiveToAcquire != null)
         {
+            acquirePassiveText.text = $"Acquire {passiveToAcquire.passiveName}";
             acquirePassiveIcon.sprite = passiveToAcquire.passiveIcon;
             passiveADescriptionText.text = passiveToAcquire.description;
+        }
+        else
+        {
+            acquirePassiveText.text = NoNewPassivesAvailable;
+            acquirePassiveIcon.sprite = noAvaibleIcon;
+            passiveADescriptionText.text = "";
         }
 
         acquirePassiveButton.interactable = passiveToAcquire != null;

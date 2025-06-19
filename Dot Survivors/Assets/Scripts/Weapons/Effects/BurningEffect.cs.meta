@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: f346677216d808c4f8ac339e9e59df29
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - flameParticlePrefab: {fileID: 2714482869200971589, guid: 5dd1fedca26b44940a0329e023e8e0b3, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

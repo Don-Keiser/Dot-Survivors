@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6577c589e9c51df4892cc1ae85b19c6e, type: 3}
+  m_Name: KaarentedsScorch
+  m_EditorClassIdentifier: 
+  weaponName: "K\xE4\xE4rented\u2019s Scorch"
+  weaponIcon: {fileID: 21300000, guid: 3fde0e90f0a684f4a9dedfa9626027c7, type: 3}
+  description: "Unleash a barrage of pellets that pierce through foes and set them
+    ablaze. Enemies burn over time, but can\u2019t be ignited twice until the flames
+    die out."
+  level: 1
+  maxLevel: 3
+  baseDamage: 10
+  cooldown: 1.1
+  upgradeSteps:
+  - upgrades:
+    - statName: damageIncrease
+      value: 5
+    - statName: cooldownReduction
+      value: 0.1
+    - statName: spreadIncrease
+      value: 5
+    - statName: morePellets
+      value: 5
+    - statName: burnDamageIncrease
+      value: 10
+    - statName: burnDurationIncrease
+      value: 1
+  - upgrades:
+    - statName: damageIncrease
+      value: 5
+    - statName: cooldownReduction
+      value: 0.2
+    - statName: spreadIncrease
+      value: 5
+    - statName: morePellets
+      value: 10
+    - statName: burnDamageIncrease
+      value: 10
+    - statName: burnDurationIncrease
+      value: 1
+  piercingPelletPrefab: {fileID: 761922942573321250, guid: 1dfbf810bc1f5144f8fd5532e994ee3b, type: 3}
+  pellets: 15
+  spreadAngle: 30
+  bulletSpeed: 10
+  burnDamage: 10
+  burnDuration: 3

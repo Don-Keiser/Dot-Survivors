@@ -221,9 +221,9 @@ RectTransform:
   - {fileID: 566064521}
   m_Father: {fileID: 1258587325}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 600, y: -557.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 600, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &175747733
@@ -505,9 +505,9 @@ RectTransform:
   - {fileID: 1359129711}
   m_Father: {fileID: 1623639341}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175, y: -127.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &259610951
@@ -811,9 +811,9 @@ RectTransform:
   - {fileID: 2007210957}
   m_Father: {fileID: 1258587325}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 600, y: -772.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 600, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &420594296
@@ -1457,9 +1457,9 @@ RectTransform:
   - {fileID: 568154348}
   m_Father: {fileID: 1258587325}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 600, y: -342.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 600, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &562347591
@@ -1605,7 +1605,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 600, y: 100}
+  m_SizeDelta: {x: 580, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &566064522
 MonoBehaviour:
@@ -1741,7 +1741,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 600, y: 100}
+  m_SizeDelta: {x: 580, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &567167482
 MonoBehaviour:
@@ -1877,7 +1877,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 600, y: 100}
+  m_SizeDelta: {x: 580, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &568154349
 MonoBehaviour:
@@ -2325,6 +2325,7 @@ MonoBehaviour:
   acquireWeaponText: {fileID: 1462624123}
   upgradeWeaponIcon: {fileID: 1359129712}
   acquireWeaponIcon: {fileID: 393623573}
+  noAvaibleIcon: {fileID: -2396614387282235878, guid: 4bd386201a2b8e441a2e34e81027ab09, type: 3}
   upgradePassiveButton: {fileID: 562347591}
   acquirePassiveButton: {fileID: 420594296}
   upgradePassiveText: {fileID: 1636205892}
@@ -3882,9 +3883,9 @@ RectTransform:
   - {fileID: 567167481}
   m_Father: {fileID: 1258587325}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 600, y: -127.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 600, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1383731125
@@ -4577,9 +4578,9 @@ RectTransform:
   - {fileID: 393623572}
   m_Father: {fileID: 1623639341}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175, y: -557.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1614271059
@@ -4857,9 +4858,9 @@ RectTransform:
   - {fileID: 289227238}
   m_Father: {fileID: 1623639341}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175, y: -772.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1674701355
@@ -5126,7 +5127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1831170933
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5570,9 +5571,9 @@ RectTransform:
   - {fileID: 469665244}
   m_Father: {fileID: 1623639341}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175, y: -342.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2006103089
@@ -5648,7 +5649,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 600, y: 100}
+  m_SizeDelta: {x: 580, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2007210958
 MonoBehaviour:
@@ -5972,7 +5973,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2719976312610856224, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
   m_PrefabInstance: {fileID: 7995766372259085775}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7995766372259085778}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 327e1761e1a74aa4c99266e28825ae36, type: 3}
@@ -5990,46 +5991,10 @@ PrefabInstance:
       propertyPath: levelUpUI
       value: 
       objectReference: {fileID: 652287765}
-    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: availableWeapons.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: 'availableWeapons.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 7382e15a60901db41bf354521de4537f, type: 2}
-    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: 'availableWeapons.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: c530c3d0ab1cec04f89574275988c5fc, type: 2}
-    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: 'availableWeapons.Array.data[2]'
-      value: 
-      objectReference: {fileID: 11400000, guid: d0ba6adb461b51740b087157a10ddf6f, type: 2}
-    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: 'availableWeapons.Array.data[3]'
-      value: 
-      objectReference: {fileID: 11400000, guid: e5cf2c118067f00459f9242aefdea372, type: 2}
-    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: 'availableWeapons.Array.data[4]'
-      value: 
-      objectReference: {fileID: 11400000, guid: b18db752801de5c4bbceab270c95bbb6, type: 2}
-    - target: {fileID: 2266792240343806365, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: synergyManager
-      value: 
-      objectReference: {fileID: 7995766372259085779}
     - target: {fileID: 2266792240343806365, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: passiveHotbarUI
       value: 
       objectReference: {fileID: 652287767}
-    - target: {fileID: 2266792240343806365, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: acquiredPassives.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2266792240343806365, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: 'acquiredPassives.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: a6ce06d3951f53d47bc71fa28e3713c3, type: 2}
     - target: {fileID: 2719976312610856224, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: deathPanel
       value: 
@@ -6042,22 +6007,6 @@ PrefabInstance:
       propertyPath: hotbarUI
       value: 
       objectReference: {fileID: 652287766}
-    - target: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: synergyManager
-      value: 
-      objectReference: {fileID: 7995766372259085779}
-    - target: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: weapons.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: 'weapons.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: c530c3d0ab1cec04f89574275988c5fc, type: 2}
-    - target: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: 'weapons.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: c530c3d0ab1cec04f89574275988c5fc, type: 2}
     - target: {fileID: 7877710158319238251, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -6105,57 +6054,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7877710158319238251, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7995766372259085779}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
---- !u!114 &7995766372259085776 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2266792240343806365, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-  m_PrefabInstance: {fileID: 7995766372259085775}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7995766372259085778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e68959ac6e562445b9d82b280f1f21b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7995766372259085777 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-  m_PrefabInstance: {fileID: 7995766372259085775}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7995766372259085778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72bc94d1e9a241f43809a558ce6e068a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &7995766372259085778 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7877710158319238251, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-  m_PrefabInstance: {fileID: 7995766372259085775}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7995766372259085779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7995766372259085778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cb0b1f5a6a65c84094a594bab8028b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  synergyDefinitions:
-  - synergyName: "\xC6oth\u2019s Halo"
-    baseWeapon: {fileID: 11400000, guid: c530c3d0ab1cec04f89574275988c5fc, type: 2}
-    requiredPassive: 1
-    synergyWeapon: {fileID: 11400000, guid: 8fba0e3fad1860a4c97084372cd68dae, type: 2}
-  weaponManager: {fileID: 7995766372259085777}
-  passiveManager: {fileID: 7995766372259085776}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

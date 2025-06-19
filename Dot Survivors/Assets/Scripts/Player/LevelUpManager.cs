@@ -94,8 +94,26 @@ public class LevelUpManager : MonoBehaviour
         levelUpUI.Initialize(weaponManager, passiveManager, weaponToUpgrade, weaponToAcquire, passiveToUpgrade, passiveToAcquire, OnLevelUpChoiceMade);
     }
 
-    private void OnLevelUpChoiceMade()
+private void OnLevelUpChoiceMade()
     {
+        // Remove acquired weapon from pool
+        if (weaponManager.weapons.Count > 0)
+        {
+            WeaponBase lastWeapon = weaponManager.weapons.Last();
+            availableWeapons = availableWeapons
+                .Where(w => w.weaponName != lastWeapon.weaponName)
+                .ToArray();
+        }
+
+        // Remove acquired passive from pool
+        if (passiveManager.acquiredPassives.Count > 0)
+        {
+            PassiveUpgrade lastPassive = passiveManager.acquiredPassives.Last();
+            availablePassives = availablePassives
+                .Where(p => p.passiveName != lastPassive.passiveName)
+                .ToArray();
+        }
+
         pendingLevelUps--;
 
         if (pendingLevelUps > 0)

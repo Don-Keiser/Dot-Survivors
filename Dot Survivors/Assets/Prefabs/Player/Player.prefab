@@ -296,7 +296,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 276526960851706169, guid: e2359855d0beae44487b88b5ffcc47a8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e2359855d0beae44487b88b5ffcc47a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -326,6 +326,7 @@ GameObject:
   - component: {fileID: 439212896346591181}
   - component: {fileID: 2266792240343806365}
   - component: {fileID: 8982746850537161109}
+  - component: {fileID: 8301476170581943064}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -609,7 +610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapons:
-  - {fileID: 11400000, guid: 1bc19e00be8bc1346923288f55a4dd79, type: 2}
+  - {fileID: 11400000, guid: e5cf2c118067f00459f9242aefdea372, type: 2}
   maxWeapons: 6
   firePoint: {fileID: 4599012647917783859}
   hotbarUI: {fileID: 0}
@@ -628,13 +629,12 @@ MonoBehaviour:
   weaponManager: {fileID: 7413976699927729864}
   passiveManager: {fileID: 2266792240343806365}
   availableWeapons:
+  - {fileID: 11400000, guid: 7382e15a60901db41bf354521de4537f, type: 2}
+  - {fileID: 11400000, guid: 1bc19e00be8bc1346923288f55a4dd79, type: 2}
+  - {fileID: 11400000, guid: d0ba6adb461b51740b087157a10ddf6f, type: 2}
   - {fileID: 11400000, guid: c530c3d0ab1cec04f89574275988c5fc, type: 2}
   - {fileID: 11400000, guid: b18db752801de5c4bbceab270c95bbb6, type: 2}
-  - {fileID: 11400000, guid: d0ba6adb461b51740b087157a10ddf6f, type: 2}
-  - {fileID: 11400000, guid: e5cf2c118067f00459f9242aefdea372, type: 2}
-  - {fileID: 11400000, guid: 7382e15a60901db41bf354521de4537f, type: 2}
   availablePassives:
-  - {fileID: 11400000, guid: e869a63a963e2404eb0465219b13d790, type: 2}
   - {fileID: 11400000, guid: 7d25e1b90c7bd30479431994405a929f, type: 2}
   - {fileID: 11400000, guid: 3b0db4242d1358241a33ff11785a7921, type: 2}
   - {fileID: 11400000, guid: 4e62e63681f484041bfca221deec4ea0, type: 2}
@@ -653,7 +653,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e68959ac6e562445b9d82b280f1f21b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acquiredPassives: []
+  acquiredPassives:
+  - {fileID: 11400000, guid: e869a63a963e2404eb0465219b13d790, type: 2}
   maxPassives: 6
   passiveHotbarUI: {fileID: 0}
 --- !u!114 &8982746850537161109
@@ -685,3 +686,26 @@ MonoBehaviour:
   afterimagePrefab: {fileID: 9113370201198448745, guid: 047aec2b6fba9fa47a8ac0320c8a06ea, type: 3}
   auraPrefab: {fileID: 6223348652578123160, guid: f3dbf301fa5a5c34b94793660866d1f6, type: 3}
   berserkerOutline: {fileID: 7774555438506922290}
+--- !u!114 &8301476170581943064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7877710158319238251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb0b1f5a6a65c84094a594bab8028b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  synergyDefinitions:
+  - synergyName: "\xC6oth\u2019s Halo"
+    baseWeapon: {fileID: 11400000, guid: c530c3d0ab1cec04f89574275988c5fc, type: 2}
+    requiredPassive: 1
+    synergyWeapon: {fileID: 11400000, guid: 8fba0e3fad1860a4c97084372cd68dae, type: 2}
+  - synergyName: "K\xE4\xE4rented\u2019s Scorch"
+    baseWeapon: {fileID: 11400000, guid: e5cf2c118067f00459f9242aefdea372, type: 2}
+    requiredPassive: 5
+    synergyWeapon: {fileID: 11400000, guid: d2c3632a5be6fcf4d8667602e8aaf335, type: 2}
+  weaponManager: {fileID: 7413976699927729864}
+  passiveManager: {fileID: 2266792240343806365}

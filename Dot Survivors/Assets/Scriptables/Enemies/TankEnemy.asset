@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: TankEnemy
   m_EditorClassIdentifier: 
   enemyName: Tank
-  health: 800
-  moveSpeed: 1
+  health: 1200
+  moveSpeed: 1.2
   damage: 20
   damageInterval: 0.3
   possibleDrops:

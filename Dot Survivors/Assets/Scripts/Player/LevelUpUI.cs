@@ -37,6 +37,10 @@ public class LevelUpUI : MonoBehaviour
     [SerializeField] private TMP_Text synergyDescriptionText;
     [SerializeField] private Image synergyIcon;
 
+    [Header("Flash screen")]
+    [SerializeField] private Image flashOverlay;
+    [SerializeField] private float flashDuration;
+
     // Private fields
     private System.Action onLevelUpComplete;
     private PlayerWeaponManager weaponManager;
@@ -217,6 +221,8 @@ public class LevelUpUI : MonoBehaviour
         if (synergyAnimCoroutine != null) StopCoroutine(synergyAnimCoroutine);
         synergyAnimCoroutine = StartCoroutine(AnimatePopup(true));
 
+        StartCoroutine(ScreenFlash(flashDuration));
+
         isSynergyPopupActive = true;
     }
 
@@ -249,6 +255,24 @@ public class LevelUpUI : MonoBehaviour
             synergyPanel.SetActive(false);
             CloseMenu();
         }
+    }
+
+    private IEnumerator ScreenFlash(float duration)
+    {
+        flashOverlay.gameObject.SetActive(true);
+        Color color = flashOverlay.color;
+
+        float time = 0f;
+        while (time < duration)
+        {
+            float t = time / duration;
+            flashOverlay.color = new Color(color.r, color.g, color.b, 1f - t);
+            time += Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        flashOverlay.color = new Color(color.r, color.g, color.b, 0f);
+        flashOverlay.gameObject.SetActive(false);
     }
 
     private void CloseMenu()

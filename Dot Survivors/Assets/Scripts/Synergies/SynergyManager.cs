@@ -8,6 +8,7 @@ public class WeaponSynergy
     public WeaponBase baseWeapon;
     public PassiveType requiredPassive;
     public WeaponBase synergyWeapon;
+    public Sprite synergyPopUpSprite;
 }
 
 public class SynergyManager : MonoBehaviour
@@ -16,7 +17,10 @@ public class SynergyManager : MonoBehaviour
 
     [SerializeField] private List<WeaponSynergy> synergyDefinitions;
     [SerializeField] private PlayerWeaponManager weaponManager;
-    [SerializeField] private PlayerPassiveManager passiveManager;
+    [SerializeField] private PlayerPassiveManager passiveManager;   
+    [SerializeField] private LevelUpUI levelUpUI;
+
+    private WeaponSynergy pendingSynergy;
 
     private void Awake()
     {
@@ -28,16 +32,25 @@ public class SynergyManager : MonoBehaviour
     {
         foreach (var synergy in synergyDefinitions)
         {
-            Debug.Log("Synergy check completed.");
             bool hasBaseWeapon = weaponManager.weapons.Exists(w => w.weaponName == synergy.baseWeapon.weaponName && w.level >= w.maxLevel);
             bool hasPassive = passiveManager.acquiredPassives.Exists(p => p.passiveType == synergy.requiredPassive && p.level >= p.maxLevel);
             bool alreadyHasSynergy = weaponManager.weapons.Exists(w => w.weaponName == synergy.synergyWeapon.weaponName);
 
             if (hasBaseWeapon && hasPassive && !alreadyHasSynergy)
             {
-                ReplaceWithSynergy(synergy);
+                pendingSynergy = synergy;
+                levelUpUI.ShowSynergyPopup(synergy);
                 break;
             }
+        }
+    }
+
+    public void ConfirmSynergy()
+    {
+        if (pendingSynergy != null)
+        {
+            ReplaceWithSynergy(pendingSynergy);
+            pendingSynergy = null;
         }
     }
 
@@ -48,7 +61,6 @@ public class SynergyManager : MonoBehaviour
 
         weaponManager.RemoveWeapon(index);
         weaponManager.AddWeapon(synergy.synergyWeapon);
-
         Debug.Log($"Synergy activated: {synergy.synergyName}");
     }
 }

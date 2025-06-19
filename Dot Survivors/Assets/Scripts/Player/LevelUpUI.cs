@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class LevelUpUI : MonoBehaviour
 {
@@ -30,6 +31,12 @@ public class LevelUpUI : MonoBehaviour
     public TMP_Text weaponADescriptionText;
     public TMP_Text passiveADescriptionText;
 
+    [Header("Synergy Popup")]
+    [SerializeField] private GameObject synergyPanel;
+    [SerializeField] private TMP_Text synergyNameText;
+    [SerializeField] private TMP_Text synergyDescriptionText;
+    [SerializeField] private Image synergyIcon;
+
     // Private fields
     private System.Action onLevelUpComplete;
     private PlayerWeaponManager weaponManager;
@@ -43,14 +50,20 @@ public class LevelUpUI : MonoBehaviour
     private const string NoNewWeaponsAvailable = "No New Weapons Available";
     private const string NoPassivesToUpgrade = "No Passives to Upgrade";
     private const string NoNewPassivesAvailable = "No New Passives Available";
+    
+    private bool isSynergyPopupActive = false;
+
+    //PopUp anim
+    private Coroutine synergyAnimCoroutine;
+    private float popupAnimDuration = 0.25f;
 
     public void Initialize(
-        PlayerWeaponManager wManager, 
-        PlayerPassiveManager pManager, 
-        WeaponBase upgradeWeapon, 
-        WeaponBase acquireWeapon, 
-        PassiveUpgrade upgradePassive, 
-        PassiveUpgrade acquirePassive, 
+        PlayerWeaponManager wManager,
+        PlayerPassiveManager pManager,
+        WeaponBase upgradeWeapon,
+        WeaponBase acquireWeapon,
+        PassiveUpgrade upgradePassive,
+        PassiveUpgrade acquirePassive,
         System.Action onComplete)
     {
         weaponManager = wManager;
@@ -154,16 +167,18 @@ public class LevelUpUI : MonoBehaviour
             weaponToUpgrade.UpgradeWeapon();
             SynergyManager.Instance?.TryCheckSynergies();
         }
-        CloseMenu();
+
+        if (!isSynergyPopupActive)
+            CloseMenu();
     }
 
     public void OnAcquireWeapon()
     {
         if (weaponToAcquire != null && weaponManager != null)
-        {
             weaponManager.AddWeapon(weaponToAcquire);
-        }
-        CloseMenu();
+
+        if (!isSynergyPopupActive)
+            CloseMenu();
     }
 
     public void OnUpgradePassive()
@@ -174,16 +189,66 @@ public class LevelUpUI : MonoBehaviour
             PlayerPassives.Instance.ApplyPassiveUpgrade(passiveToUpgrade);
             SynergyManager.Instance?.TryCheckSynergies();
         }
-        CloseMenu();
+
+        if (!isSynergyPopupActive)
+            CloseMenu();
     }
 
     public void OnAcquirePassive()
     {
         if (passiveToAcquire != null && passiveManager != null)
-        {
             passiveManager.AddPassive(passiveToAcquire);
+
+        if (!isSynergyPopupActive)
+            CloseMenu();
+    }
+
+    public void ShowSynergyPopup(WeaponSynergy synergy)
+    {
+        panel.SetActive(false); // Disable background UI
+
+        synergyPanel.SetActive(true);
+        synergyPanel.transform.localScale = Vector3.zero;
+
+        synergyNameText.text = synergy.synergyName;
+        synergyDescriptionText.text = synergy.synergyWeapon.description;
+        synergyIcon.sprite = synergy.synergyPopUpSprite;
+
+        if (synergyAnimCoroutine != null) StopCoroutine(synergyAnimCoroutine);
+        synergyAnimCoroutine = StartCoroutine(AnimatePopup(true));
+
+        isSynergyPopupActive = true;
+    }
+
+    public void OnSynergyPopupClicked()
+    {
+        SynergyManager.Instance.ConfirmSynergy();
+
+        if (synergyAnimCoroutine != null) StopCoroutine(synergyAnimCoroutine);
+        synergyAnimCoroutine = StartCoroutine(AnimatePopup(false));
+    }
+
+    private IEnumerator AnimatePopup(bool poppingIn)
+    {
+        float time = 0f;
+        Vector3 start = poppingIn ? Vector3.zero : Vector3.one;
+        Vector3 end = poppingIn ? Vector3.one : Vector3.zero;
+
+        while (time < popupAnimDuration)
+        {
+            synergyPanel.transform.localScale = Vector3.Lerp(start, end, time / popupAnimDuration);
+            time += Time.unscaledDeltaTime;
+            yield return null;
         }
-        CloseMenu();
+
+        synergyPanel.transform.localScale = end;
+
+        if (!poppingIn)
+        {
+            isSynergyPopupActive = false;
+            synergyPanel.SetActive(false);
+            CloseMenu();
+        }
     }
 
     private void CloseMenu()

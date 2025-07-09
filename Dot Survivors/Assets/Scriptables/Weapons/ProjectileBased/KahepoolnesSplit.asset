@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9035e5923c46ed54da627aa2b9df4d1e, type: 3}
+  m_Name: KahepoolnesSplit
+  m_EditorClassIdentifier: 
+  weaponName: Kahepoolne's Split
+  weaponIcon: {fileID: 21300000, guid: 4be0c987059d43b47bc26b09dca68286, type: 3}
+  description: Shoots continuously forward and backward at once
+  level: 1
+  maxLevel: 3
+  baseDamage: 50
+  cooldown: 0.6
+  upgradeSteps:
+  - upgrades:
+    - statName: damageIncrease
+      value: 10
+    - statName: cooldownReduction
+      value: 0.2
+    - statName: extraBullets
+      value: 4
+  - upgrades:
+    - statName: damageIncrease
+      value: 10
+    - statName: cooldownReduction
+      value: 0.2
+    - statName: extraBullets
+      value: 4
+  projectilePrefab: {fileID: 761922942573321250, guid: 09fded82a7b5f2c498d318c88fcc2e55, type: 3}
+  bulletCount: 4
+  bulletSpeed: 10
+  bulletSpacing: 0.3
+  rowSpawnDelay: 0.1

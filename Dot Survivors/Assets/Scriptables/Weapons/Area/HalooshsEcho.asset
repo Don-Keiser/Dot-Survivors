@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b582a4b9fafd10d4fa53856d191eb41a, type: 3}
+  m_Name: HalooshsEcho
+  m_EditorClassIdentifier: 
+  weaponName: "Hal\xF6\xF6sh's Echo"
+  weaponIcon: {fileID: 21300000, guid: eee5c1bec59bd6049b3a92c496752088, type: 3}
+  description: Toss explosives in a clock pattern. Explodes then explodes again slightly
+    further.
+  level: 1
+  maxLevel: 3
+  baseDamage: 65
+  cooldown: 1
+  upgradeSteps:
+  - upgrades:
+    - statName: damageIncrease
+      value: 15
+    - statName: cooldownReduction
+      value: 0.1
+    - statName: explosionRadiusIncrease
+      value: 0.05
+    - statName: extraGrenades
+      value: 1
+  - upgrades:
+    - statName: damageIncrease
+      value: 20
+    - statName: cooldownReduction
+      value: 0.1
+    - statName: explosionRadiusIncrease
+      value: 0
+    - statName: extraGrenades
+      value: 0
+  grenadePrefab: {fileID: 761922942573321250, guid: 9a7893b5182689644a5d9e72d29ab7e3, type: 3}
+  throwRange: 3
+  explosionRadius: 1.15
+  grenadeSpeed: 5.5
+  grenadeCount: 5
+  isEchoGrenade: 1

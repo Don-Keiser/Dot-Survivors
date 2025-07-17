@@ -9,6 +9,7 @@ public class GrenadeWeapon : WeaponBase
     [SerializeField] private float explosionRadius = 2f;
     [SerializeField] private float grenadeSpeed = 5f;
     [SerializeField] private int grenadeCount = 1; // Start with 1 grenade
+    [SerializeField] private bool isEchoGrenade = false;
     private float cooldownTimer = 0f;
     private int lastThrownHour = 0; // Track last thrown hour
 
@@ -30,7 +31,14 @@ public class GrenadeWeapon : WeaponBase
         {
             Vector2 targetPoint = GetClockPosition(firePoint.position, hour);
             GameObject grenade = Instantiate(grenadePrefab, firePoint.position, Quaternion.identity);
-            grenade.GetComponent<Grenade>().Initialize(targetPoint, explosionRadius, GetModifiedDamage(), grenadeSpeed);
+            if (isEchoGrenade)
+            {
+                grenade.GetComponent<HalooshsEchoGrenade>().Initialize(targetPoint, explosionRadius, GetModifiedDamage(), grenadeSpeed);
+            }
+            else
+            {
+                grenade.GetComponent<Grenade>().Initialize(targetPoint, explosionRadius, GetModifiedDamage(), grenadeSpeed);
+            }
         }
     }
 

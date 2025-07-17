@@ -6709,13 +6709,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 652287765}
     - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: availableWeapons.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: 'availableWeapons.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1bc19e00be8bc1346923288f55a4dd79, type: 2}
+    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: 'availableWeapons.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: d0ba6adb461b51740b087157a10ddf6f, type: 2}
+    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: 'availableWeapons.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: c530c3d0ab1cec04f89574275988c5fc, type: 2}
+    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: 'availableWeapons.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: b18db752801de5c4bbceab270c95bbb6, type: 2}
+    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: 'availableWeapons.Array.data[4]'
       value: 
       objectReference: {fileID: 11400000, guid: e5cf2c118067f00459f9242aefdea372, type: 2}
     - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
-      propertyPath: 'availablePassives.Array.data[2]'
+      propertyPath: 'availableWeapons.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e5cf2c118067f00459f9242aefdea372, type: 2}
+    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: 'availablePassives.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: e869a63a963e2404eb0465219b13d790, type: 2}
+    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: 'availablePassives.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 4e62e63681f484041bfca221deec4ea0, type: 2}
     - target: {fileID: 2266792240343806365, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: passiveHotbarUI
       value: 
@@ -6723,7 +6751,7 @@ PrefabInstance:
     - target: {fileID: 2266792240343806365, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: 'acquiredPassives.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 4e62e63681f484041bfca221deec4ea0, type: 2}
+      objectReference: {fileID: 11400000, guid: 3b0db4242d1358241a33ff11785a7921, type: 2}
     - target: {fileID: 2719976312610856224, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: deathPanel
       value: 
@@ -6732,6 +6760,10 @@ PrefabInstance:
       propertyPath: deathScreenOverlay
       value: 
       objectReference: {fileID: 641752182}
+    - target: {fileID: 3913756579057680444, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: hotbarUI
       value: 
@@ -6739,7 +6771,7 @@ PrefabInstance:
     - target: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: 'weapons.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 1bc19e00be8bc1346923288f55a4dd79, type: 2}
+      objectReference: {fileID: 11400000, guid: 7382e15a60901db41bf354521de4537f, type: 2}
     - target: {fileID: 7877710158319238251, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -6750,20 +6782,32 @@ PrefabInstance:
       objectReference: {fileID: 652287765}
     - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: synergyDefinitions.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: synergyDefinitions.Array.data[2].baseWeapon
       value: 
       objectReference: {fileID: 11400000, guid: 1bc19e00be8bc1346923288f55a4dd79, type: 2}
     - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: synergyDefinitions.Array.data[3].baseWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 7382e15a60901db41bf354521de4537f, type: 2}
+    - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: synergyDefinitions.Array.data[2].synergyName
       value: Kahepoolne's Split
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: synergyDefinitions.Array.data[3].synergyName
+      value: "Hal\xF6\xF6sh's Echo"
       objectReference: {fileID: 0}
     - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: synergyDefinitions.Array.data[2].synergyWeapon
       value: 
       objectReference: {fileID: 11400000, guid: 1f49ddfd0c0aad14b86cdb95550811ee, type: 2}
+    - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: synergyDefinitions.Array.data[3].synergyWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: f9491ae513e30bf43b7fc02b1457c14a, type: 2}
     - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: synergyDefinitions.Array.data[1].requiredPassive
       value: 5
@@ -6771,6 +6815,10 @@ PrefabInstance:
     - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: synergyDefinitions.Array.data[2].requiredPassive
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: synergyDefinitions.Array.data[3].requiredPassive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: synergyDefinitions.Array.data[0].synergyPopUpSprite
@@ -6784,6 +6832,10 @@ PrefabInstance:
       propertyPath: synergyDefinitions.Array.data[2].synergyPopUpSprite
       value: 
       objectReference: {fileID: 21300000, guid: 8dd6b53e8c6efd840b5412bf73862edf, type: 3}
+    - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: synergyDefinitions.Array.data[3].synergyPopUpSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: eee5c1bec59bd6049b3a92c496752088, type: 3}
     - target: {fileID: 8497902260973513762, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

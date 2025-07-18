@@ -1,11 +1,14 @@
+// Scripts/Weapons/Gatling/BouncingGatlingGunWeapon.cs
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "GatlingGunWeapon", menuName = "ScriptableObjects/GatlingGunWeapon", order = 3)]
-public class GatlingGunWeapon : WeaponBase
+[CreateAssetMenu(fileName = "BouncingGatlingGun", menuName = "ScriptableObjects/BouncingGatlingGunWeapon")]
+public class BouncingGatlingGunWeapon : WeaponBase
 {
     [SerializeField] GameObject projectilePrefab;
     [SerializeField] float fireRate = 0.1f;
     [SerializeField] float rotationSpeed = 120f;
+    [SerializeField] int bounceCount = 3;
+    [SerializeField] float bounceRange = 3f;
 
     private float cooldownTimer = 0f;
 
@@ -15,18 +18,28 @@ public class GatlingGunWeapon : WeaponBase
         if (cooldownTimer <= 0f)
         {
             cooldownTimer = fireRate;
-            FireGatling(firePoint);
+            FireQuad(firePoint);
         }
 
         firePoint.Rotate(0, 0, rotationSpeed * Time.deltaTime);
     }
 
-    private void FireGatling(Transform firePoint)
+    private void FireQuad(Transform firePoint)
     {
-        Quaternion rotation = firePoint.rotation;
+        FireProjectile(firePoint.rotation, firePoint);
+        FireProjectile(Quaternion.Euler(0, 0, firePoint.rotation.eulerAngles.z + 90f), firePoint);
+        FireProjectile(Quaternion.Euler(0, 0, firePoint.rotation.eulerAngles.z + 180f), firePoint);
+        FireProjectile(Quaternion.Euler(0, 0, firePoint.rotation.eulerAngles.z + 270f), firePoint);
+    }
+
+    private void FireProjectile(Quaternion rotation, Transform firePoint)
+    {
         GameObject bullet = Instantiate(projectilePrefab, firePoint.position, rotation);
-        bullet.GetComponent<Rigidbody2D>().linearVelocity = bullet.transform.right * (10f * PlayerPassives.Instance.GetProjectileSpeedMultiplier());
-        bullet.GetComponent<Projectile>().damage = GetModifiedDamage();
+        var rb = bullet.GetComponent<Rigidbody2D>();
+        rb.linearVelocity = bullet.transform.right * (10f * PlayerPassives.Instance.GetProjectileSpeedMultiplier());
+
+        var proj = bullet.GetComponent<Projectile>();
+        proj.damage = GetModifiedDamage();
     }
 
     protected override string[] GetPossibleUpgradeStats()
@@ -44,7 +57,7 @@ public class GatlingGunWeapon : WeaponBase
 
     public override WeaponBase Clone()
     {
-        GatlingGunWeapon copy = Instantiate(this);
+        BouncingGatlingGunWeapon copy = Instantiate(this);
         copy.level = this.level;
         copy.baseDamage = this.baseDamage;
         copy.cooldown = this.cooldown;

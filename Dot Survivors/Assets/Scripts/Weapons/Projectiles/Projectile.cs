@@ -7,14 +7,14 @@ public class Projectile : MonoBehaviour
     public bool isPiercing;
     public float lifetime = 5f;
 
-    private HashSet<GameObject> hitEnemies = new HashSet<GameObject>(); // Prevents multiple hits
+    protected HashSet<GameObject> hitEnemies = new HashSet<GameObject>();
 
-    private void Start()
+    protected virtual void Start()
     {
         Destroy(gameObject, lifetime);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy") && !hitEnemies.Contains(collision.gameObject))
         {

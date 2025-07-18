@@ -103,7 +103,25 @@ public class ParallaxSettingsUI : MonoBehaviour
 
     private void UpdateLayerLabel()
     {
-        currentLayerText.text = $"Layer {currentLayerIndex + 1}";
+        if (currentLayerIndex == 0)
+        {
+            currentLayerText.text = "Background Layer";
+            return;
+        }
+        else if (currentLayerIndex == 1)
+        {
+            currentLayerText.text = "Lower Layer";
+            return;
+        }
+        else if (currentLayerIndex == 2)
+        {
+            currentLayerText.text = "Upper Layer";
+            return;
+        }
+        else
+        {
+            currentLayerText.text = "Layer Not Recognized";
+        }
     }
 
     public void SaveParallaxSettings()

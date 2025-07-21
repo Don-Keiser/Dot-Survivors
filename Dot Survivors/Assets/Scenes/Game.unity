@@ -6727,7 +6727,7 @@ PrefabInstance:
     - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: 'availableWeapons.Array.data[3]'
       value: 
-      objectReference: {fileID: 11400000, guid: b18db752801de5c4bbceab270c95bbb6, type: 2}
+      objectReference: {fileID: 11400000, guid: d0ba6adb461b51740b087157a10ddf6f, type: 2}
     - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: 'availableWeapons.Array.data[4]'
       value: 
@@ -6736,6 +6736,10 @@ PrefabInstance:
       propertyPath: 'availableWeapons.Array.data[5]'
       value: 
       objectReference: {fileID: 11400000, guid: e5cf2c118067f00459f9242aefdea372, type: 2}
+    - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: 'availablePassives.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 49e66090aa3d9714cb1a0687912ac6ee, type: 2}
     - target: {fileID: 439212896346591181, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: 'availablePassives.Array.data[1]'
       value: 
@@ -6755,7 +6759,7 @@ PrefabInstance:
     - target: {fileID: 2266792240343806365, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: 'acquiredPassives.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 49e66090aa3d9714cb1a0687912ac6ee, type: 2}
+      objectReference: {fileID: 11400000, guid: 7d25e1b90c7bd30479431994405a929f, type: 2}
     - target: {fileID: 2719976312610856224, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: deathPanel
       value: 
@@ -6775,7 +6779,7 @@ PrefabInstance:
     - target: {fileID: 7413976699927729864, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: 'weapons.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: d0ba6adb461b51740b087157a10ddf6f, type: 2}
+      objectReference: {fileID: 11400000, guid: b18db752801de5c4bbceab270c95bbb6, type: 2}
     - target: {fileID: 7877710158319238251, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -6786,7 +6790,7 @@ PrefabInstance:
       objectReference: {fileID: 652287765}
     - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: synergyDefinitions.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: synergyDefinitions.Array.data[2].baseWeapon
@@ -6801,6 +6805,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: d0ba6adb461b51740b087157a10ddf6f, type: 2}
     - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: synergyDefinitions.Array.data[5].baseWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: b18db752801de5c4bbceab270c95bbb6, type: 2}
+    - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: synergyDefinitions.Array.data[2].synergyName
       value: Kahepoolne's Split
       objectReference: {fileID: 0}
@@ -6811,6 +6819,10 @@ PrefabInstance:
     - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: synergyDefinitions.Array.data[4].synergyName
       value: "K\xE4ded\u2019s Reverb"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: synergyDefinitions.Array.data[5].synergyName
+      value: "Issandakhiir\u2019s Fang"
       objectReference: {fileID: 0}
     - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: synergyDefinitions.Array.data[2].synergyWeapon
@@ -6824,6 +6836,10 @@ PrefabInstance:
       propertyPath: synergyDefinitions.Array.data[4].synergyWeapon
       value: 
       objectReference: {fileID: 11400000, guid: a5c4d37d171eeed4d86c76f7db7c1be6, type: 2}
+    - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: synergyDefinitions.Array.data[5].synergyWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 49e183002d348a041922ff183e62b807, type: 2}
     - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: synergyDefinitions.Array.data[1].requiredPassive
       value: 5
@@ -6839,6 +6855,10 @@ PrefabInstance:
     - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: synergyDefinitions.Array.data[4].requiredPassive
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: synergyDefinitions.Array.data[5].requiredPassive
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: synergyDefinitions.Array.data[0].synergyPopUpSprite
@@ -6860,6 +6880,10 @@ PrefabInstance:
       propertyPath: synergyDefinitions.Array.data[4].synergyPopUpSprite
       value: 
       objectReference: {fileID: 21300000, guid: 0b7fb47c85f7fea4f91894dafa70ff0f, type: 3}
+    - target: {fileID: 8301476170581943064, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
+      propertyPath: synergyDefinitions.Array.data[5].synergyPopUpSprite
+      value: 
+      objectReference: {fileID: 2087949621987537175, guid: 5cb7927719a6ec54185a373c18a112ff, type: 3}
     - target: {fileID: 8497902260973513762, guid: 27c0cdc1427efcc448f439b4b0e6877d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
